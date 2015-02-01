@@ -104,7 +104,7 @@
 \begin{document}
 
 \begin{frame}[fragile]
-\maketitle
+	\maketitle
 \end{frame}
 
 \begin{frame}[fragile]
@@ -118,10 +118,10 @@
 	
 	You can experiment with these rules using ``IDLE".
 	\begin{itemize}
-	\item When you open IDLE, you can type things in and press enter to have IDLE read what you wrote.
-	\item When you type things in, you should write in Python. IDLE will complain if you don't.
-	\item Things you do in IDLE aren't permament. You can always close IDLE and open it afresh.
-	\item As we introduce new ideas today, you can follow along by typing things into IDLE.
+		\item When you open IDLE, you can type things in and press enter to have IDLE read what you wrote.
+		\item When you type things in, you should write in Python. IDLE will complain if you don't.
+		\item Things you do in IDLE aren't permanent. You can always close IDLE and open it afresh.
+		\item As we introduce new ideas today, you can follow along by typing things into IDLE.
 	\end{itemize}
 \end{frame}
 
@@ -190,15 +190,15 @@
 		\pause For example:
 		\begin{itemize}
 			\item Adding an integer to a string.
-    		\begin{onlyenv}<2>
-		    	\begin{lstlisting}
+			\begin{onlyenv}<2>
+				\begin{lstlisting}
 				>>> 16 + "hello"
 				$\textrm{\color{red}TypeError: unsupported operand type(s) for +: `int' and `str'}$
-		    	\end{lstlisting}
-    		\end{onlyenv}
-    		
-    		\pause
-    		
+				\end{lstlisting}
+			\end{onlyenv}
+			
+			\pause
+			
 			\item Indexing into something that is not a sequence.
 			\begin{onlyenv}<3>
 				\begin{lstlisting}
@@ -232,18 +232,18 @@
 	\end{itemize}
 	
 	\begin{onlyenv}<1-2>
-	\begin{lstlisting}
-	>>> x = 5
-	>>> y = x+6
-	>>> print(y)
-	11
-	\end{lstlisting}
+		\begin{lstlisting}
+		>>> x = 5
+		>>> y = x+6
+		>>> print(y)
+		11
+		\end{lstlisting}
 	\end{onlyenv}
-		
+	
 	\pause
 	
 	\begin{itemize} \item They can be reassigned: \end{itemize}
-
+	
 	\begin{lstlisting}
 	>>> x = 5
 	>>> x = 7
@@ -258,12 +258,10 @@
 	\begin{lstlisting}
 	>>> x = [5, 7]
 	>>> y = x
-	>>> y += [9]
+	>>> y += [9, 11]
 	>>> print(x)
-	[5, 7, 9]
+	[5, 7, 9, 11]
 	\end{lstlisting} \note<3>{\lstinline|x| and \lstinline|y| now label the same value. When we add to \lstinline|y|, it is the same list that gets modified.}
-	
-	
 \end{frame}
 
 \begin{frame}[fragile]
@@ -283,7 +281,6 @@
 	\begin{lstlisting}
 	if :
 	\end{lstlisting}
-	
 \end{frame}
 
 \begin{frame}[fragile]
