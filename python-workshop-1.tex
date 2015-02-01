@@ -1,0 +1,311 @@
+\documentclass[notes]{beamer}
+
+\usepackage{listings}
+\usepackage{color}
+\usepackage{etoolbox}
+
+\definecolor{orange}{rgb}{1,0.5,0}
+\definecolor{green}{rgb}{0,0.5,0}
+\definecolor{gray}{rgb}{0.25,0.25,0.25}
+\definecolor{mauve}{rgb}{0.58,0,0.82}
+\definecolor{red}{rgb}{1.0,0,0}
+
+\colorlet{punct}{green}
+\colorlet{delim}{green}
+\colorlet{num}{mauve}
+
+\definecolor{codebg}{rgb}{1.0,1.0,0.8}
+\definecolor{jargonbg}{rgb}{0.5,1.0,0.8}
+
+\newtoggle{InString}{}% Keep track of if we are within a string
+\togglefalse{InString}% Assume not initally in string
+
+\newcommand*{\ColorIfNotInString}[1]{\iftoggle{InString}{#1}{\color{num}#1}}
+\newcommand*{\ProcessQuote}[1]{\color{red}#1\iftoggle{InString}{\global\togglefalse{InString}}{\global\toggletrue{InString}}}
+
+\lstdefinelanguage{py}{
+	morekeywords={if,elif,else,for,in,def,class,True,False},
+	literate=
+		*{=}{{{\color{punct}{=}}}}{1}
+		{|}{{{\color{punct}{|}}}}{1}
+		{\^}{{{\color{punct}{\^{}}}}}{1}
+		{\{}{{{\color{punct}{\{}}}}{1}
+		{\}}{{{\color{punct}{\}}}}}{1}
+		{[}{{{\color{punct}{[}}}}{1}
+		{]}{{{\color{punct}{]}}}}{1}
+		{)}{{{\color{punct}{)}}}}{1}
+		{(}{{{\color{punct}{(}}}}{1}
+		{<}{{{\color{punct}{<}}}}{1}
+		{>}{{{\color{punct}{>}}}}{1}
+		{*}{{{\color{punct}{*}}}}{1}
+		{?}{{{\color{punct}{?}}}}{1}
+		{:}{{{\color{punct}{:}}}}{1}
+		{,}{{{\color{punct}{,}}}}{1}
+		{\&}{{{\color{punct}{\&}}}}{1}
+		{!}{{{\color{punct}{!}}}}{1}
+		{-}{{{\color{punct}{-}}}}{1}
+		{+}{{{\color{punct}{+}}}}{1}
+		{.}{{{\color{punct}{.}}}}{1}
+		{\%}{{{\color{punct}{\%}}}}{1}
+		{/}{{{\color{punct}{/}}}}{1}
+		{\~}{{{$\color{punct}{\sim}$}}}{1}
+		{;}{{{\color{punct}{;}}}}{1}
+		%{"}{{{\ProcessQuote{"}}}}1% Disable coloring within double quotes
+		%{'}{{{\ProcessQuote{'}}}}1% Disable coloring within single quote
+		{0}{{{\ColorIfNotInString{0}}}}1
+		{1}{{{\ColorIfNotInString{1}}}}1
+		{2}{{{\ColorIfNotInString{2}}}}1
+		{3}{{{\ColorIfNotInString{3}}}}1
+		{4}{{{\ColorIfNotInString{4}}}}1
+		{5}{{{\ColorIfNotInString{5}}}}1
+		{6}{{{\ColorIfNotInString{6}}}}1
+		{7}{{{\ColorIfNotInString{7}}}}1
+		{8}{{{\ColorIfNotInString{8}}}}1
+		{9}{{{\ColorIfNotInString{9}}}}1,
+}
+
+\lstset{
+	language=py,
+	%
+	captionpos=b,                    % sets the caption-position to bottom
+	mathescape=true,
+	keepspaces=true,
+	showspaces=false,
+	showstringspaces=false,          % underline spaces within strings only
+	showtabs=false,                  % show tabs within strings adding particular underscores
+	stepnumber=1,
+	tabsize=4,
+	title=\lstname,
+	morestring=[b]",
+	%
+	numberstyle=\footnotesize\color{gray},
+	rulecolor=\color{black},
+	basicstyle=\ttfamily\small,
+	commentstyle=\itshape,
+	backgroundcolor=\color{codebg},
+	keywordstyle=\color{blue},
+	commentstyle=\color{orange}\itshape,
+	stringstyle=\color{red},
+}
+
+\lstdefinestyle{output}{
+	basicstyle=\small\ttfamily,
+	numbers=none,
+	frame=tblr,
+	columns=fullflexible,
+	backgroundcolor=\color{blue!10},
+	linewidth=0.9\linewidth,
+	xleftmargin=0.1\linewidth
+}
+
+\title{CUCaTS Python Workshop}
+\date{Lent 2015}
+
+\begin{document}
+
+\begin{frame}[fragile]
+\maketitle
+\end{frame}
+
+\begin{frame}[fragile]
+	\frametitle{Environment setup}
+	% Python, text editor, PIP?
+\end{frame}
+
+\begin{frame}[fragile]
+	\frametitle{Python}
+	Python is a language: a set of rules for constructing programs.
+	
+	You can experiment with these rules using ``IDLE".
+	\begin{itemize}
+	\item When you open IDLE, you can type things in and press enter to have IDLE read what you wrote.
+	\item When you type things in, you should write in Python. IDLE will complain if you don't.
+	\item Things you do in IDLE aren't permament. You can always close IDLE and open it afresh.
+	\item As we introduce new ideas today, you can follow along by typing things into IDLE.
+	\end{itemize}
+\end{frame}
+
+\begin{frame}[fragile]
+	\frametitle{Values}
+	
+	\begin{itemize}
+		\item A program processes data.
+		\item Data such as numbers, text, images, dates/time, sound, files and so on.
+		\item Even complex and abstract things like a road network or the structure of a protein.
+		\item A value is a piece of data stored in a computer's memory.
+	\end{itemize}
+\end{frame}
+
+\begin{frame}[fragile]
+	\frametitle{Datatypes}
+	
+	All values have a datatype. Some examples:
+	
+	\begin{itemize}
+		\item Numbers (integers, floats) \\
+		e.g. \colorbox{codebg}{\lstinline|5|} or \colorbox{codebg}{\lstinline|9.6|}
+		\note<1>{Integers can hold whole numbers only. ``Floats", or floating-point numbers, are capable of fractional numbers as well. \\}
+		
+		\pause
+		
+		\item Booleans \\
+		\colorbox{codebg}{\lstinline|True|} and \colorbox{codebg}{\lstinline|False|}
+		\note<2>{True/false values are called ``Booleans" (after George Boole). They are used for expression conditions.}
+		
+		\pause
+		
+		\item Strings \\
+		\colorbox{codebg}{\lstinline|"Hello world!"|}
+		\note<3>{Strings can use single quotes or double quotes, but we will stick to double quotes for consistency. \\}
+		
+		\pause
+		
+		\item Lists \\
+		\colorbox{codebg}{\lstinline|[4, 8, 15, 16, 23, 42]|} \\
+		or \colorbox{codebg}{\lstinline|["first", "second", "fourth"]|} \\
+		or even \colorbox{codebg}{\lstinline|[[], "some text", 99]|}
+		\note<4>{Lists hold a sequence of values. The third example is a list containing firstly an empty list, then a string and then an integer. As you can see, the elements of a list do not have to all be the same datatype. In Python, a list is simply a list, not a list \emph{of} something. \\}
+		
+		\pause
+		
+		\item Dictionaries % bother explaining them this early?
+		
+		% I'm thinking, don't mention tuples because it will be difficult to explain how they differ from lists
+	\end{itemize}
+\end{frame}
+
+\begin{frame}[fragile]
+	\frametitle{}
+	% Some basic operations on values
+	% indexing, appending lists (needed in coming slides)
+	% print
+	% REPL
+\end{frame}
+
+\begin{frame}[fragile]
+	\frametitle{Errors}
+	
+	\begin{itemize}
+		\item There are rules governing what you can't do with certain types and values.
+		\pause For example:
+		\begin{itemize}
+			\item Adding an integer to a string.
+    		\begin{onlyenv}<2>
+		    	\begin{lstlisting}
+				>>> 16 + "hello"
+				$\textrm{\color{red}TypeError: unsupported operand type(s) for +: `int' and `str'}$
+		    	\end{lstlisting}
+    		\end{onlyenv}
+    		
+    		\pause
+    		
+			\item Indexing into something that is not a sequence.
+			\begin{onlyenv}<3>
+				\begin{lstlisting}
+				>>> 9.0[1]
+				$\textrm{\color{red}TypeError: `int' object has no attribute `\_\_getitem\_\_'}$
+				\end{lstlisting}
+			\end{onlyenv}
+			
+			\pause
+			
+			\item Asking for the sixth element of a list that only has four.
+			\begin{onlyenv}<4>
+				\begin{lstlisting}
+				>>> [4, 5, 6, 7][5]
+				$\textrm{\color{red}IndexError: list index out of range}$
+				\end{lstlisting}
+			\end{onlyenv}
+			
+			\pause
+		\end{itemize}
+		\item Designed to help you spots problems with your code.
+	\end{itemize}
+\end{frame}
+
+\begin{frame}[fragile]
+	\frametitle{Variables}
+	\begin{itemize}
+		\item Variables are labels put onto values. They allow us to refer to those values by a name.
+		% NOT BOXES BECAUSE REFERENCE SEMANTICS
+		\note<1>{Variable names must consist only of letters, digits and underscores. They can't start with a digit. They are case sensitive, }
+	\end{itemize}
+	
+	\begin{onlyenv}<1-2>
+	\begin{lstlisting}
+	>>> x = 5
+	>>> y = x+6
+	>>> print(y)
+	11
+	\end{lstlisting}
+	\end{onlyenv}
+		
+	\pause
+	
+	\begin{itemize} \item They can be reassigned: \end{itemize}
+
+	\begin{lstlisting}
+	>>> x = 5
+	>>> x = 7
+	>>> print(x)
+	7
+	\end{lstlisting}
+	
+	\pause
+	
+	\begin{itemize} \item Assignment does not create a new value: \end{itemize}
+	
+	\begin{lstlisting}
+	>>> x = [5, 7]
+	>>> y = x
+	>>> y += [9]
+	>>> print(x)
+	[5, 7, 9]
+	\end{lstlisting} \note<3>{\lstinline|x| and \lstinline|y| now label the same value. When we add to \lstinline|y|, it is the same list that gets modified.}
+	
+	
+\end{frame}
+
+\begin{frame}[fragile]
+	\frametitle{for loops}
+	
+	% whitespace...
+\end{frame}
+
+\begin{frame}[fragile]
+	\frametitle{if-else}
+	
+	Provide two different pieces of code to run depending on some condition.
+	
+	% explain in the context of for loops, because otherwise the condition is going to be tautological and it won't be clear why providing a branch is useful
+	% which is why if comes after for
+	
+	\begin{lstlisting}
+	if :
+	\end{lstlisting}
+	
+\end{frame}
+
+\begin{frame}[fragile]
+	\frametitle{}
+	
+	% and or gates
+	% ==
+\end{frame}
+
+\begin{frame}[fragile]
+	\frametitle{List comprehensions}
+	
+	% restate a former for+if example more concisely, teach them to think in terms of transforming data, pipelines
+\end{frame}
+
+\begin{frame}[fragile]
+	\frametitle{Functions}
+\end{frame}
+
+\begin{frame}[fragile]
+	\frametitle{Methods}
+	% Use (n.) only, because they're going to encounter that pretty early
+\end{frame}
+
+\end{document}
