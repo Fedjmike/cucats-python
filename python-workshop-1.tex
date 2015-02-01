@@ -24,7 +24,7 @@
 \newcommand*{\ProcessQuote}[1]{\color{red}#1\iftoggle{InString}{\global\togglefalse{InString}}{\global\toggletrue{InString}}}
 
 \lstdefinelanguage{py}{
-	morekeywords={if,elif,else,for,in,def,class,True,False},
+	morekeywords={if,elif,else,for,in,def,class,True,False,print},
 	literate=
 		*{=}{{{\color{punct}{=}}}}{1}
 		{|}{{{\color{punct}{|}}}}{1}
@@ -228,7 +228,7 @@
 	\begin{itemize}
 		\item Variables are labels put onto values. They allow us to refer to those values by a name.
 		% NOT BOXES BECAUSE REFERENCE SEMANTICS
-		\note<1>{Variable names must consist only of letters, digits and underscores. They can't start with a digit. They are case sensitive, }
+		\note<1>{Variable names must consist only of letters, digits and underscores. They can't start with a digit or have spaces. They are case sensitive, }
 	\end{itemize}
 	
 	\begin{onlyenv}<1-2>
@@ -254,6 +254,7 @@
 	\pause
 	
 	\begin{itemize} \item Assignment does not create a new value: \end{itemize}
+	% save for later? allows delaying explaing list += list
 	
 	\begin{lstlisting}
 	>>> x = [5, 7]
@@ -265,7 +266,57 @@
 \end{frame}
 
 \begin{frame}[fragile]
+	\frametitle{Processing lists}
+	
+	\begin{onlyenv}<1>
+	\begin{lstlisting}
+	>>> nums = [1, 2, 3, 4, 5]
+	>>> squares = [1, 4, 9, 16, 25]
+	\end{lstlisting}
+	
+	~ \\
+	~ \\
+
+	\end{onlyenv}
+	
+	\pause
+	
+	\begin{onlyenv}<2->
+	\begin{lstlisting}
+	>>> nums = [1, 2, 3, 4, 5]
+	>>> squares = [x*x for x in nums]$\pause$
+	>>> print(squares)
+	[1, 4, 9, 16, 25]
+	\end{lstlisting}
+	\end{onlyenv}
+	
+	\pause
+	
+	\begin{itemize}
+		\item Called a list comprehension.
+		\item Creates a new list out of another by using each element to create a corresponding new value.
+		
+		\item `\lstinline|for|' and `\lstinline|in|' are keywords.
+		\note{Keywords are ones that have a special meaning. You cannot use them as variable names. List comprehensions must use `\lstinline|for|' and `\lstinline|in|'}
+	\end{itemize}
+\end{frame}
+
+
+\begin{frame}[fragile]
 	\frametitle{for loops}
+	
+	\begin{lstlisting}
+	>>> nums = [1, 2, 3, 4, 5]
+	>>> total = 0
+	
+	>>> for x in nums:
+	        total = total + x
+	$\pause$
+	>>> print(total)
+	15
+	\end{lstlisting}
+	
+	% step by step on the side of the running total
 	
 	% whitespace...
 \end{frame}
