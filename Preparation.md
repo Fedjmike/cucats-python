@@ -9,6 +9,7 @@
 - [Installing the package installer](#installing-the-package-installer)
     - [Windows](#windows-1)
     - [Mac and Linux](#mac-and-linux)
+- [Using pip](#using-pip)
 
 <!-- /MarkdownTOC -->
 
@@ -24,7 +25,7 @@ It will save time if you can install Python 3 on your laptop before the workshop
 * Download the [Windows x86-64 MSI installer](https://www.python.org/ftp/python/3.4.2/python-3.4.2.amd64.msi) for 64 bit Windows or [Windows x86 MSI installer](https://www.python.org/ftp/python/3.4.2/python-3.4.2.amd64.msi) for 32 bit Windows. If in doubt, choose 32 bit.
     * The choice between 64 and 32 bit only matters if you want to install libraries in the future, as you will need to install the same version as your Python version.
 * Run it and follow instructions.
-* To test if your installation is successful, you can press `windows + R`, type `cmd` and press enter to launch the command prompt (a black box into which you can type commands). Then type `python3` and press enter. The Python console should start - you should see something like:
+* To test if your installation is successful, you can press `windows + R`, type `cmd` and press enter to launch the command prompt (a black box into which you can type commands). Then type `python` and press enter. The Python console should start - you should see something like:
 ```
 Python 3.4.2 (default, Dec 27 2014, 13:16:08) 
 [Something] on Windows
@@ -32,6 +33,8 @@ Type "help", "copyright", "credits" or "license" for more information.
 >>>
 ```
 You can then close the window.
+
+* If you see Python 2.7 instead, then start with `py -3` instead.
 
 ### Mac
 
@@ -47,6 +50,8 @@ You can then close the window.
 Python comes with many useful libraries which you can install easily with a package manager. Here we will be using [pip](https://pip.pypa.io/en/latest/installing.html). 
 
 ### Windows
+* The installer installs pip by default. You can check if it is installed by entering `pip --version` or `py -3 -m pip --version` in your command prompt. If The first command gives you an error but the second one works, you might want update it with `py -3 -m pip install --upgrade pip`, and you enter `pip --version` afterwards.
+* If it is not installed, you can follow the following instructions to install it.
 * Download the [installer script](https://bootstrap.pypa.io/get-pip.py) and save it somewhere (e.g. your desktop). 
 * Browse to your desktop, hold down `shift` and right click on an empty space, select `Open command window here`.
 * Type `py get-pip.py` and press enter.
@@ -57,3 +62,5 @@ Python comes with many useful libraries which you can install easily with a pack
 * If you don't have pip, you can run the following command which is a script to download the installer and installing it.
     - `curl -OL https://bootstrap.pypa.io/get-pip.py && python3 get-pip.py`
     - If it complains about permission denied, you can try running `sudo python3 get-pip.py`
+
+## Using pip
