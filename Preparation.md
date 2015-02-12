@@ -24,7 +24,7 @@ It will save time if you can install Python 3 on your laptop before the workshop
 * Download the [Windows x86-64 MSI installer](https://www.python.org/ftp/python/3.4.2/python-3.4.2.amd64.msi) for 64 bit Windows or [Windows x86 MSI installer](https://www.python.org/ftp/python/3.4.2/python-3.4.2.amd64.msi) for 32 bit Windows. If in doubt, choose 32 bit.
     * The choice between 64 and 32 bit only matters if you want to install libraries in the future, as you will need to install the same version as your Python version.
 * Run it and follow instructions.
-* To test if your installation is successful. You can press `windows + R`, type `cmd` and press enter to launch the command prompt (a black box into which you can type commands), and type `python3` and press enter. The Python console should start - you should see something like:
+* To test if your installation is successful, you can press `windows + R`, type `cmd` and press enter to launch the command prompt (a black box into which you can type commands). Then type `python3` and press enter. The Python console should start - you should see something like:
 ```
 Python 3.4.2 (default, Dec 27 2014, 13:16:08) 
 [Something] on Windows
