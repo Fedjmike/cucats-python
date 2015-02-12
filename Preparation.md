@@ -15,14 +15,23 @@ Preparation for the CUCaTS coding workshop
 
 # Installing Python
 
-https://www.python.org/downloads/release/python-342/
+Python is both a programming language and a piece of software. There are two popular versions of Python: Python 2 and Python 3. We are going to be using Python 3, which is more modern.
+
+It will save time if you can install Python 3 on your laptop before the workshop - instructions on how to do so follow.
 
 ## Windows
 
 * Download the [Windows x86-64 MSI installer](https://www.python.org/ftp/python/3.4.2/python-3.4.2.amd64.msi) for 64 bit Windows or [Windows x86 MSI installer](https://www.python.org/ftp/python/3.4.2/python-3.4.2.amd64.msi) for 32 bit Windows. If in doubt, choose 32 bit.
-    * This only matters if you want to install libraries in the future as you need to install the same version as your Python version.
+    * The choice between 64 and 32 bit only matters if you want to install libraries in the future, as you will need to install the same version as your Python version.
 * Run it and follow instructions.
-* To test if your installation is successful. You can press `windows + R`, type `cmd` and press enter to launch the command prompt, and type `python` and press enter. The Python console should start.
+* To test if your installation is successful. You can press `windows + R`, type `cmd` and press enter to launch the command prompt (a black box into which you can type commands), and type `python3` and press enter. The Python console should start - you should see something like:
+
+    Python 3.4.2 (default, Dec 27 2014, 13:16:08) 
+    [Something] on Windows
+    Type "help", "copyright", "credits" or "license" for more information.
+    >>>
+    
+You can then close the window.
 
 ## Mac
 
