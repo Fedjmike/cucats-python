@@ -16,7 +16,7 @@
 
 ## Installing Python
 
-Python is both a programming language and a piece of software. There are two popular versions of Python: Python 2 and Python 3. We are going to be using Python 3, which is more modern.
+[Python](https://www.python.org) is both a programming language and a piece of software. There are two popular versions of Python: Python 2 and Python 3. We are going to be using Python 3, which is more modern.
 
 It will save time if you can install Python 3 on your laptop before the workshop - instructions on how to do so follow.
 
@@ -43,11 +43,11 @@ You can then close the window.
 ### Mac
 
 * For OS X 10.6 and above, Download and run [this](https://www.python.org/ftp/python/3.4.2/python-3.4.2-macosx10.6.pkg).
-* Open your terminal by pressing `cmd + space` and entering `terminal`. Type `python3`
+* Open your terminal by pressing `cmd + space` and entering `terminal`. Type `python3`. (Don't include the full stop.)
 
 ### Linux
 
-* Start your terminal and install it using your package manager. For example, `sudo apt-get install python3` or `sudo yum install python3`
+* Open a terminal and install Python 3 using your package manager. For example, `sudo apt-get install python3` or `sudo yum install python3`.
 
 ## Installing the package installer (Optional)
 
@@ -56,15 +56,15 @@ This is not necessary for the workshop. But if you want to use Python in the fut
 Python comes with many useful libraries which you can install easily with a package manager. Here we will provide instructions for installing [pip](https://pip.pypa.io/en/latest/installing.html). 
 
 ### Windows
-* The Python 3 installer installs pip by default. You can check if it is installed by entering `pip --version` or `py -3 -m pip --version` in your command prompt. If The first command gives you an error but the second one works, you might want update it with `py -3 -m pip install --upgrade pip`, and you enter `pip --version` afterwards.
-* If it is not installed, you can follow the following instructions to install it.
-* Download the [installer script](https://bootstrap.pypa.io/get-pip.py) and save it somewhere (e.g. your desktop). 
-* Browse to your desktop, hold down `shift` and right click on an empty space, select `Open command window here`.
-* Type `py get-pip.py` and press enter.
+* The Python 3 installer installs pip by default. You can check that pip is installed by entering `pip --version` or `py -3 -m pip --version` in your command prompt. If the first command gives you an error but the second one works, you might want to update pip by entering `py -3 -m pip install --upgrade pip`. Then `pip --version` should work.
+* If pip is not installed, you can install it like so:
+    * Download the [installer script](https://bootstrap.pypa.io/get-pip.py) and save it somewhere (e.g. your desktop). 
+    * Browse to the location where you saved the installer. Then hold down `shift` and right click on an empty space in your file explorer, and select `Open command window here`.
+    * Type `py get-pip.py` and press enter.
 
 ### Mac and Linux
-* You might want to check if you have pip installed. Open your terminal and type `pip` or `python3 -m pip`. If you don't get an error, then you already have it installed. 
-    * In that case, run `python3 -m pip install --upgrade pip`. This will update pip and you can run it in the future with `pip` rather than `python3 -m pip`
+* You might want to check if pip is already installed. Open your terminal and type `pip` or `python3 -m pip`. If you don't get an error, then pip is already installed. 
+    * In that case, enter `python3 -m pip install --upgrade pip`. This will update pip so you can run it in the future with `pip` rather than `python3 -m pip`.
 * If you don't have pip, you can run the following command which is a script to download the installer and installing it.
     - `curl -OL https://bootstrap.pypa.io/get-pip.py && python3 get-pip.py`
     - If it complains about permission denied, you can try running `sudo python3 get-pip.py`
