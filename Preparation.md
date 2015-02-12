@@ -34,7 +34,7 @@ Type "help", "copyright", "credits" or "license" for more information.
 ```
 You can then close the window.
 
-* If you see Python 2.7 instead, then start with `py -3` instead.
+* If you see Python 2.7, then start with `py -3` instead.
 
 ### Mac
 
