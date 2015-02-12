@@ -25,12 +25,12 @@ It will save time if you can install Python 3 on your laptop before the workshop
     * The choice between 64 and 32 bit only matters if you want to install libraries in the future, as you will need to install the same version as your Python version.
 * Run it and follow instructions.
 * To test if your installation is successful. You can press `windows + R`, type `cmd` and press enter to launch the command prompt (a black box into which you can type commands), and type `python3` and press enter. The Python console should start - you should see something like:
-
-    Python 3.4.2 (default, Dec 27 2014, 13:16:08) 
-    [Something] on Windows
-    Type "help", "copyright", "credits" or "license" for more information.
-    >>>
-    
+```
+Python 3.4.2 (default, Dec 27 2014, 13:16:08) 
+[Something] on Windows
+Type "help", "copyright", "credits" or "license" for more information.
+>>>
+```
 You can then close the window.
 
 ## Mac
