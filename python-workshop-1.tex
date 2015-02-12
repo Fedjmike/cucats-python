@@ -15,7 +15,7 @@
 \colorlet{num}{mauve}
 
 \definecolor{codebg}{rgb}{1.0,1.0,0.8}
-\definecolor{jargonbg}{rgb}{0.5,1.0,0.8}
+\definecolor{jargonbg}{rgb}{0.8,1.0,0.8}
 
 \newtoggle{InString}{}% Keep track of if we are within a string
 \togglefalse{InString}% Assume not initally in string
@@ -166,9 +166,10 @@
 		or even \colorbox{codebg}{\lstinline|[[], "some text", 99]|}
 		\note<4>{Lists hold a sequence of values. The third example is a list containing firstly an empty list, then a string and then an integer. As you can see, the elements of a list do not have to all be the same datatype. In Python, a list is simply a list, not a list \emph{of} something. \\}
 		
-		\pause
+		%\pause
 		
-		\item Dictionaries % bother explaining them this early?
+		%\item Dictionaries
+		% bother explaining them this early?
 		
 		% I'm thinking, don't mention tuples because it will be difficult to explain how they differ from lists
 	\end{itemize}
@@ -176,6 +177,28 @@
 
 \begin{frame}[fragile]
 	\frametitle{}
+	
+	Arithmetic:
+	
+	\begin{lstlisting}
+	>>> 5 + 9
+	14$\pause$
+	>>> 7.5 * 2
+	15.0
+	\end{lstlisting}
+	\note<2>{Note that the multiplication results in \lstinline|15.0|, a float, because \lstinline|7.5| was a float.}
+	
+	\pause
+	
+	Comparisons:
+	
+	\begin{lstlisting}
+	>>> 5 < 6
+	False
+	>>> 9 == 18 / 2
+	True
+	\end{lstlisting}
+	
 	% Some basic operations on values
 	% indexing, appending lists (needed in coming slides)
 	% print
@@ -203,7 +226,7 @@
 			\begin{onlyenv}<3>
 				\begin{lstlisting}
 				>>> 9.0[1]
-				$\textrm{\color{red}TypeError: `int' object has no attribute `\_\_getitem\_\_'}$
+				$\textrm{\color{red}TypeError: `float' object has no attribute `\_\_getitem\_\_'}$
 				\end{lstlisting}
 			\end{onlyenv}
 			
@@ -293,11 +316,10 @@
 	\pause
 	
 	\begin{itemize}
-		\item Called a list comprehension.
 		\item Creates a new list out of another by using each element to create a corresponding new value.
-		
 		\item `\lstinline|for|' and `\lstinline|in|' are keywords.
-		\note{Keywords are ones that have a special meaning. You cannot use them as variable names. List comprehensions must use `\lstinline|for|' and `\lstinline|in|'}
+		\note<3->{Keywords are ones that have a special meaning. You cannot use them as variable names. List comprehensions must use `\lstinline|for|' and `\lstinline|in|'}
+		\item This is called a \colorbox{jargonbg}{list comprehension}.
 	\end{itemize}
 \end{frame}
 
@@ -339,12 +361,6 @@
 	
 	% and or gates
 	% ==
-\end{frame}
-
-\begin{frame}[fragile]
-	\frametitle{List comprehensions}
-	
-	% restate a former for+if example more concisely, teach them to think in terms of transforming data, pipelines
 \end{frame}
 
 \begin{frame}[fragile]
