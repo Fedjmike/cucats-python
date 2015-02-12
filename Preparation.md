@@ -1,3 +1,18 @@
+Preparation for CUCaTS coding workshop
+
+<!-- MarkdownTOC autolink=true bracket=round -->
+
+- [Installing Python](#installing-python)
+    - [Windows](#windows)
+    - [Mac](#mac)
+    - [Unix](#unix)
+- [Installing package installer](#installing-package-installer)
+    - [Windows](#windows-1)
+    - [Mac and Unix](#mac-and-unix)
+
+<!-- /MarkdownTOC -->
+
+
 # Installing Python
 
 https://www.python.org/downloads/release/python-342/
@@ -11,7 +26,7 @@ https://www.python.org/downloads/release/python-342/
 
 ## Mac
 
-* Download and run [OS X 10.6 and above](https://www.python.org/ftp/python/3.4.2/python-3.4.2-macosx10.6.pkg).
+* For OS X 10.6 and above, Download and run [this](https://www.python.org/ftp/python/3.4.2/python-3.4.2-macosx10.6.pkg).
 * Open your terminal by pressing `cmd + space` and entering `terminal`. Type `python3`
 
 ## Unix
