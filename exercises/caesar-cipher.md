@@ -1,10 +1,8 @@
-# Exercises for the CUCaTS Python Beginners workshop
-
-## Break a Caesar cipher!
+# Break a Caesar cipher!
 
 A *Caesar cipher* is a very simple encryption technique- each letter in the *plaintext* (the text to be encrypted) is replaced by a letter a fixed number of positions down the alphabet (the output is know as *ciphertext*. So for example `cucats` shifted left by two would give us `asayrq`. You're now going to write your very own Caesar cipher solver- let's get started!
 
-### Step one- Function to shift a character by a number of places
+## Step one- Function to shift a character by a number of places
 
 [Insert some stuff about how letters are stored as numbers]
 
