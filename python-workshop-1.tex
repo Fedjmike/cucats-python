@@ -108,8 +108,10 @@
 \end{frame}
 
 \begin{frame}[fragile]
-	\frametitle{Environment setup}
-	% Python, text editor, PIP?
+	\begin{quotation}
+		Literacy is a bridge from misery to hope. It is a tool for daily life in modern society. It is a bulwark against poverty, and a building block of development, an essential complement to investments in roads, dams, clinics and factories. Literacy is a platform for democratization, and a vehicle for the promotion of cultural and national identity. Especially for girls and women, it is an agent of family health and nutrition. For everyone, everywhere, literacy is, along with education in general, a basic human right.... Literacy is, finally, the road to human progress and the means through which every man, woman and child can realize his or her full potential.
+	\end{quotation}
+	-- Kofi Annan
 \end{frame}
 
 \begin{frame}[fragile]
@@ -186,7 +188,7 @@
 	>>> 7.5 * 2
 	15.0
 	\end{lstlisting}
-	\note<2>{Note that the multiplication results in \lstinline|15.0|, a float, because \lstinline|7.5| was a float.}
+	\note<2>{Explain REPL. Note that the multiplication results in \lstinline|15.0|, a float, because \lstinline|7.5| was a float.}
 	
 	\pause
 	
@@ -199,6 +201,23 @@
 	True
 	\end{lstlisting}
 	
+	\pause
+
+	\begin{lstlisting}
+	>>> "two" + "strings"
+	"twostrings" 
+	\end{lstlisting}
+\end{frame}
+
+\begin{frame}[fragile]
+	\frametitle{Try it out}
+
+	\begin{lstlisting}
+	>>> "a" + "b"
+	>>> "test" + "ing" == "testing"
+	>>> 3 == "3"
+	>>> "a" < "b"
+	\end{lstlisting}
 	% Some basic operations on values
 	% indexing, appending lists (needed in coming slides)
 	% print
@@ -277,7 +296,7 @@
 	\pause
 	
 	\begin{itemize} \item Assignment does not create a new value: \end{itemize}
-	% save for later? allows delaying explaing list += list
+	% save for later? allows delaying explaining list += list
 	
 	\begin{lstlisting}
 	>>> x = [5, 7]
