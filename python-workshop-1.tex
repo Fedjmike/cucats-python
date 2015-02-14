@@ -109,7 +109,7 @@
 
 \begin{frame}[fragile]
 	\begin{quotation}
-		Literacy is a bridge from misery to hope. It is a tool for daily life in modern society. It is a bulwark against poverty, and a building block of development, an essential complement to investments in roads, dams, clinics and factories. Literacy is a platform for democratization, and a vehicle for the promotion of cultural and national identity. Especially for girls and women, it is an agent of family health and nutrition. For everyone, everywhere, literacy is, along with education in general, a basic human right.... Literacy is, finally, the road to human progress and the means through which every man, woman and child can realize his or her full potential.
+		Literacy is a bridge from misery to hope. It is a tool for daily life in modern society. It is a bulwark against poverty, and a building block of development, an essential complement to investments in roads, dams, clinics and factories. Literacy is a platform for democratization, and a vehicle for the promotion of cultural and national identity. Especially for girls and women, it is an agent of family health and nutrition. For everyone, everywhere, literacy is, along with education in general, a basic human right\dots Literacy is, finally, the road to human progress and the means through which every man, woman and child can realize his or her full potential.
 	\end{quotation}
 \hfill	-- Kofi Annan
 \end{frame}
@@ -120,15 +120,30 @@
 \end{frame}
 
 \begin{frame}[fragile]
-	\frametitle{Python}
-	Python is a language: a set of rules for constructing programs.
-	
-	You can experiment with these rules using ``IDLE".
+	\frametitle{What is Python?}
 	\begin{itemize}
-		\item When you open IDLE, you can type things in and press enter to have IDLE read what you wrote.
-		\item When you type things in, you should write in Python. IDLE will complain if you don't.
-		\item Things you do in IDLE aren't permanent. You can always close IDLE and open it afresh.
-		\item As we introduce new ideas today, you can follow along by typing things into IDLE.
+		\item Python is a language: a set of rules for constructing programs.
+		\pause
+		\item Experiment using the interpreter. Type \lstinline|python| into a command prompt to launch.
+		\pause
+		\begin{lstlisting}
+		Python 3.4.2 (default, Dec 27 2014, 13:16:08)
+		[GCC 4.9.2] on linux
+		Type "help", "copyright", "credits" or "licen
+		>>>
+		\end{lstlisting}
+		\pause
+		\item Talk to the interpreter in Python.
+		\pause
+		\item Changes here aren't permanent. Can close and start again.
+		\note<5>{
+		When you open the interpreter, you can type things in and press enter to have it read what you wrote.
+		
+		When you type things in, you should write in Python. The interpreter will complain if you don't.
+		
+		Things you do in the interpreter aren't permanent. You can always close the window and open it afresh.
+		
+		As we introduce new ideas today, you can follow along by typing things into the interpreter.}
 	\end{itemize}
 \end{frame}
 
@@ -212,7 +227,17 @@
 	>>> "two" + "strings"
 	"twostrings" 
 	\end{lstlisting}
-	
+\end{frame}
+
+\begin{frame}[fragile]
+	\frametitle{Try it out}
+
+	\begin{lstlisting}
+	>>> "a" + "b"
+	>>> "test" + "ing" == "testing"
+	>>> 3 == "3"
+	>>> "a" < "b"
+	\end{lstlisting}
 	% Some basic operations on values
 	% indexing, appending lists (needed in coming slides)
 	% print
