@@ -4,7 +4,7 @@ from os import path
 here = path.abspath(path.dirname(__file__))
 setup(
     name = "cucats",
-    version = "1.0.0",
+    version = "1.0.1",
     packages=["cucats"],
 #    packages=find_packages(),
     description = "A CUCaTS python course self check exercise module",

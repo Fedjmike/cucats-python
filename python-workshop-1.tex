@@ -120,7 +120,6 @@
         \item Python is a language: a set of rules for constructing programs.
         \pause
         \item Experiment using the interpreter. Type \lstinline|python| into a command prompt to launch.
-        \pause
         \begin{lstlisting}
         Python 3.4.2 (default, Dec 27 2014, 13:16:08)
         [GCC 4.9.2] on linux
@@ -333,6 +332,7 @@
         \item Case sensitive: \lstinline|my_variable| and \lstinline|my_Variable| are different variables.
         \note<2>{Variable names must consist only of letters, digits and underscores. They can't start with a digit or have spaces. They are case sensitive, i.e.}
     \end{itemize}
+    \pause
     
     \begin{onlyenv}<1-2>
         \begin{lstlisting}
@@ -474,30 +474,45 @@
 
 \begin{frame}[fragile]
     \frametitle{Functions}
-	A function is a piece of code that can take an input value, processes it and gives back an output. The syntax for writing a function is simple --
+    A function is a piece of code that can take an input value, processes it and gives back an output. The syntax for writing a function is simple --
     \begin{lstlisting}
-	def function_name(input):
-	    # Your previous code goes here, which
-	    # processes the input as required.
-	    return output
+    def function_name(input):
+        # Your previous code goes here, which
+        # processes the input as required.
+        return output
     \end{lstlisting}
-	{\tt output} is the value you'd like to have after having performed your computation on {\tt input}.
+    {\tt output} is the value you'd like to have after having performed your computation on {\tt input}.
 \end{frame}
 
 \begin{frame}[fragile]
     \frametitle{Example function}
-	Here's a function that returns the sum of all values in a list:
+    Here's a function that returns the sum of all values in a list:
     \begin{lstlisting}
-	def sum(numbers):
-	    total = 0
+    def sum(numbers):
+        total = 0
         for x in numbers:
             total = total + x
-	    return total
+        return total
 
-	y = sum([1, 2, 3, 4, 5])
-	# The value of y is now 15.
+    y = sum([1, 2, 3, 4, 5])
+    # The value of y is now 15.
     \end{lstlisting}
-	{\tt output} is the value you'd like to have after having performed your computation on {\tt input}.
+    {\tt output} is the value you'd like to have after having performed your computation on {\tt input}.
+\end{frame}
+
+\begin{frame}[fragile]
+    \frametitle{Making a program: writing Python code in a file}
+    We have been using the interpreter. There is another way to use Python.
+    \begin{itemize}
+        \item We can save some Python commands in a file and then invoke the interpreter on the file.
+        \pause
+        \item Write \lstinline|print("Hello!")| in a file using a text editor (say, Notepad) and save it somewhere under the name \lstinline|my_python_script.py|.
+        \item Note the \lstinline|.py| extension!
+        \pause
+        \item Open a command prompt at the folder where you saved the script and type in the name of your script (\lstinline|my_python_script.py|).
+        \item The computer should respond: \lstinline|Hello!|
+    \end{itemize}
+    
 \end{frame}
 
 \end{document}
