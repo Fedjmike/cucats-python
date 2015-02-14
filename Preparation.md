@@ -63,11 +63,10 @@ Python comes with many useful libraries which you can install easily with a pack
     * Type `py get-pip.py` and press enter.
 
 ### Mac and Linux
-* You might want to check if pip is already installed. Open your terminal and type `pip` or `python3 -m pip`. If you don't get an error, then pip is already installed. 
-    * In that case, enter `python3 -m pip install --upgrade pip`. This will update pip so you can run it in the future with `pip` rather than `python3 -m pip`.
+* Check if you have pip installed: open your terminal and type `pip` or `python3 -m pip`. If you don't get an error, then pip is already installed.
 * If you don't have pip, you can run the following command which is a script to download the installer and installing it.
     - `curl -OL https://bootstrap.pypa.io/get-pip.py && python3 get-pip.py`
-    - If it complains about permission denied, you can try running `sudo python3 get-pip.py`
+    - If it complains about permission denied, run `sudo python3 get-pip.py`
 
 ### Using pip (Optional)
 

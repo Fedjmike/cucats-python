@@ -13,6 +13,7 @@ setup(
     url = "http://about.me/daniel.low",
     download_url = "http://cucats.org",
     keywords = ["CUCaTS"],
+    install_requires = ['pygeocoder'],
     classifiers = [
         "Programming Language :: Python",
         "Programming Language :: Python :: 3",
