@@ -14,7 +14,7 @@
 ## Getting the package
 
 Open the terminal/command prompt and enter 
-`pip install --user http://org/python-package`
+`pip install --user http://cucats.org/python-package`
 
 ## Using the package
 
@@ -32,10 +32,10 @@ Our exercises will ask you to provide either a value or implement a function. Th
 
 ### Demo 1: Submitting a value
 To get the instruction of the demo exercise 1. Enter
-`demo1.get_instruction()`
+`demo1.get_instructions()`
 You should see 
  
-    >>> demo1.get_instruction()
+    >>> demo1.get_instructions()
     Call the check method with the value of 40 + 2.
     i.e. demo1.check(answer)
 
@@ -62,9 +62,9 @@ If we store our value as a variable like `x = 40 + 2`, then we can submit it wit
 This demo will show you how to check your answer if the exercise is for you to implement a function.
 
 We first get instruction by typing 
-`demo2.get_instruction()`
+`demo2.get_instructions()`
 
-    >>> demo2.get_instruction()
+    >>> demo2.get_instructions()
     Write a function called f which returns the value 42.
     And then call the check method with the function
     i.e. demo2.check(f)

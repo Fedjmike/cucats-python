@@ -6,6 +6,10 @@ Created on Sat Feb 14 16:35:26 2015
 """
 
 class Wrapper:
+    """.get_instructions() to get instructions for this exercise.
+.check(answer) to check your answer"""    
+    
+    
     check_function = 1
     name = "default"
     instruction = ""
@@ -30,7 +34,7 @@ class Wrapper:
         else:
             print("Incorrect answer. Please try again.")
 
-    def get_instruction(self):
+    def get_instructions(self):
         print(self.instruction)
 
     def __init__(self, name, check_function, instruction = None):
