@@ -335,7 +335,9 @@
 	\begin{itemize}
 		\item Variables are labels put onto values. They allow us to refer to those values by a name.
 		% NOT BOXES BECAUSE REFERENCE SEMANTICS
-		\note<1>{Variable names must consist only of letters, digits and underscores. They can't start with a digit or have spaces. They are case sensitive, }
+		\pause
+		\item Case sensitive: \lstinline|my_variable| and \lstinline|my_Variable| are different variables.
+		\note<2>{Variable names must consist only of letters, digits and underscores. They can't start with a digit or have spaces. They are case sensitive, i.e.}
 	\end{itemize}
 	
 	\begin{onlyenv}<1-2>
@@ -436,7 +438,7 @@
 
 
 \begin{frame}[fragile]
-	\frametitle{if-else}
+	\frametitle{\lstinline|if|-\lstinline|else|}
 	
 	Provide two different pieces of code to run depending on some condition.\\
     \pause
