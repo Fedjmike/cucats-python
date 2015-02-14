@@ -194,6 +194,7 @@
 		% bother explaining them this early?
 		
 		% I'm thinking, don't mention tuples because it will be difficult to explain how they differ from lists
+		
 	\end{itemize}
 \end{frame}
 
@@ -366,16 +367,31 @@
 \begin{frame}[fragile]
 	\frametitle{for loops}
 	
-	\begin{lstlisting}
-	>>> nums = [1, 2, 3, 4, 5]
-	>>> total = 0
-	
-	>>> for x in nums:
-	        total = total + x
-	$\pause$
-	>>> print(total)
-	15
-	\end{lstlisting}
+	\begin{columns}[c]
+		\column{.7\textwidth}
+		\begin{lstlisting}
+		>>> nums = [1, 2, 3, 4, 5]
+		>>> total = 0
+		
+		>>> for x in nums:
+		        total = total + x
+		$\pause$
+		>>> print(total)
+		15
+		\end{lstlisting}
+		
+		\column{.2\textwidth}
+		\pause
+		\begin{tabular}{l | r}
+			\lstinline|x| & \lstinline|total| \\
+			\, & 0 \\ \pause
+			1 & 1 \\ \pause
+			2 & 3 \\ \pause
+			3 & 6 \\ \pause
+			4 & 10 \\ \pause
+			5 & 15 \\
+		\end{tabular}
+	\end{columns}
 	
 	% step by step on the side of the running total
 	
