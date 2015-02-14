@@ -238,6 +238,41 @@
 \end{frame}
 
 \begin{frame}[fragile]
+	\frametitle{Variables}
+	\begin{itemize}
+		\item Variables are labels put onto values. They allow us to refer to those values by a name.
+		% NOT BOXES BECAUSE REFERENCE SEMANTICS
+		\note<1>{Variable names must consist only of letters, digits and underscores. They can't start with a digit or have spaces. They are case sensitive, i.e.}
+	\end{itemize}
+	
+	\begin{onlyenv}<1-2>
+		\begin{lstlisting}
+		>>> x = 5
+		>>> y = x+6
+		>>> print(y)
+		11
+		\end{lstlisting}
+	\end{onlyenv}
+	
+	\pause
+	
+	\begin{itemize}
+		\item They can be reassigned:
+	\end{itemize}
+	
+	\begin{lstlisting}
+	>>> x = 5
+	>>> x = 7
+	>>> print(x)
+	7
+	\end{lstlisting}
+	
+	%\begin{itemize} \item Assignment does not create a new value: \end{itemize}%
+	% save for later? allows delaying explaining list += list
+	
+\end{frame}
+
+\begin{frame}[fragile]
     \frametitle{Accessing elements in lists}
     
     \begin{lstlisting}
@@ -321,44 +356,6 @@
     >>> list = [1, 2, 3]
     >>> list[1.0]
     \end{lstlisting}
-\end{frame}
-
-\begin{frame}[fragile]
-    \frametitle{Variables}
-    \begin{itemize}
-        \item Variables are labels put onto values. They allow us to refer to those values by a name.
-        % NOT BOXES BECAUSE REFERENCE SEMANTICS
-        \pause
-        \item Case sensitive: \lstinline|my_variable| and \lstinline|my_Variable| are different variables.
-        \note<2>{Variable names must consist only of letters, digits and underscores. They can't start with a digit or have spaces. They are case sensitive, i.e.}
-    \end{itemize}
-    \pause
-    
-    \begin{onlyenv}<1-2>
-        \begin{lstlisting}
-        >>> x = 5
-        >>> y = x+6
-        >>> print(y)
-        11
-        \end{lstlisting}
-    \end{onlyenv}
-    
-    \pause
-    
-    \begin{itemize} \item They can be reassigned: \end{itemize}
-    
-    \begin{lstlisting}
-    >>> x = 5
-    >>> x = 7
-    >>> print(x)
-    7
-    \end{lstlisting}
-    
-    \pause
-    
-    %\begin{itemize} \item Assignment does not create a new value: \end{itemize}%
-    % save for later? allows delaying explaining list += list
-
 \end{frame}
 
 \begin{frame}[fragile]
