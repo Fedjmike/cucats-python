@@ -1,0 +1,152 @@
+\documentclass[12pt]{article}
+
+\usepackage[pdftex]{graphicx}
+
+\usepackage{listings}
+\usepackage{color}
+\usepackage{etoolbox}
+
+\usepackage{amsmath}
+\usepackage{xcolor}
+\usepackage[margin=1in]{geometry}
+
+\setlength{\parindent}{0pt}
+
+\definecolor{orange}{rgb}{1,0.5,0}
+\definecolor{green}{rgb}{0,0.5,0}
+\definecolor{gray}{rgb}{0.25,0.25,0.25}
+\definecolor{mauve}{rgb}{0.58,0,0.82}
+\definecolor{red}{rgb}{1.0,0,0}
+
+\colorlet{punct}{green}
+\colorlet{delim}{green}
+\colorlet{num}{mauve}
+
+\definecolor{codebg}{rgb}{1.0,1.0,0.8}
+\definecolor{jargonbg}{rgb}{0.8,1.0,0.8}
+
+\newtoggle{InString}{}% Keep track of if we are within a string
+\togglefalse{InString}% Assume not initally in string
+
+\newcommand*{\ColorIfNotInString}[1]{\iftoggle{InString}{#1}{\color{num}#1}}
+\newcommand*{\ProcessQuote}[1]{\color{red}#1\iftoggle{InString}{\global\togglefalse{InString}}{\global\toggletrue{InString}}}
+
+\lstdefinelanguage{py}{
+	morekeywords={if,elif,else,for,in,def,class,True,False,print},
+	literate=
+		*{=}{{{\color{punct}{=}}}}{1}
+		{|}{{{\color{punct}{|}}}}{1}
+		{\^}{{{\color{punct}{\^{}}}}}{1}
+		{\{}{{{\color{punct}{\{}}}}{1}
+		{\}}{{{\color{punct}{\}}}}}{1}
+		{[}{{{\color{punct}{[}}}}{1}
+		{]}{{{\color{punct}{]}}}}{1}
+		{)}{{{\color{punct}{)}}}}{1}
+		{(}{{{\color{punct}{(}}}}{1}
+		{<}{{{\color{punct}{<}}}}{1}
+		{>}{{{\color{punct}{>}}}}{1}
+		{*}{{{\color{punct}{*}}}}{1}
+		{?}{{{\color{punct}{?}}}}{1}
+		{:}{{{\color{punct}{:}}}}{1}
+		{,}{{{\color{punct}{,}}}}{1}
+		{\&}{{{\color{punct}{\&}}}}{1}
+		{!}{{{\color{punct}{!}}}}{1}
+		{-}{{{\color{punct}{-}}}}{1}
+		{+}{{{\color{punct}{+}}}}{1}
+		{.}{{{\color{punct}{.}}}}{1}
+		{\%}{{{\color{punct}{\%}}}}{1}
+		{/}{{{\color{punct}{/}}}}{1}
+		{\~}{{{$\color{punct}{\sim}$}}}{1}
+		{;}{{{\color{punct}{;}}}}{1}
+		%{"}{{{\ProcessQuote{"}}}}1% Disable coloring within double quotes
+		%{'}{{{\ProcessQuote{'}}}}1% Disable coloring within single quote
+		{0}{{{\ColorIfNotInString{0}}}}1
+		{1}{{{\ColorIfNotInString{1}}}}1
+		{2}{{{\ColorIfNotInString{2}}}}1
+		{3}{{{\ColorIfNotInString{3}}}}1
+		{4}{{{\ColorIfNotInString{4}}}}1
+		{5}{{{\ColorIfNotInString{5}}}}1
+		{6}{{{\ColorIfNotInString{6}}}}1
+		{7}{{{\ColorIfNotInString{7}}}}1
+		{8}{{{\ColorIfNotInString{8}}}}1
+		{9}{{{\ColorIfNotInString{9}}}}1,
+}
+
+\lstset{
+	language=py,
+	%
+	captionpos=b,                    % sets the caption-position to bottom
+	mathescape=true,
+	keepspaces=true,
+	showspaces=false,
+	showstringspaces=false,          % underline spaces within strings only
+	showtabs=false,                  % show tabs within strings adding particular underscores
+	stepnumber=1,
+	tabsize=4,
+	title=\lstname,
+	morestring=[b]",
+	%
+	numberstyle=\footnotesize\color{gray},
+	rulecolor=\color{black},
+	basicstyle=\ttfamily\small,
+	commentstyle=\itshape,
+	backgroundcolor=\color{codebg},
+	keywordstyle=\color{blue},
+	commentstyle=\color{orange}\itshape,
+	stringstyle=\color{red},
+}
+
+\lstdefinestyle{output}{
+	basicstyle=\small\ttfamily,
+	numbers=none,
+	frame=tblr,
+	columns=fullflexible,
+	backgroundcolor=\color{blue!10},
+	linewidth=0.9\linewidth,
+	xleftmargin=0.1\linewidth
+}
+
+\title{CUCaTS Python Cheatsheet}
+\date{}
+
+\begin{document}
+	\maketitle
+	
+	\subsubsection*{}
+	
+	\begin{tabular}{l l}
+		\textbf{Datatype} & \textbf{Example} \\
+
+		Integers &
+		\colorbox{codebg}{\lstinline|5|} \\
+		
+		Floats &
+		\colorbox{codebg}{\lstinline|9.6|} \\
+		
+		Booleans &
+		\colorbox{codebg}{\lstinline|True|} and \colorbox{codebg}{\lstinline|False|} \\
+		
+		Strings &
+		\colorbox{codebg}{\lstinline|"Hello world!"|} \\
+		
+		Lists &
+		\colorbox{codebg}{\lstinline|[4, 8, 15, 16, 23, 42]|} \\
+		\, &
+		\colorbox{codebg}{\lstinline|["first", "second", "fourth"]|} \\
+		\, &
+		\colorbox{codebg}{\lstinline|[[], "some text", 99]|}
+	\end{tabular}
+	
+	\subsubsection*{Operations}
+	
+	\lstinline|+|, \lstinline|-|, \lstinline|*|, \lstinline|/| (on integers and floats)
+	
+	\lstinline|+| (to join strings or lists)
+	
+	\lstinline|*|
+	
+	\subsubsection*{Lists}
+	
+	\colorbox{codebg}{\lstinline|[x*x for x in nums]|}
+	
+\end{document}
