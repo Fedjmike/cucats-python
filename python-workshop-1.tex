@@ -217,6 +217,7 @@
 	>>> "test" + "ing" == "testing"
 	>>> 3 == "3"
 	>>> "a" < "b"
+	>>> "Na"*8 + " batman"
 	\end{lstlisting}
 	% Some basic operations on values
 	% indexing, appending lists (needed in coming slides)
@@ -266,6 +267,16 @@
 \end{frame}
 
 \begin{frame}[fragile]
+	\frametitle{Try it out}
+
+	\begin{lstlisting}
+	>>> "this is a string" + 2
+	>>> "this is a string" - "string"
+	>>> 
+	\end{lstlisting}
+\end{frame}
+
+\begin{frame}[fragile]
 	\frametitle{Variables}
 	\begin{itemize}
 		\item Variables are labels put onto values. They allow us to refer to those values by a name.
@@ -297,14 +308,7 @@
 	
 	\begin{itemize} \item Assignment does not create a new value: \end{itemize}
 	% save for later? allows delaying explaining list += list
-	
-	\begin{lstlisting}
-	>>> x = [5, 7]
-	>>> y = x
-	>>> y += [9, 11]
-	>>> print(x)
-	[5, 7, 9, 11]
-	\end{lstlisting} \note<3>{\lstinline|x| and \lstinline|y| now label the same value. When we add to \lstinline|y|, it is the same list that gets modified.}
+
 \end{frame}
 
 \begin{frame}[fragile]
