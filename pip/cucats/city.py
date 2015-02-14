@@ -30,7 +30,7 @@ class City (Wrapper):
         - Takes the names of two cities as input strings
         - Tells us what is at the point between the cities
 
-        To help you do this, we're giving you two fuctions:
+        To help you do this, we're giving you two functions:
         - 'coordinates(city)': Takes the name of a city as input and gives you (latitude, longitude)
         - 'city(latitude,longitude)': Takes a latitude and a longitude as input and returns a string telling you what's at the point
 
