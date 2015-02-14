@@ -132,16 +132,13 @@
 		Type "help", "copyright", "credits" or "licen
 		>>>
 		\end{lstlisting}
+		\note<2>{When you open the interpreter, you can type things in and press enter to have it read what you wrote.}
 		\pause
 		\item Talk to the interpreter in Python.
+		\note<4>{When you type things in, you should write in Python. The interpreter will complain if you don't.}
 		\pause
 		\item Changes here aren't permanent. Can close and start again.
-		\note<5>{
-		When you open the interpreter, you can type things in and press enter to have it read what you wrote.
-		
-		When you type things in, you should write in Python. The interpreter will complain if you don't.
-		
-		Things you do in the interpreter aren't permanent. You can always close the window and open it afresh.
+		\note<5>{Things you do in the interpreter aren't permanent. You can always close the window and open it afresh.
 		
 		As we introduce new ideas today, you can follow along by typing things into the interpreter.}
 	\end{itemize}
@@ -375,21 +372,30 @@
 	\begin{lstlisting}
 	>>> days = ["Mon", "Tue", "Wed", "Thu",
 	            "Fri", "Sat", "Sun"]
-	>>> days[0]
+	>>> days[1]
 	\end{lstlisting}
+	\note<1>{Let's make a list. To get items from the list, we use square brackets. What happens if we ask for the first element?}
 	\pause
 	What do you get?
 	\\
-	~\\
-	~\\
+	\note<2>{Try it out.}
 	\pause
 	\begin{lstlisting}
-	'Mon'
-	>>> days[1] == "Tue"
+	'Tue'
+	\end{lstlisting}
+	\note<3>{Tuesday? Why not Monday?}
+	\pause
+	\begin{lstlisting}
+	>>> days[0] == "Mon"
 	True
+	\end{lstlisting}
+	\note<4>{It's because indices start with zero in Python.}
+	\pause
+	\begin{lstlisting}
 	>>> days[-1]
 	'Sun'
 	\end{lstlisting}
+	\note<5>{We can also index into lists with negative numbers, to work backwards from the end of the list.}
 \end{frame}
 
 \begin{frame}[fragile]
