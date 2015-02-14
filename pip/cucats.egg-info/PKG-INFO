@@ -1,0 +1,23 @@
+Metadata-Version: 1.1
+Name: cucats
+Version: 1.0.0
+Summary: A CUCaTS python course self check exercise module
+Home-page: http://about.me/daniel.low
+Author: D. Low
+Author-email: daniellowtw@gmail.com
+License: UNKNOWN
+Download-URL: http://cucats.org
+Description: CUCaTS exercise module
+        -------------------------------------
+        This includes exercises for a Beginners Python workshop.
+        
+Keywords: CUCaTS
+Platform: UNKNOWN
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Development Status :: 4 - Beta
+Classifier: Environment :: Other Environment
+Classifier: Intended Audience :: Beginners
+Classifier: License :: OSI Approved :: GNU Library or Lesser General Public License (LGPL)
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Learning
