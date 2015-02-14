@@ -24,6 +24,7 @@
 
 \definecolor{codebg}{rgb}{1.0,1.0,0.8}
 \definecolor{jargonbg}{rgb}{0.8,1.0,0.8}
+\definecolor{spacebg}{rgb}{1.0,0.8,0.0}
 
 \newtoggle{InString}{}% Keep track of if we are within a string
 \togglefalse{InString}% Assume not initally in string
@@ -143,10 +144,20 @@
 	
 	\lstinline|+| (to join strings or lists)
 	
-	\lstinline|*|
+	\lstinline|==|, \lstinline|!=| (comparing any values)
+	
+	\lstinline|>|, \lstinline|>=|, \lstinline|<|, \lstinline|<=| (comparing integers or floats)
 	
 	\subsubsection*{Lists}
 	
-	\colorbox{codebg}{\lstinline|[x*x for x in nums]|}
+	\colorbox{codebg}{\lstinline|[x*x for x in nums]|} \\
+	
+	In general, \colorbox{codebg}{\lstinline|[$\colorbox{spacebg}{\quad}$ for $\ \colorbox{spacebg}{\quad}$ in $\ \colorbox{spacebg}{\quad}$]|}
+	
+	\subsubsection*{Control Flow}
+	
+	\colorbox{codebg}{\lstinline|for $\ \colorbox{spacebg}{\quad}$ in $\ \colorbox{spacebg}{\quad}$:|} \\
+	
+	\colorbox{codebg}{\lstinline|if $\ \colorbox{spacebg}{\quad}$:|}
 	
 \end{document}
