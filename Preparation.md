@@ -65,7 +65,7 @@ Python comes with many useful libraries which you can install easily with a pack
 ### Mac and Linux
 * If you don't have pip, you can run the following command which is a script to download the installer and installing it.
     - `curl -OL https://bootstrap.pypa.io/get-pip.py && python3 get-pip.py`
-    - If it complains about permission denied, you can run `sudo python3 get-pip.py`
+    - If it complains about permission denied, run `sudo python3 get-pip.py`
 
 ### Using pip (Optional)
 
