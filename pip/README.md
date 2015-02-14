@@ -14,47 +14,47 @@
 ## Getting the package
 
 Open the terminal/command prompt and enter 
-`pip install --user http://cucats.org/python-package`
+`pip install --user http://org/python-package`
 
 ## Using the package
 
-Run python, enter `import cucats`.
+Run python, enter `from cucats import *`.
 This will load the module with the exercises we have prepared.
 
 ### Listing the exercises available
-`cucats.exercises`
+`exercises`
 Here we can see the list of exercises available.
 
-    >>> cucats.exercises
+    >>> exercises
     ['ex1', 'ex2', 'demo1', 'demo2']  
 
 Our exercises will ask you to provide either a value or implement a function. The demo below will walk you through how to do both.
 
 ### Demo 1: Submitting a value
 To get the instruction of the demo exercise 1. Enter
-`cucats.demo1.get_instruction()`
+`demo1.get_instruction()`
 You should see 
  
-    >>> cucats.demo1.get_instruction()
+    >>> demo1.get_instruction()
     Call the check method with the value of 40 + 2.
-    i.e. cucats.demo1.check(answer)
+    i.e. demo1.check(answer)
 
 We know 40 + 2 = 42. So we check out answer with
-`cucats.demo1.check(42)`
+`demo1.check(42)`
 
-    >>> cucats.demo1.check(42)            
+    >>> demo1.check(42)            
     Correct! Well done!
 
 What if we made a mistake?
-`cucats.demo1.check(41)`
+`demo1.check(41)`
 
-    >>> cucats.demo1.check(41)   
+    >>> demo1.check(41)   
     Incorrect. Please try again. 
 
 If we store our value as a variable like `x = 40 + 2`, then we can submit it with 
 
     >>> x = 40 + 2
-    >>> cucats.demo1.check(x)
+    >>> demo1.check(x)
     Correct! Well done!
 
 
@@ -62,12 +62,12 @@ If we store our value as a variable like `x = 40 + 2`, then we can submit it wit
 This demo will show you how to check your answer if the exercise is for you to implement a function.
 
 We first get instruction by typing 
-`cucats.demo2.get_instruction()`
+`demo2.get_instruction()`
 
-    >>> cucats.demo2.get_instruction()
+    >>> demo2.get_instruction()
     Write a function called f which returns the value 42.
     And then call the check method with the function
-    i.e. cucats.demo2.check(f)
+    i.e. demo2.check(f)
 
 So we start by defining a function to do that:
 
@@ -76,5 +76,5 @@ So we start by defining a function to do that:
 
 and then we can submit our function with
 
-    >>> cucats.demo2.check(test)   
+    >>> demo2.check(test)   
     Correct! Well done!
