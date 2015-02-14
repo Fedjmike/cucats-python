@@ -1,0 +1,7 @@
+setup.py
+cucats/__init__.py
+cucats/exercise1.py
+cucats_python.egg-info/PKG-INFO
+cucats_python.egg-info/SOURCES.txt
+cucats_python.egg-info/dependency_links.txt
+cucats_python.egg-info/top_level.txt
