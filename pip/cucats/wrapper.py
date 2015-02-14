@@ -30,6 +30,9 @@ class Wrapper:
         else:
             print("Incorrect answer. Please try again.")
 
+    def get_instruction(self):
+        print(self.instruction)
+
     def __init__(self, name, check_function, instruction = None):
         self.name = name
         self.check_function = check_function
