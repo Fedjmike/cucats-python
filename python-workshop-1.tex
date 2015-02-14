@@ -65,7 +65,7 @@
 }
 
 \lstset{
-	language=py,
+	language=Python,
 	%
 	captionpos=b,                    % sets the caption-position to bottom
 	mathescape=true,
@@ -408,14 +408,42 @@
 \begin{frame}[fragile]
 	\frametitle{if-else}
 	
-	Provide two different pieces of code to run depending on some condition.
+	Provide two different pieces of code to run depending on some condition.\\
+    \pause
+    A condition is an expression which when evaluated, returns either `\lstinline|True|' or `\lstinline|False|'.
 	
 	% explain in the context of for loops, because otherwise the condition is going to be tautological and it won't be clear why providing a branch is useful
 	% which is why if comes after for
-	
+    \pause	
 	\begin{lstlisting}
-	if :
+	if MY_CONDITION:
+    # Perform computation if
+    # MY_CONDITION evaluates
+    # to True.
+	else:
+    # Perform computation if
+    # MY_CONDITION evaluates
+    # to False.
 	\end{lstlisting}
+\end{frame}
+
+\begin{frame}[fragile]
+    \frametitle{If-else examples}
+
+    Let's write some code to go through a bunch of values in a list and output whether or not they are even or odd.
+    
+	\pause
+	\begin{lstlisting}
+	xs = [5,1,-4,100,53,-91,32]
+
+	for x in xs:
+	    if (x % 2) == 0:
+	        print(x, "is even.")
+	    else:
+	        print(x, "is odd.")
+	\end{lstlisting}
+	\pause
+	Try it out!
 \end{frame}
 
 \begin{frame}[fragile]
