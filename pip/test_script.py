@@ -7,8 +7,14 @@ Created on Fri Feb 13 19:01:08 2015
 This is a script to test the module.
 """
 
-import cucats as c
+import cucats
+from cucats import *
 
-c.ex1.instruction
-c.ex1.check(2)
-c.ex1.check(2**1000)
+def between(city1,city2):
+    lat = (coordinates(city1)[0] + coordinates(city2)[0])/2
+    lon = (coordinates(city1)[1] + coordinates(city2)[1])/2
+    return(city(lat, lon))
+
+
+
+cucats.city_ex.check(between)
