@@ -25,6 +25,7 @@
 
 \lstdefinelanguage{py}{
 	morekeywords={if,elif,else,for,in,def,class,True,False,print},
+	morecomment=[l]\#,
 	literate=
 		*{=}{{{\color{punct}{=}}}}{1}
 		{|}{{{\color{punct}{|}}}}{1}
@@ -65,7 +66,7 @@
 }
 
 \lstset{
-	language=Python,
+	language=py,
 	%
 	captionpos=b,                    % sets the caption-position to bottom
 	mathescape=true,
@@ -457,15 +458,15 @@
 \end{frame}
 
 \begin{frame}[fragile]
-    \frametitle{If-else examples}
+    \frametitle{\lstinline|if|-\lstinline|else| examples}
 
     Let's write some code to go through a bunch of values in a list and output whether or not they are even or odd.
     
 	\pause
 	\begin{lstlisting}
-	xs = [5,1,-4,100,53,-91,32]
+	numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 
-	for x in xs:
+	for x in numbers:
 	    if (x % 2) == 0:
 	        print(x, "is even.")
 	    else:
