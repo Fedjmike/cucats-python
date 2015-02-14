@@ -245,6 +245,38 @@
 \end{frame}
 
 \begin{frame}[fragile]
+	\frametitle{Accessing elements in lists}
+	
+	\begin{lstlisting}
+	>>> days = ["Mon", "Tue", "Wed", "Thu",
+	...         "Fri", "Sat", "Sun"]
+	>>> days[1]
+	\end{lstlisting}
+	\note<1>{Let's make a list. To get items from the list, we use square brackets. What happens if we ask for the first element?}
+	\pause
+	What do you get?
+	\\
+	\note<2>{Try it out.}
+	\pause
+	\begin{lstlisting}
+	'Tue'
+	\end{lstlisting}
+	\note<3>{Tuesday? Why not Monday?}
+	\pause
+	\begin{lstlisting}
+	>>> days[0] == "Mon"
+	True
+	\end{lstlisting}
+	\note<4>{It's because indices start with zero in Python.}
+	\pause
+	\begin{lstlisting}
+	>>> days[-1]
+	'Sun'
+	\end{lstlisting}
+	\note<5>{We can also index into lists with negative numbers, to work backwards from the end of the list.}
+\end{frame}
+
+\begin{frame}[fragile]
 	\frametitle{Errors}
 	
 	\begin{itemize}
@@ -365,38 +397,6 @@
 	% step by step on the side of the running total
 	
 	% whitespace...
-\end{frame}
-
-\begin{frame}[fragile]
-	\frametitle{Accessing elements in lists}
-	
-	\begin{lstlisting}
-	>>> days = ["Mon", "Tue", "Wed", "Thu",
-	...         "Fri", "Sat", "Sun"]
-	>>> days[1]
-	\end{lstlisting}
-	\note<1>{Let's make a list. To get items from the list, we use square brackets. What happens if we ask for the first element?}
-	\pause
-	What do you get?
-	\\
-	\note<2>{Try it out.}
-	\pause
-	\begin{lstlisting}
-	'Tue'
-	\end{lstlisting}
-	\note<3>{Tuesday? Why not Monday?}
-	\pause
-	\begin{lstlisting}
-	>>> days[0] == "Mon"
-	True
-	\end{lstlisting}
-	\note<4>{It's because indices start with zero in Python.}
-	\pause
-	\begin{lstlisting}
-	>>> days[-1]
-	'Sun'
-	\end{lstlisting}
-	\note<5>{We can also index into lists with negative numbers, to work backwards from the end of the list.}
 \end{frame}
 
 \begin{frame}[fragile]
