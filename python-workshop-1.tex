@@ -432,7 +432,7 @@
 
 
 \begin{frame}[fragile]
-    \frametitle{\lstinline|if|-\lstinline|else|}
+    \frametitle{if-else}
     
     Provide two different pieces of code to run depending on some condition.\\
     \pause
@@ -474,19 +474,7 @@
 
 \begin{frame}[fragile]
     \frametitle{Functions}
-    A function is a piece of code that can take an input value, processes it and gives back an output. The syntax for writing a function is simple --
-    \begin{lstlisting}
-    def function_name(input):
-        # Your previous code goes here, which
-        # processes the input as required.
-        return output
-    \end{lstlisting}
-    {\tt output} is the value you'd like to have after having performed your computation on {\tt input}.
-\end{frame}
-
-\begin{frame}[fragile]
-    \frametitle{Example function}
-    Here's a function that returns the sum of all values in a list:
+    A function is a piece of code that can take an input value, processes it and gives back an output. The syntax for writing a function is simple:
     \begin{lstlisting}
     def sum(numbers):
         total = 0
@@ -498,6 +486,25 @@
     # The value of y is now 15.
     \end{lstlisting}
     {\tt output} is the value you'd like to have after having performed your computation on {\tt input}.
+\end{frame}
+
+\begin{frame}[fragile]
+    \frametitle{Functions}
+	Functions can also take multiple values as inputs:
+    \begin{lstlisting}
+    def add(num1, num2):
+        sum = num1 + num2
+        return sum
+
+    def mult(num1, num2):
+        product = num1 * num2
+        return product
+
+    x = add(4,3)
+    y = mult(6,5)
+    # The value of x is now 7.
+    # The value of y is now 30.
+    \end{lstlisting}
 \end{frame}
 
 \begin{frame}[fragile]
