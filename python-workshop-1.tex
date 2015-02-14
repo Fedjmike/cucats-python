@@ -277,7 +277,7 @@
 		
 		\begin{lstlisting}
 		>>> days = ["Mon", "Tue", "Wed", "Thu",
-		...	 	"Fri", "Sat", "Sun"]
+		...         "Fri", "Sat", "Sun"]
 		>>> days[1]
 		\end{lstlisting}
 		\note<1>{Let's make a list. To get items from the list, we use square brackets. What happens if we ask for the first element?}
@@ -440,13 +440,13 @@
 		\pause  
 		\begin{lstlisting}
 		if MY_CONDITION:
-		# Perform computation if
-		# MY_CONDITION evaluates
-		# to True.
+			# Perform computation if
+			# MY_CONDITION evaluates
+			# to True.
 		else:
-		# Perform computation if
-		# MY_CONDITION evaluates
-		# to False.
+			# Perform computation if
+			# MY_CONDITION evaluates
+			# to False.
 		\end{lstlisting}
 	\end{frame}
 	
@@ -460,10 +460,10 @@
 		numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 		
 		for x in numbers:
-		if (x % 2) == 0:
-		print(x, "is even.")
-		else:
-		print(x, "is odd.")
+			if (x % 2) == 0:
+				print(x, "is even.")
+			else:
+				print(x, "is odd.")
 		\end{lstlisting}
 		\pause
 		Try it out!
@@ -474,10 +474,10 @@
 		A function is a piece of code that can take an input value, processes it and gives back an output. The syntax for writing a function is simple:
 		\begin{lstlisting}
 		def sum(numbers):
-		total = 0
-		for x in numbers:
-		total = total + x
-		return total
+			total = 0
+			for x in numbers:
+				total = total + x
+			return total
 		
 		y = sum([1, 2, 3, 4, 5])
 		# The value of y is now 15.
@@ -490,12 +490,12 @@
 		Functions can also take multiple values as inputs:
 		\begin{lstlisting}
 		def add(num1, num2):
-		sum = num1 + num2
-		return sum
+			sum = num1 + num2
+			return sum
 		
 		def mult(num1, num2):
-		product = num1 * num2
-		return product
+			product = num1 * num2
+			return product
 		
 		x = add(4,3)
 		y = mult(6,5)
