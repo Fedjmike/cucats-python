@@ -333,17 +333,17 @@
 \end{frame}
 
 \begin{frame}[fragile]
-	\frametitle{for loops}
+	\frametitle{`for' loops}
 	
 	\begin{columns}[c]
 		\column{.7\textwidth}
 		\begin{lstlisting}
 		>>> nums = [1, 2, 3, 4, 5]
 		>>> total = 0
-		
 		>>> for x in nums:
-		        total = total + x
-		$\pause$
+		...     total = total + x
+		$\note<1>{The line `for x in nums' followed by the colon opens up a new block of code, which has to be indented. Everything in the block gets executed for each x in nums. To indent, use four spaces! You can put multiple lines in a block, and they must each be indented.}
+		\pause$
 		>>> print(total)
 		15
 		\end{lstlisting}
@@ -371,7 +371,7 @@
 	
 	\begin{lstlisting}
 	>>> days = ["Mon", "Tue", "Wed", "Thu",
-	            "Fri", "Sat", "Sun"]
+	...         "Fri", "Sat", "Sun"]
 	>>> days[1]
 	\end{lstlisting}
 	\note<1>{Let's make a list. To get items from the list, we use square brackets. What happens if we ask for the first element?}
