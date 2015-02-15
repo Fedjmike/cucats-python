@@ -3,13 +3,13 @@
 from cucats import exercise1,exercise2,demo,fizzbuzz
 from cucats.city import city, coordinates, City
 
-version = 2.0
-city_ex = City()
+version = 2.1
 demo1 = demo.Demo1()
 demo2 = demo.Demo2()
 ex1 = exercise1.Exercise1()
 ex2 = exercise2.Exercise2()
-fizzbuzz = fizzbuzz.Exercise()
+ex3 = City()
+ex4 = fizzbuzz.Exercise()
 
-exercises = ['ex1','ex2','demo1','demo2','fizzbuzz','city_ex']
+exercises = ['demo1','demo2','ex1','ex2','ex3','ex4']
 
