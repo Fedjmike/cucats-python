@@ -36,7 +36,7 @@
 \newcommand*{\ProcessQuote}[1]{\color{red}#1\iftoggle{InString}{\global\togglefalse{InString}}{\global\toggletrue{InString}}}
 
 \lstdefinelanguage{py}{
-	morekeywords={if,elif,else,for,in,def,class,True,False,print},
+	morekeywords={if,elif,else,for,in,def,class,True,False,print,return},
 	literate=
 		*{=}{{{\color{punct}{=}}}}{1}
 		{|}{{{\color{punct}{|}}}}{1}
@@ -136,7 +136,10 @@
 		\, &
 		\colorbox{codebg}{\lstinline|["first", "second"]|} \\
 		\, &
-		\colorbox{codebg}{\lstinline|[[], "some text", 99]|}
+		\colorbox{codebg}{\lstinline|[[], "some text", 99]|} \\
+		
+		Dictionaries &
+		\colorbox{codebg}{\lstinline|\{"Alice": 42, "Bob": 40\}|}
 	\end{tabular}
 	
 	\subsubsection*{Operations}
@@ -172,6 +175,8 @@
 	\subsubsection*{Functions}
 	
 	\colorbox{codebg}{\lstinline|def $\ \colorbox{spacebg}{\quad}$($\colorbox{spacebg}{\quad}$):|} \\
+	
+	\colorbox{codebg}{\lstinline|\ \ \ \ return $\ \colorbox{spacebg}{\quad}$|} \\
 	
 	\subsubsection*{Common methods}
 	
