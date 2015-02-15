@@ -1,4 +1,4 @@
-\documentclass[12pt]{article}
+\documentclass[12pt,twocolumn]{article}
 
 \usepackage[pdftex]{graphicx}
 
@@ -9,6 +9,8 @@
 \usepackage{amsmath}
 \usepackage{xcolor}
 \usepackage[margin=1in]{geometry}
+
+\setlength{\columnsep}{30pt}
 
 \setlength{\parindent}{0pt}
 
@@ -112,9 +114,7 @@
 
 \begin{document}
 	\maketitle
-	
-	\subsubsection*{}
-	
+
 	\begin{tabular}{l l}
 		\textbf{Datatype} & \textbf{Example} \\
 
@@ -133,7 +133,7 @@
 		Lists &
 		\colorbox{codebg}{\lstinline|[4, 8, 15, 16, 23, 42]|} \\
 		\, &
-		\colorbox{codebg}{\lstinline|["first", "second", "fourth"]|} \\
+		\colorbox{codebg}{\lstinline|["first", "second"]|} \\
 		\, &
 		\colorbox{codebg}{\lstinline|[[], "some text", 99]|}
 	\end{tabular}
@@ -148,7 +148,7 @@
 	
 	\lstinline|>|, \lstinline|>=|, \lstinline|<|, \lstinline|<=| (comparing integers or floats)
 	
-	\subsection*{Variables}
+	\subsubsection*{Variables}
 	
 	Labels onto values. Their names must consist only of letters, digits and underscores. They can't start with a digit or have spaces. They are case sensitive.
 	
@@ -158,7 +158,7 @@
 	
 	In general, \colorbox{codebg}{\lstinline|[$\colorbox{spacebg}{\quad}$ for $\ \colorbox{spacebg}{\quad}$ in $\ \colorbox{spacebg}{\quad}$]|}
 	
-	\subsubsection*{Control Flow}
+	\subsubsection*{Control flow}
 	
 	\colorbox{codebg}{\lstinline|for $\ \colorbox{spacebg}{\quad}$ in $\ \colorbox{spacebg}{\quad}$:|} \\
 	
@@ -166,6 +166,37 @@
 	
 	\subsubsection*{Functions}
 	
-	\colorbox{codebg}{\lstinline|def $\ \colorbox{spacebg}{\quad}$($\colorbox{spacebg}{\quad}$):|}
+	\colorbox{codebg}{\lstinline|def $\ \colorbox{spacebg}{\quad}$($\colorbox{spacebg}{\quad}$):|} \\
 	
+	\subsubsection*{Common methods}
+	
+	list.\lstinline|append($\colorbox{spacebg}{item}$)| \\
+	list.\lstinline|reverse()| \\
+	list.\lstinline|remove($\colorbox{spacebg}{item}$)| \\
+	
+	string.\lstinline|split($\colorbox{spacebg}{separator}$)| \\
+	string.\lstinline|capitalize()| \\
+	string.\lstinline|upper()| \\
+	string.\lstinline|lower()| \\
+	string.\lstinline|find($\colorbox{spacebg}{substring}$)| \\
+	
+	\subsubsection*{Dictionaries}
+	
+	An example:
+	\begin{lstlisting}[belowskip=-0.8 \baselineskip]
+ages = {"Alice": 42, "Bob": 40}
+\end{lstlisting}
+	Indexing:
+	\begin{lstlisting}[belowskip=-0.8 \baselineskip]
+>>> ages["Bob"]
+35\end{lstlisting}
+	Keys:
+	\begin{lstlisting}[belowskip=-0.8 \baselineskip]
+>>> ages.keys()
+dict_keys(['Alice', 'Bob'])\end{lstlisting}
+	Adding items:
+	\begin{lstlisting}[belowskip=-0.8 \baselineskip]
+>>> ages.update({"Charlie": 1})\end{lstlisting}
+	
+
 \end{document}

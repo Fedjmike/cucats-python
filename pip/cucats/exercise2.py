@@ -18,7 +18,7 @@ def squaring(f):
 
 class Exercise2 (Wrapper):
     def __init__(self):
-        instruction = "Write a function f that returns the square of the input. Call squaring.check(f)"
+        instruction = "Write a function f that returns the square of the input. Call ex2.check(f)"
         title = "Writing a "
         Wrapper.__init__(self, title, squaring, instruction)
         print ("Exercises 2 loaded")

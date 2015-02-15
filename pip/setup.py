@@ -4,7 +4,7 @@ from os import path
 here = path.abspath(path.dirname(__file__))
 setup(
     name = "cucats",
-    version = "1.0.1",
+    version = "2.0.0",
     packages=["cucats"],
 #    packages=find_packages(),
     description = "A CUCaTS python course self check exercise module",
@@ -13,6 +13,7 @@ setup(
     url = "http://about.me/daniel.low",
     download_url = "http://cucats.org",
     keywords = ["CUCaTS"],
+    install_requires = ['pygeocoder'],
     classifiers = [
         "Programming Language :: Python",
         "Programming Language :: Python :: 3",

@@ -1,4 +1,5 @@
 \documentclass[notes]{beamer}
+%\documentclass[handout]{beamer}
 
 \usepackage{listings}
 \usepackage{color}
@@ -126,15 +127,15 @@
 			Type "help", "copyright", "credits" or "licen
 			>>>
 			\end{lstlisting}
-			\note<2>{When you open the interpreter, you can type things in and press enter to have it read what you wrote.}
+			%\note<2>{When you open the interpreter, you can type things in and press enter to have it read what you wrote.}
 			\pause
 			\item Talk to the interpreter in Python.
-			\note<4>{When you type things in, you should write in Python. The interpreter will complain if you don't.}
+			%\note<4>{When you type things in, you should write in Python. The interpreter will complain if you don't.}
 			\pause
 			\item Changes here aren't permanent. Can close and start again.
-			\note<5>{Things you do in the interpreter aren't permanent. You can always close the window and open it afresh.
+			%\note<5>{Things you do in the interpreter aren't permanent. You can always close the window and open it afresh.
 				
-				As we introduce new ideas today, you can follow along by typing things into the interpreter.}
+			% As we introduce new ideas today, you can follow along by typing things into the interpreter.}
 		\end{itemize}
 	\end{frame}
 	
@@ -157,19 +158,19 @@
 		\begin{itemize}
 			\item Numbers (integers, floats) \\
 			e.g. \colorbox{codebg}{\lstinline|5|} or \colorbox{codebg}{\lstinline|9.6|}
-			\note<1>{Integers can hold whole numbers only. ``Floats", or floating-point numbers, are capable of fractional numbers as well. \\}
+			%\note<1>{Integers can hold whole numbers only. ``Floats", or floating-point numbers, are capable of fractional numbers as well. \\}
 			
 			\pause
 			
 			\item Strings \\
 			\colorbox{codebg}{\lstinline|"Hello world!"|}
-			\note<3>{Strings can use single quotes or double quotes, but we will stick to double quotes for consistency. \\}
+			%\note<3>{Strings can use single quotes or double quotes, but we will stick to double quotes for consistency. \\}
 			
 			\pause
 			
 			\item Booleans \\
 			\colorbox{codebg}{\lstinline|True|} and \colorbox{codebg}{\lstinline|False|}
-			\note<2>{True/false values are called ``Booleans" (after George Boole). They are used for expression conditions.}
+			%\note<2>{True/false values are called ``Booleans" (after George Boole). They are used for expression conditions.}
 			
 			\pause
 			
@@ -177,7 +178,7 @@
 			\colorbox{codebg}{\lstinline|[4, 8, 15, 16, 23, 42]|} \\
 			or \colorbox{codebg}{\lstinline|["first", "second", "fourth"]|} \\
 			or even \colorbox{codebg}{\lstinline|[[], "some text", 99]|}
-			\note<4>{Lists hold a sequence of values. The third example is a list containing firstly an empty list, then a string and then an integer. As you can see, the elements of a list do not have to all be the same datatype. In Python, a list is simply a list, not a list \emph{of} something. \\}
+			%\note<4>{Lists hold a sequence of values. The third example is a list containing firstly an empty list, then a string and then an integer. As you can see, the elements of a list do not have to all be the same datatype. In Python, a list is simply a list, not a list \emph{of} something. \\}
 			
 			%\pause
 			
@@ -200,7 +201,7 @@
 		>>> 7.5 * 2
 		15.0
 		\end{lstlisting}
-		\note<2>{Explain REPL. Note that the multiplication results in \lstinline|15.0|, a float, because \lstinline|7.5| was a float.}
+		%\note<2>{Explain REPL. Note that the multiplication results in \lstinline|15.0|, a float, because \lstinline|7.5| was a float.}
 		
 		\pause
 		
@@ -242,7 +243,7 @@
 		\begin{itemize}
 			\item Variables are labels put onto values. They allow us to refer to those values by a name.
 			% NOT BOXES BECAUSE REFERENCE SEMANTICS
-			\note<1>{Variable names must consist only of letters, digits and underscores. They can't start with a digit or have spaces. They are case sensitive, i.e.}
+			%\note<1>{Variable names must consist only of letters, digits and underscores. They can't start with a digit or have spaces. They are case sensitive, i.e.}
 		\end{itemize}
 		
 		\begin{onlyenv}<1-2>
@@ -280,28 +281,28 @@
 		...         "Fri", "Sat", "Sun"]
 		>>> days[1]
 		\end{lstlisting}
-		\note<1>{Let's make a list. To get items from the list, we use square brackets. What happens if we ask for the first element?}
+		%\note<1>{Let's make a list. To get items from the list, we use square brackets. What happens if we ask for the first element?}
 		\pause
 		What do you get?
 		\\
-		\note<2>{Try it out.}
+		%\note<2>{Try it out.}
 		\pause
 		\begin{lstlisting}
 		'Tue'
 		\end{lstlisting}
-		\note<3>{Tuesday? Why not Monday?}
+		%\note<3>{Tuesday? Why not Monday?}
 		\pause
 		\begin{lstlisting}
 		>>> days[0] == "Mon"
 		True
 		\end{lstlisting}
-		\note<4>{It's because indices start with zero in Python.}
+		%\note<4>{It's because indices start with zero in Python.}
 		\pause
 		\begin{lstlisting}
 		>>> days[-1]
 		'Sun'
 		\end{lstlisting}
-		\note<5>{We can also index into lists with negative numbers, to work backwards from the end of the list.}
+		%\note<5>{We can also index into lists with negative numbers, to work backwards from the end of the list.}
 	\end{frame}
 	
 	\begin{frame}[fragile]
@@ -367,8 +368,8 @@
 			>>> nums = [1, 2, 3, 4, 5]
 			>>> total = 0
 			>>> for x in nums:
-			... 	total = total + x
-			$\note<1>{The line `for x in nums' followed by the colon opens up a new block of code, which has to be indented. Everything in the block gets executed for each x in nums. To indent, use four spaces! You can put multiple lines in a block, and they must each be indented.}
+			...     total = total + x
+			$ % \note<1>{The line `for x in nums' followed by the colon opens up a new block of code, which has to be indented. Everything in the block gets executed for each x in nums. To indent, use four spaces! You can put multiple lines in a block, and they must each be indented.}
 			\pause$
 			>>> print(total)
 			15
@@ -422,7 +423,7 @@
 		\begin{itemize}
 			\item Creates a new list out of another by using each element to create a corresponding new value.
 			\item `\lstinline|for|' and `\lstinline|in|' are keywords.
-			\note<3->{Keywords are ones that have a special meaning. You cannot use them as variable names. List comprehensions must use `\lstinline|for|' and `\lstinline|in|'}
+			%\note<3->{Keywords are ones that have a special meaning. You cannot use them as variable names. List comprehensions must use `\lstinline|for|' and `\lstinline|in|'}
 			\item This is called a \colorbox{jargonbg}{list comprehension}.
 		\end{itemize}
 	\end{frame}
@@ -437,16 +438,16 @@
 		
 		% explain in the context of for loops, because otherwise the condition is going to be tautological and it won't be clear why providing a branch is useful
 		% which is why if comes after for
-		\pause  
+		\pause
 		\begin{lstlisting}
 		if MY_CONDITION:
-			# Perform computation if
-			# MY_CONDITION evaluates
-			# to True.
+		    # Perform computation if
+		    # MY_CONDITION evaluates
+		    # to True.
 		else:
-			# Perform computation if
-			# MY_CONDITION evaluates
-			# to False.
+		    # Perform computation if
+		    # MY_CONDITION evaluates
+		    # to False.
 		\end{lstlisting}
 	\end{frame}
 	
@@ -460,10 +461,10 @@
 		numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 		
 		for x in numbers:
-			if (x % 2) == 0:
-				print(x, "is even.")
-			else:
-				print(x, "is odd.")
+		    if (x % 2) == 0:
+		        print(x, "is even.")
+		    else:
+		        print(x, "is odd.")
 		\end{lstlisting}
 		\pause
 		Try it out!
@@ -474,10 +475,10 @@
 		A function is a piece of code that can take an input value, processes it and gives back an output. The syntax for writing a function is simple:
 		\begin{lstlisting}
 		def sum(numbers):
-			total = 0
-			for x in numbers:
-				total = total + x
-			return total
+		    total = 0
+		    for x in numbers:
+		        total = total + x
+		    return total
 		
 		y = sum([1, 2, 3, 4, 5])
 		# The value of y is now 15.
@@ -490,12 +491,12 @@
 		Functions can also take multiple values as inputs:
 		\begin{lstlisting}
 		def add(num1, num2):
-			sum = num1 + num2
-			return sum
+		    sum = num1 + num2
+		    return sum
 		
 		def mult(num1, num2):
-			product = num1 * num2
-			return product
+		    product = num1 * num2
+		    return product
 		
 		x = add(4,3)
 		y = mult(6,5)
@@ -516,7 +517,20 @@
 			\item Open a command prompt at the folder where you saved the script and type in the name of your script (\lstinline|my_python_script.py|).
 			\item The computer should respond: \lstinline|Hello!|
 		\end{itemize}
-		
+	\end{frame}
+	
+	\begin{frame}[fragile]
+		\frametitle{The print function}
+		\begin{lstlisting}
+		print(value)
+		\end{lstlisting}
+		\begin{itemize}
+			\item \lstinline|print| writes things into the command prompt.
+			\pause
+			\item \lstinline|print| can print all kinds of values.
+			\pause
+			\item A useful function to see ``what's going on'' in your program.
+		\end{itemize}
 	\end{frame}
 	
 \end{document}
