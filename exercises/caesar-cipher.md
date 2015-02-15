@@ -49,7 +49,7 @@ Ok, let's see if the function works:
 
   and run `cipher.py`. You should see 'x'.
   
-We're doing good, but not quite there yet.
+We're doing well, but not quite there yet.
 
 * What happens if you do the following?
 
@@ -61,7 +61,8 @@ We end up getting an opening curly bracket! This is because ASCII doesn't only o
 
 ## Step 3: Fixing our function to enable wrapping around
 
-* Open up your text editor and make the following changes to `cipher.py`:
+* Open up your text editor and make the following changes to `cipher.py`:  
+
   ```
   def shift(letter, n):
       if (ord(letter) + n < 65) or (ord(letter) + n > 90):
