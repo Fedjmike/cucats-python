@@ -65,16 +65,48 @@ We end up getting an opening curly bracket! This is because ASCII doesn't only o
 
   ```
   def shift(letter, n):
-      if (ord(letter) + n < 65) or (ord(letter) + n > 90):
-          # Leave this space blank for now
-      elif (ord(letter) + n < 97) or (ord(letter) + n > 122):
-          # Leave this space blank for now
-      else:
-          # Leave this space blank for now
+      if letter.isupper():
+          # Leave blank for now
+      elif letter.islower():
+          # Leave blank for now
+      return(shifted_letter)
   ```
 
-What have we done here? We need to look into two new keywords: `elif` and `or`.
+We've introduced two new functions here: `isupper()` and `islower()`. All these functions do is return `True` or `False` depending on whether or not the letter is upper case or lower case.
 
 What is `elif`? `elif` is basically short for `else if`. Sometimes we don't just want our program to branch into two cases, there might be more we want to take care of. So, what we'd ideally like to do is run an initial test and see if it evaluates to `True`. If it does, it's all good and we can just execute the first bit of our `if-else` block. If not, there are still other cases we need to check before settling on a branch. How would we go about doing this? Run another `if-else` condition, of course! This is where an `elif` is used.
 
-What is `or`? `or` is exactly what it sounds like. Assume there are two things we need to check, and we want to run our code if either is true. That is when we use an `or` between them to indicate that.
+* Modify your code to the following:
+
+  ```
+  def shift(letter, n):
+      if letter.isupper():
+          if (ord(letter) + n < 65):
+              # Leave blank for now
+          elif (ord(letter) + n > 90):
+              # Leave blank for now
+          else:
+              shifted_letter = chr(ord(letter) + n)
+      elif letter.islower():
+          if (ord(letter) + n < 97):
+              # Leave blank for now
+          elif (ord(letter) + n > 122):
+              # Leave blank for now
+          else:
+              shifted_letter = chr(ord(letter) + n)
+      return(shifted_letter)
+  ```
+
+Here our inner `if`-conditions here are testing if after applying the shift our letters fall in the required ranges or not (remember that 'a' is 97, 'z' is 122, 'A' is 65 and 'Z' is 90). If they don't we need to adjust them accordingly, i.e., add or subtract 26 depending on what part of the range they cross.
+
+* Replace the blank bits of your code now with the required conditions. For example, the first of the four shoud look like:
+
+  ```
+  shifted_letter = chr(ord(letter) + n + 26)
+  ```
+
+By having added 26 to `n`, we have successfully wrapped around the alphabet. Try the something similar on the rest!
+
+## Step 4: Completed function
+
+Congratulations, you're now finished with your function to perform shifts on idividual characters! This involved understanding `if`-conditions at a deeper level and using methods such as `isupper()` and `islower()` - you can now appreciate what you've done. In future sessions we'll work on extending this function to work on full sentences, so that we can decipher them with ease! Till next time!
