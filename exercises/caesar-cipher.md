@@ -1,8 +1,10 @@
 # Break a Caesar cipher!
 
-A *Caesar cipher* is a very simple encryption technique: each letter in the *plaintext* (the text to be encrypted) is replaced by a letter a fixed number of positions down the alphabet. (The output is know as *ciphertext*.) So for example `cucats` shifted left by two would give us `asayrq`. You're now going to write your very own Caesar cipher solver - let's get started!
+A *Caesar cipher* is a very simple encryption technique: each letter in the *plaintext* (the text to be encrypted) is replaced by a letter a fixed number of positions down the alphabet. (The output is know as *ciphertext*.) So for example `cucats` shifted left by two would give us `ewecvu`. You're now going to write your very own Caesar cipher solver - let's get started!
 
 ## Step 1: Shifting characters
+
+Characters in computers are internally stored as numbers, as are many other things. ASCII (American Standard Code for Information Interchange) is one character-encoding scheme that is basically a conversion scheme between characters and numbers. Each character is assigned a number. For example, the ASCII code for 'A' is 65, and the code for 'a' is 97.
 
 To shift a letter by a number of places, we need to (well, we don't *need* to, this is but one of many ways) first convert it into the corresponding ASCII number. (ASCII is just a commonly-used mapping between letters and numbers.) This can be done using the `ord` function. Go ahead, try it out:
 
@@ -10,7 +12,7 @@ To shift a letter by a number of places, we need to (well, we don't *need* to, t
 
   `ord('a')`
 
-You should get 97, which is the ASCII code for lowercase a. Try it with uppercase 'A', what number do you get? Do you notice anything special about the difference between these numbers?
+You should get 97, which is the ASCII code for lowercase a. Try it with uppercase 'A', what number do you get? Do you notice anything special about the difference between these numbers? Try it with 'b', 'c' and 'd' and see if you can spot the pattern (try the uppercase versions as well!).
 
 We just converted from a character to its ASCII code. To do the reverse, use the `chr` function.
 
@@ -47,7 +49,7 @@ Ok, let's see if the function works:
 
   and run `cipher.py`. You should see 'x'.
   
-We're doing good, but not quite there yet.
+We're doing well, but not quite there yet.
 
 * What happens if you do the following?
 
@@ -55,6 +57,24 @@ We're doing good, but not quite there yet.
   print(shift('y',4))
   ```
 
-  Can you explain what's happening?
+We end up getting an opening curly bracket! This is because ASCII doesn't only outline codes for the 26 alphabet - remember that there are other symbols you use (such as punctuation marks)! The problem we now need to fix is to make our program 'wrap around' the alphabet if we go beyond our ranges of 'a'-'z' or 'A'-'Z'. We can fix that using if-conditions.
 
-Uh oh...
+## Step 3: Fixing our function to enable wrapping around
+
+* Open up your text editor and make the following changes to `cipher.py`:  
+
+  ```
+  def shift(letter, n):
+      if (ord(letter) + n < 65) or (ord(letter) + n > 90):
+          # Leave this space blank for now
+      elif (ord(letter) + n < 97) or (ord(letter) + n > 122):
+          # Leave this space blank for now
+      else:
+          # Leave this space blank for now
+  ```
+
+What have we done here? We need to look into two new keywords: `elif` and `or`.
+
+What is `elif`? `elif` is basically short for `else if`. Sometimes we don't just want our program to branch into two cases, there might be more we want to take care of. So, what we'd ideally like to do is run an initial test and see if it evaluates to `True`. If it does, it's all good and we can just execute the first bit of our `if-else` block. If not, there are still other cases we need to check before settling on a branch. How would we go about doing this? Run another `if-else` condition, of course! This is where an `elif` is used.
+
+What is `or`? `or` is exactly what it sounds like. Assume there are two things we need to check, and we want to run our code if either is true. That is when we use an `or` between them to indicate that.

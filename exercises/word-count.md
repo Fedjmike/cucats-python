@@ -19,7 +19,7 @@ The brackets indicate that `split` is a function, rather than a variable, for in
 
 ## Exercise 1
 
-* Use IDLE, or the `print()` function, to see what `my_string.split()` is.
+* Write a script where you make a string, and use the `print()` function to see what the result of `my_string.split()` is.
  
   Hint: it should be a list of _somethings_.
 
@@ -28,9 +28,18 @@ The brackets indicate that `split` is a function, rather than a variable, for in
 
 ## Exercise 2
 
-Lists have methods too. You can use a method on the list you got in exercise 1 to count the words in `my_string`.
+Python has a few built-in functions.
+For example, we can do:
+```
+>>> my_list = [1, 4, 6]
+>>> sum(my_list)
+5
+```
+Here we're using the built-in function `sum` to find the sum of the elements in the list.
 
-* What method should you use? You could use Google to help you!
+Using the list you got in exercise one, try using a different built-in function to count the words in `my_string`.
+
+* What built-in function should you use? You could use Google to help you!
 
 
 ## Exercise 3
@@ -42,14 +51,14 @@ for element in my_list:
     do_something()
 ```
 
-* Can you use this to count how many times each word appears in a string? What extra data structures would you need to achieve this? Have a go.
+* Can you use this to count how many times each word appears in a string? What extra data structure(s) would you need to achieve this? Have a go.
 * You could start by counting how many occurences of a particular word there are, then extend this to counting all the distinct words in the string.
 
 
-## Extension
+## Extensions
 
-* How can you handle punctuation?
-
-There are many ways you could attempt this.
-
-Hint: you can iterate over the characters in a string, just like elements in a list.
+* At the moment, your program probably counts "Dog" and "dog" as different words. How could you change this?
+* How can you handle punctuation? Which string methods might be helpful?
+* Find out how to read a string from a text file. (Ask!)
+* Find out how to write the word count results to a file. (Ask!)
+* What other features would you like to add? Add them!

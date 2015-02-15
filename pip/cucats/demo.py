@@ -11,7 +11,7 @@ def value_answer(ans):
     return ans == 42
     
 def function_answer(f):
-    return f()
+    return f() == 42
 
 class Demo1 (Wrapper):
     def __init__(self):

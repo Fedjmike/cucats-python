@@ -28,6 +28,7 @@ fizz
 fizzbuzz
 16
 
+You can check your function with fizzbuzz.check(f)
 
 """
 

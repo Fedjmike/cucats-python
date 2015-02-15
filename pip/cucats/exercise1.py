@@ -12,7 +12,7 @@ def calculator(answer):
 
 class Exercise1 (Wrapper):
     def __init__(self):
-        instruction = "Use python as a calculator to calculate the value of 2^1000. Check your answer with cucats.ex1.check(answer)"
+        instruction = "Use python as a calculator to calculate the value of 2^1000. Check your answer with ex1.check(answer)"
         title = "Using python as a calculator"
         Wrapper.__init__(self, title, calculator, instruction)
         print ("Exercises 1 loaded")
