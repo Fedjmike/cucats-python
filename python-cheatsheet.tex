@@ -10,6 +10,8 @@
 \usepackage{xcolor}
 \usepackage[margin=1in]{geometry}
 
+\setlength{\columnsep}{30pt}
+
 \setlength{\parindent}{0pt}
 
 \definecolor{orange}{rgb}{1,0.5,0}
@@ -177,5 +179,24 @@
 	string.\lstinline|upper()| \\
 	string.\lstinline|lower()| \\
 	string.\lstinline|find($\colorbox{spacebg}{substring}$)| \\
+	
+	\subsubsection*{Dictionaries}
+	
+	An example:
+	\begin{lstlisting}[belowskip=-0.8 \baselineskip]
+ages = {"Alice": 42, "Bob": 40}
+\end{lstlisting}
+	Indexing:
+	\begin{lstlisting}[belowskip=-0.8 \baselineskip]
+>>> ages["Bob"]
+35\end{lstlisting}
+	Keys:
+	\begin{lstlisting}[belowskip=-0.8 \baselineskip]
+>>> ages.keys()
+dict_keys(['Alice', 'Bob'])\end{lstlisting}
+	Adding items:
+	\begin{lstlisting}[belowskip=-0.8 \baselineskip]
+>>> ages.update({"Charlie": 1})\end{lstlisting}
+	
 
 \end{document}
