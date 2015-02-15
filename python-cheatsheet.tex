@@ -27,6 +27,7 @@
 \definecolor{codebg}{rgb}{1.0,1.0,0.8}
 \definecolor{jargonbg}{rgb}{0.8,1.0,0.8}
 \definecolor{spacebg}{rgb}{1.0,0.8,0.0}
+\definecolor{lightspacebg}{rgb}{1.0,0.9,0.5}
 
 \newtoggle{InString}{}% Keep track of if we are within a string
 \togglefalse{InString}% Assume not initally in string
@@ -154,9 +155,13 @@
 	
 	\subsubsection*{Lists}
 	
-	\colorbox{codebg}{\lstinline|[x*x for x in nums]|} \\
+	Element access (indexing): \colorbox{codebg}{\lstinline|days[1]|}
 	
-	In general, \colorbox{codebg}{\lstinline|[$\colorbox{spacebg}{\quad}$ for $\ \colorbox{spacebg}{\quad}$ in $\ \colorbox{spacebg}{\quad}$]|}
+	\colorbox{codebg}{\lstinline|$\colorbox{lightspacebg}{list}$[$\colorbox{lightspacebg}{index}$]|} \\
+	
+	Comprehensions: \colorbox{codebg}{\lstinline|[x*x for x in nums]|}
+	
+	In general: \colorbox{codebg}{\lstinline|[$\colorbox{spacebg}{\quad}$ for $\ \colorbox{spacebg}{\quad}$ in $\ \colorbox{spacebg}{\quad}$]|} \\
 	
 	\subsubsection*{Control flow}
 	
@@ -170,15 +175,15 @@
 	
 	\subsubsection*{Common methods}
 	
-	list.\lstinline|append($\colorbox{spacebg}{item}$)| \\
+	list.\lstinline|append($\colorbox{lightspacebg}{item}$)| \\
 	list.\lstinline|reverse()| \\
-	list.\lstinline|remove($\colorbox{spacebg}{item}$)| \\
+	list.\lstinline|remove($\colorbox{lightspacebg}{item}$)| \\
 	
-	string.\lstinline|split($\colorbox{spacebg}{separator}$)| \\
+	string.\lstinline|split($\colorbox{lightspacebg}{separator}$)| \\
 	string.\lstinline|capitalize()| \\
 	string.\lstinline|upper()| \\
 	string.\lstinline|lower()| \\
-	string.\lstinline|find($\colorbox{spacebg}{substring}$)| \\
+	string.\lstinline|find($\colorbox{lightspacebg}{substring}$)| \\
 	
 	\subsubsection*{Dictionaries}
 	
@@ -197,6 +202,5 @@ dict_keys(['Alice', 'Bob'])\end{lstlisting}
 	Adding items:
 	\begin{lstlisting}[belowskip=-0.8 \baselineskip]
 >>> ages.update({"Charlie": 1})\end{lstlisting}
-	
 
 \end{document}
