@@ -29,13 +29,13 @@ The brackets indicate that `split` is a function, rather than a variable, for in
 ## Exercise 2
 
 Python has a few built-in functions.
-For example, if we do
+For example, we can do:
 ```
 >>> my_list = [1, 4, 6]
 >>> sum(my_list)
 5
 ```
-We're using the built-in function `sum` to find the sum of the elements in the list.
+Here we're using the built-in function `sum` to find the sum of the elements in the list.
 
 Using the list you got in exercise one, try using a different built-in function to count the words in `my_string`.
 
@@ -51,7 +51,7 @@ for element in my_list:
     do_something()
 ```
 
-* Can you use this to count how many times each word appears in a string? What extra data structures would you need to achieve this? Have a go.
+* Can you use this to count how many times each word appears in a string? What extra data structure(s) would you need to achieve this? Have a go.
 * You could start by counting how many occurences of a particular word there are, then extend this to counting all the distinct words in the string.
 
 
