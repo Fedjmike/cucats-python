@@ -59,4 +59,21 @@ We're doing good, but not quite there yet.
 
 We end up getting an opening curly bracket! This is because ASCII doesn't only outline codes for the 26 alphabet - remember that there are other symbols you use (such as punctuation marks)! The problem we now need to fix is to make our program 'wrap around' the alphabet if we go beyond our ranges of 'a'-'z' or 'A'-'Z'. We can fix that using if-conditions.
 
-Uh oh...
+## Step 3: Fixing our function to enable wrapping around
+
+* Open up your text editor and make the following changes to `cipher.py`:
+  ```
+  def shift(letter, n):
+      if (ord(letter) + n < 65) or (ord(letter) + n > 90):
+          # Leave this space blank for now
+      elif (ord(letter) + n < 97) or (ord(letter) + n > 122):
+          # Leave this space blank for now
+      else:
+          # Leave this space blank for now
+  ```
+
+What have we done here? We need to look into two new keywords: `elif` and `or`.
+
+What is `elif`? `elif` is basically short for `else if`. Sometimes we don't just want our program to branch into two cases, there might be more we want to take care of. So, what we'd ideally like to do is run an initial test and see if it evaluates to `True`. If it does, it's all good and we can just execute the first bit of our `if-else` block. If not, there are still other cases we need to check before settling on a branch. How would we go about doing this? Run another `if-else` condition, of course! This is where an `elif` is used.
+
+What is `or`? `or` is exactly what it sounds like. Assume there are two things we need to check, and we want to run our code if either is true. That is when we use an `or` between them to indicate that.
