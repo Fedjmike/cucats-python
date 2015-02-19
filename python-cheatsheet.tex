@@ -10,6 +10,8 @@
 \usepackage{xcolor}
 \usepackage[margin=1in]{geometry}
 
+\pagenumbering{gobble}
+
 \setlength{\columnsep}{30pt}
 
 \setlength{\parindent}{0pt}
@@ -89,6 +91,8 @@
 	tabsize=4,
 	title=\lstname,
 	morestring=[b]",
+	morestring=[b]',
+	belowskip=-0.8 \baselineskip,
 	%
 	numberstyle=\footnotesize\color{gray},
 	rulecolor=\color{black},
@@ -115,7 +119,9 @@
 
 \begin{document}
 	\maketitle
-
+	
+	\vspace*{-1cm}
+	
 	\begin{tabular}{l l}
 		\textbf{Datatype} & \textbf{Example} \\
 
@@ -132,11 +138,11 @@
 		\colorbox{codebg}{\lstinline|"Hello world!"|} \\
 		
 		Lists &
-		\colorbox{codebg}{\lstinline|[4, 8, 15, 16, 23, 42]|} \\
+		\colorbox{codebg}{\lstinline|[4, 8, 15, 16, 23, 42]|} \vspace{0.5mm} \\
 		\, &
-		\colorbox{codebg}{\lstinline|["first", "second"]|} \\
+		\colorbox{codebg}{\lstinline|["first", "second"]|} \vspace{0.5mm} \\
 		\, &
-		\colorbox{codebg}{\lstinline|[[], "some text", 99]|} \\
+		\colorbox{codebg}{\lstinline|[[], "some text", 99]|} \vspace{0.5mm} \\
 		
 		Dictionaries &
 		\colorbox{codebg}{\lstinline|\{"Alice": 42, "Bob": 40\}|}
@@ -144,27 +150,24 @@
 	
 	\subsubsection*{Operations}
 	
-	\lstinline|+|, \lstinline|-|, \lstinline|*|, \lstinline|/| (on integers and floats)
+	\begin{tabular}{r l}
+		\lstinline|+|, \lstinline|-|, \lstinline|*|, \lstinline|/| &
+		(on integers or floats) \\
 	
-	\lstinline|+| (to join strings or lists)
+		\lstinline|+| & (to join strings or lists) \\
 	
-	\lstinline|==|, \lstinline|!=| (comparing any values)
+		\lstinline|==|, \lstinline|!=| & (comparing any values) \\
 	
-	\lstinline|>|, \lstinline|>=|, \lstinline|<|, \lstinline|<=| (comparing integers or floats)
+		\lstinline|>|, \lstinline|>=|, \lstinline|<|, \lstinline|<=| &
+		(comparing integers or floats) \\
+	\end{tabular}
 	
 	\subsubsection*{Variables}
 	
 	Labels onto values. Their names must consist only of letters, digits and underscores. They can't start with a digit or have spaces. They are case sensitive.
 	
-	\subsubsection*{Lists}
-	
-	Element access (indexing): \colorbox{codebg}{\lstinline|days[1]|}
-	
-	\colorbox{codebg}{\lstinline|$\colorbox{lightspacebg}{list}$[$\colorbox{lightspacebg}{index}$]|} \\
-	
-	Comprehensions: \colorbox{codebg}{\lstinline|[x*x for x in nums]|}
-	
-	In general: \colorbox{codebg}{\lstinline|[$\colorbox{spacebg}{\quad}$ for $\ \colorbox{spacebg}{\quad}$ in $\ \colorbox{spacebg}{\quad}$]|} \\
+	%\colorbox{codebg}{\lstinline|days[1]|}
+	%\colorbox{codebg}{\lstinline|[x*x for x in nums]|}
 	
 	\subsubsection*{Control flow}
 	
@@ -174,9 +177,23 @@
 	
 	\subsubsection*{Functions}
 	
-	\colorbox{codebg}{\lstinline|def $\ \colorbox{spacebg}{\quad}$($\colorbox{spacebg}{\quad}$):|} \\
+	\colorbox{codebg}{\lstinline|def $\ \colorbox{spacebg}{\quad}$($\colorbox{spacebg}{\quad}$):|}
+	
+	\vspace{2mm}
 	
 	\colorbox{codebg}{\lstinline|\ \ \ \ return $\ \colorbox{spacebg}{\quad}$|} \\
+	
+	\newpage
+	\vspace*{-1.5cm}
+	\subsubsection*{Lists}
+	
+	\begin{tabular}{l l}
+		Element access &
+		\colorbox{codebg}{\lstinline|$\colorbox{lightspacebg}{list}$[$\colorbox{lightspacebg}{index}$]|} \vspace{1mm} \\
+		
+		Comprehensions &
+		\colorbox{codebg}{\lstinline|[$\colorbox{spacebg}{\quad}$ for $\ \colorbox{spacebg}{\quad}$ in $\ \colorbox{spacebg}{\quad}$]|}
+	\end{tabular}
 	
 	\subsubsection*{Common methods}
 	
@@ -193,19 +210,18 @@
 	\subsubsection*{Dictionaries}
 	
 	An example:
-	\begin{lstlisting}[belowskip=-0.8 \baselineskip]
-ages = {"Alice": 42, "Bob": 40}
-\end{lstlisting}
+	\begin{lstlisting}
+ages = {"Alice": 42, "Bob": 40}\end{lstlisting}
 	Indexing:
-	\begin{lstlisting}[belowskip=-0.8 \baselineskip]
+	\begin{lstlisting}
 >>> ages["Bob"]
-35\end{lstlisting}
+40\end{lstlisting}
 	Keys:
-	\begin{lstlisting}[belowskip=-0.8 \baselineskip]
+	\begin{lstlisting}
 >>> ages.keys()
 dict_keys(['Alice', 'Bob'])\end{lstlisting}
-	Adding items:
-	\begin{lstlisting}[belowskip=-0.8 \baselineskip]
+	Adding or changing items:
+	\begin{lstlisting}
 >>> ages.update({"Charlie": 1})\end{lstlisting}
 
 \end{document}
