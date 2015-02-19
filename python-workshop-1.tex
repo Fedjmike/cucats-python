@@ -501,18 +501,27 @@
 	
 	\begin{frame}[fragile]
 		\frametitle{Functions}
-		A function is a piece of code that can take an input value, processes it and gives back an output. The syntax for writing a function is simple:
-		\begin{lstlisting}
-		def sum(numbers):
-		    total = 0
-		    for x in numbers:
-		        total = total + x
-		    return total
+		A function is a reusable piece of code that can take an input value, processes it and gives back an output. \pause
 		
-		y = sum([1, 2, 3, 4, 5])
-		# The value of y is now 15.
-		\end{lstlisting}
-		{\tt output} is the value you'd like to have after having performed your computation on {\tt input}.
+		\begin{itemize}
+			\item Definition:
+			\begin{lstlisting}
+			def sum(numbers):
+			    total = 0
+			    for x in numbers:
+			        total = total + x
+			    return total
+			\end{lstlisting}
+			\pause
+			
+			\item Use:
+			\begin{lstlisting}
+			y = sum([1, 2, 3, 4, 5])
+			# The value of y is now 15.
+			\end{lstlisting}
+		\end{itemize}
+		
+		The value of the function call is specified by \lstinline|return|.
 	\end{frame}
 	
 	\begin{frame}[fragile]
@@ -527,8 +536,8 @@
 		    product = num1 * num2
 		    return product
 		
-		x = add(4,3)
-		y = mult(6,5)
+		x = add(4, 3)
+		y = mult(6, 5)
 		# The value of x is now 7.
 		# The value of y is now 30.
 		\end{lstlisting}
