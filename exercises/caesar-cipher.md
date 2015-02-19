@@ -66,9 +66,9 @@ We end up getting an opening curly bracket! This is because ASCII doesn't only o
   ```
   def shift(letter, n):
       if letter.isupper():
-          # Leave blank for now
+          pass # Leave blank for now
       elif letter.islower():
-          # Leave blank for now
+          pass # Leave blank for now
       return(shifted_letter)
   ```
 
@@ -82,16 +82,16 @@ What is `elif`? `elif` is basically short for `else if`. Sometimes we don't just
   def shift(letter, n):
       if letter.isupper():
           if (ord(letter) + n < 65):
-              # Leave blank for now
+              pass # Leave blank for now
           elif (ord(letter) + n > 90):
-              # Leave blank for now
+              pass # Leave blank for now
           else:
               shifted_letter = chr(ord(letter) + n)
       elif letter.islower():
           if (ord(letter) + n < 97):
-              # Leave blank for now
+              pass # Leave blank for now
           elif (ord(letter) + n > 122):
-              # Leave blank for now
+              pass # Leave blank for now
           else:
               shifted_letter = chr(ord(letter) + n)
       return(shifted_letter)
