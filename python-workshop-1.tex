@@ -18,6 +18,8 @@
 \definecolor{codebg}{rgb}{1.0,1.0,0.8}
 \definecolor{jargonbg}{rgb}{0.8,1.0,0.8}
 
+\setlength{\fboxsep}{0.5mm}
+
 \newtoggle{InString}{}% Keep track of if we are within a string
 \togglefalse{InString}% Assume not initally in string
 
@@ -501,7 +503,8 @@
 	
 	\begin{frame}[fragile]
 		\frametitle{Functions}
-		A function is a reusable piece of code that can take an input value, processes it and gives back an output. \pause
+		
+		A function is a reusable piece of code. It takes an input value (\colorbox{jargonbg}{parameter}), processes it and gives back an output (\colorbox{jargonbg}{return value}). \pause
 		
 		\begin{itemize}
 			\item Definition:
@@ -526,7 +529,7 @@
 	
 	\begin{frame}[fragile]
 		\frametitle{Functions}
-		Functions can also take multiple values as inputs:
+		Functions can also take multiple parameters:
 		\begin{lstlisting}
 		def find(list, value):
 		    for item in list:
