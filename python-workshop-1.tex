@@ -521,25 +521,23 @@
 			\end{lstlisting}
 		\end{itemize}
 		
-		The value of the function call is specified by \lstinline|return|.
+		The value of the function call is specified by \lstinline|return|, which ends the function.
 	\end{frame}
 	
 	\begin{frame}[fragile]
 		\frametitle{Functions}
 		Functions can also take multiple values as inputs:
 		\begin{lstlisting}
-		def add(num1, num2):
-		    sum = num1 + num2
-		    return sum
+		def find(list, value):
+		    for item in list:
+		        if item == value:
+		            return True
 		
-		def mult(num1, num2):
-		    product = num1 * num2
-		    return product
-		
-		x = add(4, 3)
-		y = mult(6, 5)
-		# The value of x is now 7.
-		# The value of y is now 30.
+		    return False
+		\end{lstlisting}
+		\begin{lstlisting}
+		>>> find([1, 2, 3, 4], 5)
+		False
 		\end{lstlisting}
 	\end{frame}
 	
