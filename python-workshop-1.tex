@@ -337,32 +337,26 @@
 			\pause For example:
 			\begin{itemize}
 				\item Adding an integer to a string.
-				\begin{onlyenv}<2>
-					\begin{lstlisting}
-					>>> 16 + "hello"
-					$\textrm{\color{red}TypeError: unsupported operand type(s) for +: `int' and `str'}$
-					\end{lstlisting}
-				\end{onlyenv}
+				\begin{lstlisting}
+				>>> 16 + "hello"
+				$\textrm{\color{red}TypeError: unsupported operand type(s) for +: `int' and `str'}$
+				\end{lstlisting}
 				
 				\pause
 				
 				\item Indexing into something that is not a sequence.
-				\begin{onlyenv}<3>
-					\begin{lstlisting}
-					>>> 9.0[1]
-					$\textrm{\color{red}TypeError: `float' object has no attribute `\_\_getitem\_\_'}$
-					\end{lstlisting}
-				\end{onlyenv}
+				\begin{lstlisting}
+				>>> 9.0[1]
+				$\textrm{\color{red}TypeError: `float' object has no attribute `\_\_getitem\_\_'}$
+				\end{lstlisting}
 				
 				\pause
 				
 				\item Asking for the sixth element of a list that only has four.
-				\begin{onlyenv}<4>
-					\begin{lstlisting}
-					>>> [4, 5, 6, 7][5]
-					$\textrm{\color{red}IndexError: list index out of range}$
-					\end{lstlisting}
-				\end{onlyenv}
+				\begin{lstlisting}
+				>>> [4, 5, 6, 7][5]
+				$\textrm{\color{red}IndexError: list index out of range}$
+				\end{lstlisting}
 				
 				\pause
 			\end{itemize}
