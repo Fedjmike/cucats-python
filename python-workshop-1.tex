@@ -18,6 +18,8 @@
 \definecolor{codebg}{rgb}{1.0,1.0,0.8}
 \definecolor{jargonbg}{rgb}{0.8,1.0,0.8}
 
+\setlength{\fboxsep}{0.5mm}
+
 \newtoggle{InString}{}% Keep track of if we are within a string
 \togglefalse{InString}% Assume not initally in string
 
@@ -25,7 +27,7 @@
 \newcommand*{\ProcessQuote}[1]{\color{red}#1\iftoggle{InString}{\global\togglefalse{InString}}{\global\toggletrue{InString}}}
 
 \lstdefinelanguage{py}{
-	morekeywords={if,elif,else,for,in,def,class,True,False,print},
+	morekeywords={if,elif,else,for,in,def,class,True,False,print,return},
 	morecomment=[l]\#,
 	literate=
 	*{=}{{{\color{punct}{=}}}}{1}
@@ -79,6 +81,8 @@
 	tabsize=4,
 	title=\lstname,
 	morestring=[b]",
+	morestring=[b]',
+	belowskip=-0.8 \baselineskip,
 	%
 	numberstyle=\footnotesize\color{gray},
 	rulecolor=\color{black},
@@ -391,14 +395,16 @@
 	\begin{frame}[fragile]
 		\frametitle{`for' loops}
 		
+		Run a block of code for every element in a list. Indentation specifies the block.
+		
 		\begin{columns}[c]
 			\column{.7\textwidth}
 			\begin{lstlisting}
-			>>> nums = [1, 2, 3, 4, 5]
+			>>> numbers = [1, 2, 3, 4, 5]
 			>>> total = 0
-			>>> for x in nums:
-			...     total = total + x
-			$ % \note<1>{The line `for x in nums' followed by the colon opens up a new block of code, which has to be indented. Everything in the block gets executed for each x in nums. To indent, use four spaces! You can put multiple lines in a block, and they must each be indented.}
+			>>> for num in numbers:
+			...     total = total + num
+			$ % \note<1>{The line `for num in numbers' followed by the colon opens up a new block of code, which has to be indented. Everything in the block gets executed for each num in numbers. To indent, use four spaces! You can put multiple lines in a block, and they must each be indented.}
 			\pause$
 			>>> print(total)
 			15
@@ -407,12 +413,12 @@
 			\column{.2\textwidth}
 			\pause
 			\begin{tabular}{l | r}
-				\lstinline|x| & \lstinline|total| \\
+				\lstinline|num| & \lstinline|total| \\
 				\, & 0 \\ \pause
 				1 & 1 \\ \pause
 				2 & 3 \\ \pause
-				3 & 6 \\ \pause
-				4 & 10 \\ \pause
+				3 & 6 \\
+				4 & 10 \\
 				5 & 15 \\
 			\end{tabular}
 		\end{columns}
@@ -501,37 +507,47 @@
 	
 	\begin{frame}[fragile]
 		\frametitle{Functions}
-		A function is a piece of code that can take an input value, processes it and gives back an output. The syntax for writing a function is simple:
-		\begin{lstlisting}
-		def sum(numbers):
-		    total = 0
-		    for x in numbers:
-		        total = total + x
-		    return total
 		
-		y = sum([1, 2, 3, 4, 5])
-		# The value of y is now 15.
-		\end{lstlisting}
-		{\tt output} is the value you'd like to have after having performed your computation on {\tt input}.
+		A function is a reusable piece of code. It takes an input value (\colorbox{jargonbg}{parameter}), processes it and gives back an output (\colorbox{jargonbg}{return value}). \pause
+		
+		\begin{itemize}
+			\item Definition:
+			\begin{lstlisting}
+			def sum(numbers):
+			    total = 0
+			    for num in numbers:
+			        total = total + num
+			    return total
+			\end{lstlisting}
+			\pause
+			
+			\item Use:
+			\begin{lstlisting}
+			y = sum([1, 2, 3, 4, 5])
+			# The value of y is now 15.
+			\end{lstlisting}
+		\end{itemize}
+		
+		The value of the function call is specified by \lstinline|return|, which ends the function.
 	\end{frame}
 	
 	\begin{frame}[fragile]
 		\frametitle{Functions}
-		Functions can also take multiple values as inputs:
+		Functions can also take multiple parameters:
 		\begin{lstlisting}
-		def add(num1, num2):
-		    sum = num1 + num2
-		    return sum
+		def find(list, value):
+		    for item in list:
+		        if item == value:
+		            return True
 		
-		def mult(num1, num2):
-		    product = num1 * num2
-		    return product
-		
-		x = add(4,3)
-		y = mult(6,5)
-		# The value of x is now 7.
-		# The value of y is now 30.
+		    return False
 		\end{lstlisting}
+		\begin{lstlisting}
+		>>> find([1, 2, 3, 4], 5)
+		False
+		\end{lstlisting}
+		
+		Try changing it to return the index, if found.
 	\end{frame}
 	
 	\begin{frame}[fragile]

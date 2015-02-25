@@ -33,7 +33,7 @@ Shifting a character by a number of steps seems like something we'll be doing a 
 
 * Open up your text editor of choice and write the following to `cipher.py`:
 
-  ```
+  ```python
   def shift(letter, n):
       shifted_letter = chr(ord(letter) + n)
       return(shifted_letter)
@@ -43,7 +43,7 @@ Ok, let's see if the function works:
 
 * At the end of `cipher.py`, add
 
-  ```
+  ```python
   print(shift('r',6))
   ```
 
@@ -53,7 +53,7 @@ We're doing well, but not quite there yet.
 
 * What happens if you do the following?
 
-  ```
+  ```python
   print(shift('y',4))
   ```
 
@@ -63,12 +63,12 @@ We end up getting an opening curly bracket! This is because ASCII doesn't only o
 
 * Open up your text editor and make the following changes to `cipher.py`:  
 
-  ```
+  ```python
   def shift(letter, n):
       if letter.isupper():
-          # Leave blank for now
+          pass # Leave blank for now
       elif letter.islower():
-          # Leave blank for now
+          pass # Leave blank for now
       return(shifted_letter)
   ```
 
@@ -78,20 +78,20 @@ What is `elif`? `elif` is basically short for `else if`. Sometimes we don't just
 
 * Modify your code to the following:
 
-  ```
+  ```python
   def shift(letter, n):
       if letter.isupper():
           if (ord(letter) + n < 65):
-              # Leave blank for now
+              pass # Leave blank for now
           elif (ord(letter) + n > 90):
-              # Leave blank for now
+              pass # Leave blank for now
           else:
               shifted_letter = chr(ord(letter) + n)
       elif letter.islower():
           if (ord(letter) + n < 97):
-              # Leave blank for now
+              pass # Leave blank for now
           elif (ord(letter) + n > 122):
-              # Leave blank for now
+              pass # Leave blank for now
           else:
               shifted_letter = chr(ord(letter) + n)
       return(shifted_letter)
@@ -101,7 +101,7 @@ Here our inner `if`-conditions here are testing if after applying the shift our 
 
 * Replace the blank bits of your code now with the required conditions. For example, the first of the four shoud look like:
 
-  ```
+  ```python
   shifted_letter = chr(ord(letter) + n + 26)
   ```
 
