@@ -279,34 +279,54 @@
 	
 	\begin{frame}[fragile]
 		\frametitle{Accessing elements in lists}
+
+		\note<1>{Let's make a list. To get items from the list, we use square brackets. What happens if we ask for the first element?}
 		
 		\begin{lstlisting}
 		>>> days = ["Mon", "Tue", "Wed", "Thu",
 		...         "Fri", "Sat", "Sun"]
-		>>> days[1]
-		\end{lstlisting}
-		%\note<1>{Let's make a list. To get items from the list, we use square brackets. What happens if we ask for the first element?}
-		\pause
-		What do you get?
-		\\
-		%\note<2>{Try it out.}
-		\pause
-		\begin{lstlisting}
+		>>> days[1]$\pause$
 		'Tue'
 		\end{lstlisting}
-		%\note<3>{Tuesday? Why not Monday?}
+		\note<2>{Tuesday? Why not Monday?}
+		
 		\pause
+		
+		\vspace{-3mm}
+		
+		\begin{itemize}
+			\item First element is index \lstinline|0|.
+			\item Think of the index as ``how many items into the list to move''.
+		\end{itemize}
+		
 		\begin{lstlisting}
 		>>> days[0] == "Mon"
 		True
 		\end{lstlisting}
-		%\note<4>{It's because indices start with zero in Python.}
+		\note<3>{It's because indices start with zero in Python.}
+
 		\pause
+		
+		\vspace{-3mm}
+		
+		\begin{itemize}
+			\item Can also access in reverse.
+		\end{itemize}
+		
 		\begin{lstlisting}
 		>>> days[-1]
 		'Sun'
 		\end{lstlisting}
-		%\note<5>{We can also index into lists with negative numbers, to work backwards from the end of the list.}
+	
+		\note<4>{We can also index into lists with negative numbers, to work backwards from the end of the list.}
+		
+		\pause
+		
+		\begin{tabular}{ccccccc}
+			\lstinline|"Mon"| & \lstinline|"Tue"| & \lstinline|"Wed"| & \lstinline|"Thu"| & \lstinline|"Fri"| & \lstinline|"Sat"| & \lstinline|"Sun"| \\
+			0 & 1 & 2 & 3 & 4 & 5 & 6 \\
+			-7 & -6 & -5 & -4 & -3 & -2 & -1
+		\end{tabular}
 	\end{frame}
 	
 	\begin{frame}[fragile]
