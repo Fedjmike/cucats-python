@@ -1,17 +1,17 @@
 # Word count challenge
 
 You know about strings. You know that you can make a string using quotes. For example:
-```
+```python
 my_string = "Hello! Welcome to the word count challenge. :)"
 ```
 
 Because strings are commonly used, Python has some built-in features for dealing with them.
 Python knows how to split string objects up into parts.
 In Python, string objects have a built-in _method_ called `split`.
-(A _method_ is a function associated with an object.)
+(A _method_ is a function which is associated with an object.)
 
 To use a method on an object, we write the object, then a dot, then the method, then a pair of brackets, `()`, like so:
-```
+```python
 my_string.split()
 ```
 The brackets indicate that `split` is a function, rather than a variable, for instance. Functions always have brackets!
@@ -30,23 +30,21 @@ The brackets indicate that `split` is a function, rather than a variable, for in
 
 Python has a few built-in functions.
 For example, we can do:
-```
+```python
 >>> my_list = [1, 4, 6]
 >>> sum(my_list)
-5
+11
 ```
 Here we're using the built-in function `sum` to find the sum of the elements in the list.
 
-Using the list you got in exercise one, try using a different built-in function to count the words in `my_string`.
-
-* What built-in function should you use? You could use Google to help you!
+* *Using the list you got in exercise 1*, use a built-in function to count the words in `my_string`. What built-in function should you use? You could use Google to help you!
 
 
 ## Exercise 3
 
 You can iterate over the elements of a list - i.e. perform an action for each element.
 Remember, the syntax is like this:
-```
+```python
 for element in my_list:
     do_something()
 ```
