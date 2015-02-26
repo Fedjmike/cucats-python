@@ -7,15 +7,18 @@ The Cambridge University Computing and Technology Society (CUCaTS) is running a 
 #### Session One
 
 **When** : February 28, 2:30pm
+
 **Where** : Chadwick room, Selwyn College (Old court)
 
 ## Material
 
-1. [Session One](session-01-info.md)
+1. [Session One](session-1-info.md)
+2. Session Two- coming soon!
 
 ## Past Sessions
 
 #### Session One
 
 **When** : February 15, 4:00pm
+
 **Where** : "the Lecture Theatre", Trinity Hall
