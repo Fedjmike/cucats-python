@@ -14,7 +14,7 @@ Please email us at `cucats-executive@srcf.net` to tell us you're coming!
 
 ## Material
 
-1. [Session One](session-1-info.md)
+1. [Session One](session-1-info.md#readme)
 2. Session Two- coming soon!
 
 ## Past Sessions

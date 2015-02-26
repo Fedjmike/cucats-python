@@ -1,12 +1,12 @@
 # Word count challenge
 
-You know about strings. You know that you can make a string using quotes. For example:
+You know about strings. You know that you can make a string using quotation marks. For example:
 ```python
 my_string = "Hello! Welcome to the word count challenge. :)"
 ```
 
-Because strings are commonly used, Python has some built-in features for dealing with them.
-Python knows how to split string objects up into parts.
+Because strings are commonly used, Python has some features for dealing with them.
+Python knows how to split strings up into parts.
 In Python, string objects have a built-in _method_ called `split`.
 (A _method_ is a function which is associated with an object.)
 
