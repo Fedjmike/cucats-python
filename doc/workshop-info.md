@@ -10,6 +10,8 @@ The Cambridge University Computing and Technology Society (CUCaTS) is running a 
 
 **Where** : Chadwick room, Selwyn College (Old court)
 
+Please email us at `cucats-executive@srcf.net` to tell us you're coming!
+
 ## Material
 
 1. [Session One](session-1-info.md)
