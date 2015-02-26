@@ -1,6 +1,6 @@
 # Material for Session One of the CUCaTS Programming Workshops
 
-* [Preparation](./preparation.md)
+* [Preparation](./preparation.md#readme)
 * [Slides](../../../raw/master/pdf/python-workshop-1.pdf)
 * [Cheatsheet](../../../raw/master/pdf/python-cheatsheet.pdf)
 

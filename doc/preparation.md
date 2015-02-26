@@ -27,7 +27,7 @@ It will save time if you can install Python 3 on your laptop before the workshop
 * Run it and follow instructions.
 * Choose `add python.exe to path` so that you can run it from the command line with `python`
 
-![Remember to add python.exe to path for easier access](img/window_installer.png)
+![Remember to add python.exe to path for easier access](../img/window_installer.png)
 
 * To test if your installation is successful, you can press `windows + R`, type `cmd` and press enter to launch the command prompt (a black box into which you can type commands). Then type `python` and press enter. The Python console should start - you should see something like:
 ```
