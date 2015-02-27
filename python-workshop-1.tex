@@ -89,7 +89,7 @@
 	\end{frame}
 	
 	\begin{frame}[fragile]
-		\frametitle{}
+		\frametitle{Operations}
 		
 		Arithmetic:
 		
@@ -218,11 +218,15 @@
 		
 		\pause
 		
-		\begin{tabular}{ccccccc}
-			\lstinline|"Mon"| & \lstinline|"Tue"| & \lstinline|"Wed"| & \lstinline|"Thu"| & \lstinline|"Fri"| & \lstinline|"Sat"| & \lstinline|"Sun"| \\
-			0 & 1 & 2 & 3 & 4 & 5 & 6 \\
-			-7 & -6 & -5 & -4 & -3 & -2 & -1
-		\end{tabular}
+		\begin{table}
+			\vspace{-2mm}
+			\centering
+			\begin{tabular}[c]{ccccccc}
+				\lstinline|"Mon"| & \lstinline|"Tue"| & \lstinline|"Wed"| & \lstinline|"Thu"| & \lstinline|"Fri"| & \lstinline|"Sat"| & \lstinline|"Sun"| \\
+				0 & 1 & 2 & 3 & 4 & 5 & 6 \\
+				-7 & -6 & -5 & -4 & -3 & -2 & -1
+			\end{tabular}
+		\end{table}
 	\end{frame}
 	
 	\begin{frame}[fragile]
@@ -233,7 +237,7 @@
 			\pause For example:
 			\begin{itemize}
 				\item Adding an integer to a string.
-				\begin{lstlisting}
+				\begin{lstlisting}[xleftmargin=\dimexpr-\leftmargini]
 				>>> 16 + "hello"
 				$\textrm{\color{red}TypeError: unsupported operand type(s) for +: `int' and `str'}$
 				\end{lstlisting}
@@ -241,7 +245,7 @@
 				\pause
 				
 				\item Indexing into something that is not a sequence.
-				\begin{lstlisting}
+				\begin{lstlisting}[xleftmargin=\dimexpr-\leftmargini]
 				>>> 9.0[1]
 				$\textrm{\color{red}TypeError: `float' object has no attribute `\_\_getitem\_\_'}$
 				\end{lstlisting}
@@ -249,7 +253,7 @@
 				\pause
 				
 				\item Asking for the sixth element of a list that only has four.
-				\begin{lstlisting}
+				\begin{lstlisting}[xleftmargin=\dimexpr-\leftmargini]
 				>>> [4, 5, 6, 7][5]
 				$\textrm{\color{red}IndexError: list index out of range}$
 				\end{lstlisting}
@@ -440,7 +444,7 @@
 		
 		\begin{itemize}
 			\item Definition:
-			\begin{lstlisting}
+			\begin{lstlisting}[xleftmargin=\dimexpr-\leftmargini]
 			def sum(numbers):
 			    total = 0
 			    for num in numbers:
@@ -450,7 +454,7 @@
 			\pause
 			
 			\item Use:
-			\begin{lstlisting}
+			\begin{lstlisting}[xleftmargin=\dimexpr-\leftmargini]
 			y = sum([1, 2, 3, 4, 5])
 			# The value of y is now 15.
 			\end{lstlisting}
