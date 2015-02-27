@@ -9,13 +9,8 @@
 
 \include{base}
 
-\title{CUCaTS Python Cheatsheet}
-\date{}
-
 \begin{document}
-	\maketitle
-	
-	\vspace*{-2cm}
+	\twocolumn[{\LARGE\centering CUCaTS Python Cheatsheet \\[\baselineskip]}]
 	
 	\begin{tabular}{l l}
 		\textbf{Datatype} & \textbf{Example} \\
@@ -57,6 +52,19 @@
 		(comparing integers or floats) \\
 		
 		\lstinline|and|, \lstinline|or|, \lstinline|not| & (on booleans)
+	\end{tabular}
+	
+	\subsubsection*{Lists and Strings}
+	
+	\begin{tabular}{l l}
+		Element access &
+		\colorbox{codebg}{\lstinline|$\colorbox{lightspacebg}{list}$[$\colorbox{lightspacebg}{index}$]|} \vspace{1mm} \\
+		
+		Slicing &
+		\colorbox{codebg}{\lstinline|$\colorbox{lightspacebg}{list}$[$\colorbox{lightspacebg}{start}$:$\colorbox{lightspacebg}{end}$]|} \vspace{1mm} \\
+		
+		Comprehensions &
+		\colorbox{codebg}{\lstinline|[$\colorbox{spacebg}{\quad}$ for $\ \colorbox{spacebg}{\quad}$ in $\ \colorbox{spacebg}{\quad}$]|}
 	\end{tabular}
 	
 	\subsubsection*{Variables}
@@ -112,23 +120,6 @@
 		
 		\colorbox{codebg}{\lstinline|\ \ \ \ raise $\ \colorbox{spacebg}{\quad}$:|}
 	\end{minipage}
-	
-	
-	
-	\newpage
-	\vspace*{-2.5cm}
-	\subsubsection*{Lists and Strings}
-	
-	\begin{tabular}{l l}
-		Element access &
-		\colorbox{codebg}{\lstinline|$\colorbox{lightspacebg}{list}$[$\colorbox{lightspacebg}{index}$]|} \vspace{1mm} \\
-		
-		Slicing &
-		\colorbox{codebg}{\lstinline|$\colorbox{lightspacebg}{list}$[$\colorbox{lightspacebg}{start}$:$\colorbox{lightspacebg}{end}$]|} \vspace{1mm} \\
-		
-		Comprehensions &
-		\colorbox{codebg}{\lstinline|[$\colorbox{spacebg}{\quad}$ for $\ \colorbox{spacebg}{\quad}$ in $\ \colorbox{spacebg}{\quad}$]|}
-	\end{tabular}
 	
 	\subsubsection*{Common methods}
 	
