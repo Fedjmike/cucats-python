@@ -38,7 +38,7 @@
 \newcommand*{\ProcessQuote}[1]{\color{red}#1\iftoggle{InString}{\global\togglefalse{InString}}{\global\toggletrue{InString}}}
 
 \lstdefinelanguage{py}{
-	morekeywords={if,elif,else,for,in,def,class,True,False,print,return},
+	morekeywords={if,elif,else,for,in,def,class,True,False,print,return,and,or,not,with,None},
 	literate=
 		*{=}{{{\color{punct}{=}}}}{1}
 		{|}{{{\color{punct}{|}}}}{1}
@@ -151,7 +151,7 @@
 	\subsubsection*{Operations}
 	
 	\begin{tabular}{r l}
-		\lstinline|+|, \lstinline|-|, \lstinline|*|, \lstinline|/| &
+		\lstinline|+|, \lstinline|-|, \lstinline|*|, \lstinline|/|, \lstinline|%| &
 		(on integers or floats) \\
 	
 		\lstinline|+| & (to join strings or lists) \\
@@ -160,26 +160,31 @@
 	
 		\lstinline|>|, \lstinline|>=|, \lstinline|<|, \lstinline|<=| &
 		(comparing integers or floats) \\
+		
+		\lstinline|and|, \lstinline|or|, \lstinline|not| & (on booleans)
 	\end{tabular}
 	
 	\subsubsection*{Variables}
 	
 	Labels onto values. Their names must consist only of letters, digits and underscores. They can't start with a digit or have spaces. They are case sensitive.
 	
-	%\colorbox{codebg}{\lstinline|days[1]|}
-	%\colorbox{codebg}{\lstinline|[x*x for x in nums]|}
-	
 	\subsubsection*{Control flow}
 	
 	\colorbox{codebg}{\lstinline|for $\ \colorbox{spacebg}{\quad}$ in $\ \colorbox{spacebg}{\quad}$:|} \\
 	
 	\colorbox{codebg}{\lstinline|if $\ \colorbox{spacebg}{\quad}$:|}
+	\vspace{1mm}
+	
+	\colorbox{codebg}{\lstinline|elif $\ \colorbox{spacebg}{\quad}$:|}
+	\vspace{1mm}
+	
+	\colorbox{codebg}{\lstinline|else:|}
 	
 	\subsubsection*{Functions}
 	
 	\colorbox{codebg}{\lstinline|def $\ \colorbox{spacebg}{\quad}$($\colorbox{spacebg}{\quad}$):|}
 	
-	\vspace{2mm}
+	\vspace{1mm}
 	
 	\colorbox{codebg}{\lstinline|\ \ \ \ return $\ \colorbox{spacebg}{\quad}$|} \\
 	
