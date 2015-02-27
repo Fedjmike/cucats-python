@@ -43,6 +43,8 @@
 		\end{itemize}
 	\end{frame}
 	
+	\section{REPL - Values}
+	
 	\begin{frame}[fragile]
 		\frametitle{Values}
 		
@@ -293,6 +295,23 @@
 		\end{itemize}
 	\end{frame}
 	
+	\section{Files - Control flow}
+	
+	\begin{frame}[fragile]
+		\frametitle{Making a program: writing Python code in a file}
+		We have been using the interpreter. There is another way to use Python.
+		\begin{itemize}
+			\item We can save some Python commands in a file and then invoke the interpreter on the file.
+			\pause
+			\item Write \colorbox{codebg}{\lstinline|print("Hello!")|} in a file using your text editor and save it somewhere under the name \lstinline|my_python_script.py|.
+			\item Note the \lstinline|.py| extension!
+			\pause
+			\item Open a command prompt at the folder where you saved the script and type in the name of your script (\lstinline|my_python_script.py|).
+			\item The computer should respond: \texttt{Hello!}
+		\end{itemize}
+	\end{frame}
+	
+	\iffalse
 	\begin{frame}[fragile]
 		\frametitle{Control flow}
 		The order that things happen in.
@@ -307,6 +326,7 @@
 		\end{itemize}
 
 	\end{frame}
+	\fi
 
 	\begin{frame}[fragile]
 		\frametitle{`for' loops}
@@ -465,20 +485,4 @@
 		
 		Try changing it to return the index, if found.
 	\end{frame}
-	
-	\begin{frame}[fragile]
-		\frametitle{Making a program: writing Python code in a file}
-		We have been using the interpreter. There is another way to use Python.
-		\begin{itemize}
-			\item We can save some Python commands in a file and then invoke the interpreter on the file.
-			\pause
-			\item Write \colorbox{codebg}{\lstinline|print("Hello!")|} in a file using a text editor (say, Notepad) and save it somewhere under the name \lstinline|my_python_script.py|.
-			\item Note the \lstinline|.py| extension!
-			\pause
-			\item Open a command prompt at the folder where you saved the script and type in the name of your script (\lstinline|my_python_script.py|).
-			\item The computer should respond: \lstinline|Hello!|
-		\end{itemize}
-	\end{frame}
-
-	
 \end{document}
