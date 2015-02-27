@@ -1,6 +1,6 @@
 \documentclass[12pt,twocolumn]{article}
 
-\usepackage[margin=1in]{geometry}
+\usepackage[margin=0.5in]{geometry}
 
 \pagenumbering{gobble}
 
@@ -15,7 +15,7 @@
 \begin{document}
 	\maketitle
 	
-	\vspace*{-1cm}
+	\vspace*{-2cm}
 	
 	\begin{tabular}{l l}
 		\textbf{Datatype} & \textbf{Example} \\
@@ -61,35 +61,70 @@
 	
 	\subsubsection*{Variables}
 	
-	Labels onto values. Their names must consist only of letters, digits and underscores. They can't start with a digit or have spaces. They are case sensitive.
+	Labels onto values. Names must consist only of letters, digits and underscores. Cannot start with a digit or have spaces. They are case sensitive.
 	
-	\subsubsection*{Control flow}
+	\vspace{\baselineskip}
 	
-	\colorbox{codebg}{\lstinline|for $\ \colorbox{spacebg}{\quad}$ in $\ \colorbox{spacebg}{\quad}$:|} \\
+	\begin{minipage}[t]{0.23\textwidth}
+		\subsubsection*{Loops}
+		
+		\colorbox{codebg}{\lstinline|for $\ \colorbox{spacebg}{\quad}$ in $\ \colorbox{spacebg}{\quad}$:|} \\
+		
+		\colorbox{codebg}{\lstinline|while $\ \colorbox{spacebg}{\quad}$:|} \\
+		
+		\colorbox{codebg}{\lstinline|\ \ \ \ break|}
+		\vspace{1mm}
+		
+		\colorbox{codebg}{\lstinline|\ \ \ \ continue|} \\
+		
+		\subsubsection*{Branches}
+		
+		\colorbox{codebg}{\lstinline|if $\ \colorbox{spacebg}{\quad}$:|}
+		\vspace{1mm}
+		
+		\colorbox{codebg}{\lstinline|elif $\ \colorbox{spacebg}{\quad}$:|}
+		\vspace{1mm}
+		
+		\colorbox{codebg}{\lstinline|else:|}
+	\end{minipage}
+	\hfill
+	\begin{minipage}[t]{0.23\textwidth}
+		\subsubsection*{Functions}
+		
+		\colorbox{codebg}{\lstinline|def $\ \colorbox{spacebg}{\quad}$($\colorbox{spacebg}{\quad}$):|}
+		
+		\vspace{1mm}
+		
+		\colorbox{codebg}{\lstinline|\ \ \ \ return $\ \colorbox{spacebg}{\quad}$|} \\
+		
+		\subsubsection*{Exceptions}
+		
+		\colorbox{codebg}{\lstinline|try:|}
+		\vspace{1mm}
+		
+		\colorbox{codebg}{\lstinline|except $\ \colorbox{spacebg}{\quad}$:|}
+		\vspace{1mm}
+		
+		%\colorbox{codebg}{\lstinline|except $\ \colorbox{spacebg}{\quad}$ as $\ \colorbox{spacebg}{\quad}$:|}
+		%\vspace{1mm}
+		
+		\colorbox{codebg}{\lstinline|finally:|} \\
+		
+		\colorbox{codebg}{\lstinline|\ \ \ \ raise $\ \colorbox{spacebg}{\quad}$:|}
+	\end{minipage}
 	
-	\colorbox{codebg}{\lstinline|if $\ \colorbox{spacebg}{\quad}$:|}
-	\vspace{1mm}
 	
-	\colorbox{codebg}{\lstinline|elif $\ \colorbox{spacebg}{\quad}$:|}
-	\vspace{1mm}
-	
-	\colorbox{codebg}{\lstinline|else:|}
-	
-	\subsubsection*{Functions}
-	
-	\colorbox{codebg}{\lstinline|def $\ \colorbox{spacebg}{\quad}$($\colorbox{spacebg}{\quad}$):|}
-	
-	\vspace{1mm}
-	
-	\colorbox{codebg}{\lstinline|\ \ \ \ return $\ \colorbox{spacebg}{\quad}$|} \\
 	
 	\newpage
-	\vspace*{-1.5cm}
-	\subsubsection*{Lists}
+	\vspace*{-2.5cm}
+	\subsubsection*{Lists and Strings}
 	
 	\begin{tabular}{l l}
 		Element access &
 		\colorbox{codebg}{\lstinline|$\colorbox{lightspacebg}{list}$[$\colorbox{lightspacebg}{index}$]|} \vspace{1mm} \\
+		
+		Slicing &
+		\colorbox{codebg}{\lstinline|$\colorbox{lightspacebg}{list}$[$\colorbox{lightspacebg}{start}$:$\colorbox{lightspacebg}{end}$]|} \vspace{1mm} \\
 		
 		Comprehensions &
 		\colorbox{codebg}{\lstinline|[$\colorbox{spacebg}{\quad}$ for $\ \colorbox{spacebg}{\quad}$ in $\ \colorbox{spacebg}{\quad}$]|}
