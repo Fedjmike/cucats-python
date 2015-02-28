@@ -399,20 +399,16 @@
 		
 		Provide two different pieces of code to run depending on some condition.\\
 		\pause
-		A condition is an expression which when evaluated, returns either `\lstinline|True|' or `\lstinline|False|'.
+		A condition is an expression that evaluates to a boolean, a truth value -- either \colorbox{codebg}{\lstinline|True|} or \colorbox{codebg}{\lstinline|False|}.
 		
 		% explain in the context of for loops, because otherwise the condition is going to be tautological and it won't be clear why providing a branch is useful
 		% which is why if comes after for
 		\pause
 		\begin{lstlisting}
-		if MY_CONDITION:
-		    # Perform computation if
-		    # MY_CONDITION evaluates
-		    # to True.
+		if $\colorbox{spacebg}{\qquad}$:
+		    $\colorbox{spacebg}{\quad}$ #Do something if the condition is true
 		else:
-		    # Perform computation if
-		    # MY_CONDITION evaluates
-		    # to False.
+		    $\colorbox{spacebg}{\quad}$ #Something else if it's false
 		\end{lstlisting}
 	\end{frame}
 	
