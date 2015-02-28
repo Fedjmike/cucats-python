@@ -330,14 +330,14 @@
 		\begin{columns}[c]
 			\column{.7\textwidth}
 			\begin{lstlisting}
-			>>> numbers = [1, 2, 3, 4, 5]
+			>>> numbers = [5, 6, 10, 9]
 			>>> total = 0
 			>>> for num in numbers:
 			...     total = total + num
 			$ % \note<1>{The line `for num in numbers' followed by the colon opens up a new block of code, which has to be indented. Everything in the block gets executed for each num in numbers. To indent, use four spaces! You can put multiple lines in a block, and they must each be indented.}
 			\pause$
 			>>> print(total)
-			15
+			30
 			\end{lstlisting}
 			
 			\column{.2\textwidth}
@@ -345,11 +345,10 @@
 			\begin{tabular}{l | r}
 				\lstinline|num| & \lstinline|total| \\
 				\, & 0 \\ \pause
-				1 & 1 \\ \pause
-				2 & 3 \\ \pause
-				3 & 6 \\
-				4 & 10 \\
-				5 & 15 \\
+				5 & 5 \\ \pause
+				6 & 11 \\ \pause
+				10 & 21 \\
+				9 & 30 \\
 			\end{tabular}
 		\end{columns}
 		
@@ -363,8 +362,8 @@
 		
 		\begin{onlyenv}<1>
 			\begin{lstlisting}
-			>>> nums = [1, 2, 3, 4, 5]
-			>>> squares = [1, 4, 9, 16, 25]
+			>>> nums = [3, 4, 5, 10, 15]
+			>>> squares = [9, 16, 25, 100, 225]
 			\end{lstlisting}
 			
 			~ \\
@@ -376,10 +375,10 @@
 		
 		\begin{onlyenv}<2->
 			\begin{lstlisting}
-			>>> nums = [1, 2, 3, 4, 5]
+			>>> nums = [3, 4, 5, 10, 15]
 			>>> squares = [x*x for x in nums]$\pause$
 			>>> print(squares)
-			[1, 4, 9, 16, 25]
+			[9, 16, 25, 100, 225]
 			\end{lstlisting}
 		\end{onlyenv}
 		
@@ -419,7 +418,7 @@
 		
 		\pause
 		\begin{lstlisting}
-		numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+		numbers = [6, 7, 8, 9, 10, 5, 4, 3, 2, 1]
 		
 		for x in numbers:
 		    if (x % 2) == 0:
@@ -449,8 +448,8 @@
 			
 			\item Use:
 			\begin{lstlisting}[xleftmargin=\dimexpr-\leftmargini]
-			y = sum([1, 2, 3, 4, 5])
-			# The value of y is now 15.
+			y = sum([5, 6, 10, 9])
+			#The value of y is now 30.
 			\end{lstlisting}
 		\end{itemize}
 		
@@ -469,8 +468,10 @@
 		    return False
 		\end{lstlisting}
 		\begin{lstlisting}
-		print(find([1, 2, 3, 4], 5))
-		# Gives "False"
+		print(find(["Bob", 16, 0.5, 4], 5))
+		#"False"
+		print(find(["Bob", 16, 0.5, 4], 0.5))
+		#"True"
 		\end{lstlisting}
 		
 		\pause
