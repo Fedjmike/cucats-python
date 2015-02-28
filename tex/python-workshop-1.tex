@@ -328,16 +328,16 @@
 		Run a block of code for every element in a list. Indentation specifies the block.
 		
 		\begin{columns}[c]
-			\column{.7\textwidth}
+			\column{.75\textwidth}
 			\begin{lstlisting}
-			>>> numbers = [5, 6, 10, 9]
+			>>> numbers = [4, 8, 15, 16, 23, 42]
 			>>> total = 0
 			>>> for num in numbers:
 			...     total = total + num
 			$ % \note<1>{The line `for num in numbers' followed by the colon opens up a new block of code, which has to be indented. Everything in the block gets executed for each num in numbers. To indent, use four spaces! You can put multiple lines in a block, and they must each be indented.}
 			\pause$
 			>>> print(total)
-			30
+			108
 			\end{lstlisting}
 			
 			\column{.2\textwidth}
@@ -345,10 +345,12 @@
 			\begin{tabular}{l | r}
 				\lstinline|num| & \lstinline|total| \\
 				\, & 0 \\ \pause
-				5 & 5 \\ \pause
-				6 & 11 \\ \pause
-				10 & 21 \\
-				9 & 30 \\
+				4 & 4 \\ \pause
+				8 & 12 \\ \pause
+				15 & 27 \\
+				16 & 43 \\
+				23 & 66 \\
+				42 & 108 \\
 			\end{tabular}
 		\end{columns}
 		
