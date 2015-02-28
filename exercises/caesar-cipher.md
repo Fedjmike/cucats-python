@@ -71,10 +71,11 @@ We end up getting an opening curly bracket! This is because ASCII doesn't only o
           pass # Leave blank for now
       return(shifted_letter)
   ```
-
 We've introduced two new functions here: `isupper()` and `islower()`. All these functions do is return `True` or `False` depending on whether or not the letter is upper case or lower case.
 
 What is `elif`? `elif` is basically short for `else if`. Sometimes we don't just want our program to branch into two cases, there might be more we want to take care of. So, what we'd ideally like to do is run an initial test and see if it evaluates to `True`. If it does, it's all good and we can just execute the first bit of our `if-else` block. If not, there are still other cases we need to check before settling on a branch. How would we go about doing this? Run another `if-else` condition, of course! This is where an `elif` is used.
+
+Note that `pass` just tells python 'do nothing'. Remember to remove that when you're filling in the blocks yourself!
 
 * Modify your code to the following:
 
