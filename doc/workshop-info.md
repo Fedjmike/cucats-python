@@ -4,11 +4,11 @@ The Cambridge University Computing and Technology Society (CUCaTS) is running a 
 
 ## Upcoming Sessions
 
-#### Session One
+#### Session Two
 
-**When** : February 28, 2:30pm
+**When** : Weekend of March 7- exact time TBA
 
-**Where** : Chadwick room, Selwyn College (Old court)
+**Where** : TBA
 
 Please email us at `cucats-executive@srcf.net` to tell us you're coming!
 
@@ -24,3 +24,9 @@ Please email us at `cucats-executive@srcf.net` to tell us you're coming!
 **When** : February 15, 4:00pm
 
 **Where** : "the Lecture Theatre", Trinity Hall
+
+#### Session One
+
+**When** : February 28, 2:30pm
+
+**Where** : Chadwick room, Selwyn College (Old court)
