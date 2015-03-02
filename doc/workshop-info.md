@@ -6,9 +6,9 @@ The Cambridge University Computing and Technology Society (CUCaTS) is running a 
 
 #### Session Two
 
-**When** : Weekend of March 7- exact time TBA
+**When** : March 7, 2:30pm
 
-**Where** : TBA
+**Where** : "the Lecture Theatre", Trinity Hall
 
 Please email us at `cucats-executive@srcf.net` to tell us you're coming!
 
