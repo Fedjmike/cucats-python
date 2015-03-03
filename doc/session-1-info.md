@@ -2,7 +2,7 @@
 
 * [Preparation](./preparation.md#readme)
 * [Slides](../../../raw/master/pdf/python-workshop-1.pdf)
-* [Cheatsheet](../../../raw/master/pdf/python-cheatsheet.pdf)
+* [Cheatsheet](../../../raw/master/pdf/python-cheatsheet-1.pdf)
 
 ### Challenges:
 
