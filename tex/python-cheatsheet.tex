@@ -63,11 +63,14 @@
 		Slicing &
 		\colorbox{codebg}{\lstinline|$\colorbox{lightspacebg}{list}$[$\colorbox{lightspacebg}{start}$:$\colorbox{lightspacebg}{end}$]|} \vspace{1mm} \\
 		
-		Comprehensions &
-		\colorbox{codebg}{\lstinline|[$\colorbox{spacebg}{\quad}$ for $\ \colorbox{spacebg}{\quad}$ in $\ \colorbox{spacebg}{\quad}$]|} \vspace{1mm} \\
-		
 		Length &
-		\colorbox{codebg}{\lstinline|len($\colorbox{spacebg}{\quad}$)|}
+		\colorbox{codebg}{\lstinline|len($\colorbox{spacebg}{\quad}$)|} \vspace{1mm} \\
+		
+		List &
+		\colorbox{codebg}{\lstinline|[$\colorbox{spacebg}{\quad}$ for $\ \colorbox{spacebg}{\quad}$ in $\ \colorbox{spacebg}{\quad}$]|} \\
+		
+		comprehensions &
+		\colorbox{codebg}{\lstinline|[$\colorbox{spacebg}{\quad}$ for $\ \colorbox{spacebg}{\quad}$ in $\ \colorbox{spacebg}{\quad}$ if $\ \colorbox{spacebg}{\quad}$]|}\\
 	\end{tabular}
 	
 	\subsubsection*{Variables}
@@ -134,6 +137,9 @@
 	string.\lstinline|lower()| \\
 	string.\lstinline|find($\colorbox{lightspacebg}{substring}$)| \\
 	
+	dict.\lstinline|keys()| \\
+	dict.\lstinline|update($\colorbox{lightspacebg}{otherdict}$)| \\
+	
 	\subsubsection*{Dictionaries}
 	
 	An example:
@@ -143,12 +149,4 @@ ages = {"Alice": 42, "Bob": 40}\end{lstlisting}
 	\begin{lstlisting}
 >>> ages["Bob"]
 40\end{lstlisting}
-	Keys:
-	\begin{lstlisting}
->>> ages.keys()
-dict_keys(['Alice', 'Bob'])\end{lstlisting}
-	Adding or changing items:
-	\begin{lstlisting}
->>> ages.update({"Charlie": 1})\end{lstlisting}
-
 \end{document}
