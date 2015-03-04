@@ -1,31 +1,12 @@
+import itertools
+
 from PIL import Image
 
-print("Opening image...")
-img = Image.open("image.jpg")
-img = img.convert('RGB')
 
-print("Getting data...")
-data = img.load()
+image = Image.open("image.png")
+pixels = image.load()
 
-pixels = []
+for (i, j) in itertools.product(range(10, 20), range(10, 20)):
+    pixels[i, j] = (128, 128, 128)
 
-print("Getting pixels...")
-for y in range(img.size[1]):
-	pixels.append([])
-	for x in range(img.size[0]):
-		pixels[y].append(data[x, y])
-
-## Do stuff with pixels
-## Save as outpixels
-
-
-new = Image.new('RGB', img.size)
-
-print("Placing pixels...")
-for y in range(img.size[1]):
-	for x in range(img.size[0]):
-		new.putpixel((x, y), outpixels[y][x])
-
-print("Saving image...")
-new.save(outputImage)
-print "Done!", outputImage
+image.save("output.png")
