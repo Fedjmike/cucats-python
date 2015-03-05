@@ -243,10 +243,11 @@
 			\item Enter the \lstinline|while| loop.
 			\pause
 			\item Example:
-			\begin{lstlisting}
+			% Why isn't this listing more left-aligned?
+			\begin{lstlisting}[basicstyle=\scriptsize\tt]
 			num = 0
 			while not num > 0:
-			    num = input("Enter a positive number: ")
+			    num = int(input("Enter a positive number: "))
 			\end{lstlisting}
 
 		\end{itemize}
@@ -254,7 +255,26 @@
 	
 	\begin{frame}[fragile]
 		\frametitle{break and continue}
-		% motivating example?
+		\begin{lstlisting}
+		story = """
+		        John brought 3 apples and Jenny brought
+		        26 pears. Meanwhile, Bastian brought 22
+		        guavas!
+		        """
+
+		number_of_fruits = 0
+		for word in string.split():
+		    try:
+		        number_of_fruits += int(word)
+		    except ValueError:
+		        continue
+		
+		    if number_of_fruits > 1000000:
+		        print("Too many fruits! Party over.")
+		        break
+		
+		    print(number_of_fruits, "lovely fruits!")
+		\end{lstlisting}
 	\end{frame}
 	
 	\begin{frame}[fragile]
