@@ -5,6 +5,7 @@
 \usepackage{color}
 \usepackage{listings}
 \usepackage{etoolbox}
+\usepackage{calc}
 
 \setlength{\fboxsep}{0.5mm}
 
@@ -105,3 +106,10 @@
 	linewidth=0.9\linewidth,
 	xleftmargin=0.1\linewidth
 }
+
+\newlength{\DepthReference}
+\settodepth{\DepthReference}{g}
+\newlength{\HeightReference}
+\settoheight{\HeightReference}{T}
+\newlength{\Width}
+\newcommand{\evenbox}[2]{\colorbox{#1}{\rule[-2pt]{0pt}{10pt}#2}}
