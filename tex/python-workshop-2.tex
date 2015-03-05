@@ -31,17 +31,17 @@
 		Print a number if it is divisible by two or three:
 
 		\begin{lstlisting}
-		>>> for num in range(10):
-		...     if num % 2 == 0 or num % 3 == 0:
-		...         print(num)
+		for num in range(10):
+		    if num % 2 == 0 or num % 3 == 0:
+		        print(num)
 		\end{lstlisting}
 
 		Print a number if it is divisible by three but not five:
 
 		\begin{lstlisting}
-		>>> for num in range(20):
-		...     if num % 3 == 0 and not num % 5 == 0:
-		...         print(num)
+		for num in range(20):
+		    if num % 3 == 0 and not num % 5 == 0:
+		        print(num)
 		\end{lstlisting}
 	\end{frame}
 	
@@ -173,12 +173,11 @@
 			% datatypes that can be used as keys? hashable, immutable
 			% strings, floats, integers, tuples (mention?)
 			% keys and values do not have to be of one type
-			
-			\item Adding (or updating) key-value pairs:
-			\begin{lstlisting}[xleftmargin=\dimexpr-\leftmargini]
-			ages["Charlie"] = 1
-			\end{lstlisting}
 		\end{itemize}
+		
+		Adding or changing items:
+		\begin{lstlisting}[xleftmargin=\dimexpr-\leftmargini]
+		>>> ages.update({"Charlie": 1})\end{lstlisting}
 	\end{frame}
 	
 	\begin{frame}[fragile]
