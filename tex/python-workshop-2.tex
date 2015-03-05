@@ -11,7 +11,51 @@
 		\maketitle
 	\end{frame}
 	
-	% no particular order
+	\begin{frame}[fragile]
+		\frametitle{}
+		
+		\begin{itemize}
+			\item Last session we had this code:
+			\begin{lstlisting}[xleftmargin=\dimexpr-\leftmargini]
+			def find(list, value):
+			    for item in list:
+			        if item == value:
+			            return True
+			
+			    return False
+			\end{lstlisting}
+			
+			\item We wanted to change it to return the index where the element was found. You may have come up with something like this:
+			\begin{lstlisting}[xleftmargin=\dimexpr-\leftmargini]
+			    index = 0
+			    
+			    for item in list:
+			        if item == value:
+			            return index
+			            
+			        index += 1
+			
+			    return False
+			\end{lstlisting}
+		\end{itemize}
+		
+		\begin{lstlisting}
+		>> enumerate(["Alice", "Bob", "Charlie"])
+		(0, 'Alice')
+		(1, 'Bob')
+		(2, 'Charlie')
+		\end{lstlisting}
+		
+		\begin{lstlisting}
+		    for index, item in enumerate(list):
+		        if item == value:
+		            return index
+		            
+		    return False
+		\end{lstlisting}
+		
+		% unpacking (assignment, for)
+	\end{frame}
 	
 	\begin{frame}[fragile]
 		\frametitle{Logical operators}
@@ -255,11 +299,6 @@
 	\begin{frame}[fragile]
 		\frametitle{break and continue}
 		% motivating example?
-	\end{frame}
-	
-	\begin{frame}[fragile]
-		\frametitle{Tuples}
-		% unpacking (assignment, for)
 	\end{frame}
 	
 	\begin{frame}[fragile]
