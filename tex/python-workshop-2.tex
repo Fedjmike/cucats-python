@@ -3,6 +3,8 @@
 
 \include{base}
 
+\usepackage{paralist}
+
 \title{CUCaTS Python Workshop - Session 2}
 \date{Lent 2015}
 
@@ -175,22 +177,59 @@
 			% keys and values do not have to be of one type
 		\end{itemize}
 		
-		Keys:
-		\begin{lstlisting}[xleftmargin=\dimexpr-\leftmargini]
-		>>> ages.keys()
-		dict_keys(['Alice', 'Bob'])\end{lstlisting}
 		Adding or changing items:
 		\begin{lstlisting}[xleftmargin=\dimexpr-\leftmargini]
 		>>> ages.update({"Charlie": 1})\end{lstlisting}
 	\end{frame}
 	
 	\begin{frame}[fragile]
-		\frametitle{}
-		% error handling
-		% better to ask for forgiveness than for permission
-		% IndexError on a dict?
-		% or file access? that would emphasize correctness (race condition)
-		% but the former readability
+		\frametitle{Error handling}
+		% file access? that would emphasize correctness (race condition)
+		
+		\begin{itemize}
+			\item Looking for a key that is not in the dictionary is an error:
+			\begin{lstlisting}[basicstyle=\scriptsize\tt, xleftmargin=\dimexpr-\leftmargini]
+			>>> ages[name] = ages[name]+1
+			KeyError: "Satyarth"
+			\end{lstlisting}
+			
+			\pause
+			
+			\item We can guard against  it:
+		\end{itemize}
+		
+		\begin{columns}[c]
+			\column{.49\textwidth}
+			\begin{lstlisting}[basicstyle=\scriptsize\tt]
+			if name in ages.keys():
+			    ages[name] = ages[name]+1
+					
+			else:
+			    ages[name] = 0
+			\end{lstlisting}
+			
+			\pause
+			
+			\column{.49\textwidth}
+			\begin{lstlisting}[basicstyle=\scriptsize\tt]
+			try:
+			    ages[name] = ages[name]+1
+		
+			except KeyError:
+			    ages[name] = 0
+			\end{lstlisting}
+		\end{columns}
+		
+		\begin{quote}
+			It's easier to ask forgiveness than it is to get permission.
+		\end{quote} \vspace*{-2mm} \hfill -- Grace Hopper
+		
+		\pause
+		
+		Advantages of \lstinline|try|-\lstinline|except|: \\
+		\quad $\triangleright$ Simpler
+		$\triangleright$ Less error prone
+		$\triangleright$ Keeps error handling separate
 	\end{frame}
 	
 	\begin{frame}[fragile]
