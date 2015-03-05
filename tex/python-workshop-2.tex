@@ -33,7 +33,7 @@
 		\begin{lstlisting}
 		>>> for num in range(10):
 		...     if num % 2 == 0 or num % 3 == 0:
-		...         print num
+		...         print(num)
 		\end{lstlisting}
 
 		Print a number if it is divisible by three but not five:
@@ -41,7 +41,7 @@
 		\begin{lstlisting}
 		>>> for num in range(20):
 		...     if num % 3 == 0 and not num % 5 == 0:
-		...         print num
+		...         print(num)
 		\end{lstlisting}
 	\end{frame}
 	
@@ -113,7 +113,18 @@
 	
 	\begin{frame}[fragile]
 		\frametitle{while}
-		% motivating example?
+		\begin{itemize}
+			\item Sometimes you want your loop to run while some condition is met, as opposed to a set number of times (\lstinline|for| loops).
+			\item Enter the \lstinline|while| loop.
+			\pause
+			\item Example:
+			\begin{lstlisting}
+			>>> num = 0
+			>>> while num % 3 != 0:
+			...     n = input("Enter a number: ")
+			\end{lstlisting}
+
+		\end{itemize}
 	\end{frame}
 	
 	\begin{frame}[fragile]
