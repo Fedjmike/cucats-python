@@ -35,7 +35,22 @@
 	
 	\begin{frame}[fragile]
 		\frametitle{Dictionaries}
-		% not everyone did this, probs
+		
+		\begin{itemize}
+			\item Dictionaries allow us to have a bunch of \colorbox{jargonbg}{values} associated with certain \colorbox{jargonbg}{keys}.
+			\begin{lstlisting}[xleftmargin=\dimexpr-\leftmargini]
+			ages = {"Alice": 42, "Bob": 40}
+			\end{lstlisting}
+			
+			\item One ``looks up" the key and gets the value back.
+			\begin{lstlisting}[xleftmargin=\dimexpr-\leftmargini]
+			>>> ages["Bob"]
+			40\end{lstlisting}
+			
+			% datatypes that can be used as keys? hashable, immutable
+			% strings, floats, integers, tuples (mention?)
+			% keys and values do not have to be of one type
+		\end{itemize}
 	\end{frame}
 	
 	\begin{frame}[fragile]
