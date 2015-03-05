@@ -45,7 +45,6 @@
 		\end{lstlisting}
 	\end{frame}
 	
-	
 	\begin{frame}[fragile]
 		\frametitle{Slicing}
 
@@ -67,8 +66,10 @@
 			~ & \color{red}\tt S & ~ & \color{red}\tt a & ~ & \color{red}\tt t & ~ & \color{red}\tt y & ~ & \color{red}\tt a & ~ & \color{red}\tt r & ~ & \color{red}\tt t & ~ & \color{red}\tt h \\
 			0 & ~ & 1 & ~ & 2 & ~ & 3 & ~ & 4 & ~ & 5 & ~ & 6 & ~ & 7 & ~ & 8 \\
 		\end{tabular}
+	\end{frame}
 		
-		\pause
+	\begin{frame}[fragile]
+		\frametitle{Slicing}
 		
 		\begin{itemize}
 			\item \lstinline|start| and \lstinline|end| are optional:
@@ -85,6 +86,34 @@
 				\end{lstlisting}
 			\end{columns}
 			\note<3>{This is another reason why the end is not included: if it was, ``y" would have appeared in both slices.}
+			
+			\pause
+			
+			\item This leads to an idiom for duplicating a list or string:
+			\begin{lstlisting}[xleftmargin=\dimexpr-\leftmargini]
+			>>> original = [1, 2, 3]
+			>>> dup = original[:]
+			>>> dup.append(5)
+			>>> original, dup
+			[1, 2, 3], [1, 2, 3, 5]
+			\end{lstlisting}
+			
+			\pause
+			
+			\item Third option: step size.
+			
+			\begin{columns}[c]
+				\column{.45\textwidth}
+				\begin{lstlisting}
+				>>> "Satyarth"[1::2]
+				"ayrh"
+				\end{lstlisting}
+				\column{.45\textwidth}
+				\begin{lstlisting}
+				>>> "Satyarth"[::-1]
+				"htraytaS"
+				\end{lstlisting}
+			\end{columns}
 		\end{itemize}
 		
 		% x:y, optional (off by one), step
@@ -113,10 +142,20 @@
 			>>> ages["Bob"]
 			40\end{lstlisting}
 			
+			\item Jargon: \lstinline|"Alice"| is said to \evenbox{jargonbg}{map} to \lstinline|42|.
+			
 			% datatypes that can be used as keys? hashable, immutable
 			% strings, floats, integers, tuples (mention?)
 			% keys and values do not have to be of one type
 		\end{itemize}
+		
+		Keys:
+		\begin{lstlisting}[xleftmargin=\dimexpr-\leftmargini]
+		>>> ages.keys()
+		dict_keys(['Alice', 'Bob'])\end{lstlisting}
+		Adding or changing items:
+		\begin{lstlisting}[xleftmargin=\dimexpr-\leftmargini]
+		>>> ages.update({"Charlie": 1})\end{lstlisting}
 	\end{frame}
 	
 	\begin{frame}[fragile]
