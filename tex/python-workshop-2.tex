@@ -47,7 +47,46 @@
 	
 	
 	\begin{frame}[fragile]
-		\frametitle{List slicing}
+		\frametitle{Slicing}
+
+		\begin{itemize}
+			\item Take a section of a string or list:
+			\begin{lstlisting}[xleftmargin=\dimexpr-\leftmargini]
+			>>> name = "Satyarth"
+			>>> nickname = name[0:3]$\pause$
+			>>> nickname
+			"Sat"
+			\end{lstlisting}
+
+			\item \lstinline|[$\colorbox{lightspacebg}{\rule{0}{6pt}start}$:$\colorbox{lightspacebg}{end}$]| \\
+			means ``from \lstinline|start|, up to (but not including) \lstinline|end|".
+			
+			\item View the indices as between the elements:
+		\end{itemize}
+		\begin{tabular}{llllllllllllllllll}
+			~ & \color{red}\tt S & ~ & \color{red}\tt a & ~ & \color{red}\tt t & ~ & \color{red}\tt y & ~ & \color{red}\tt a & ~ & \color{red}\tt r & ~ & \color{red}\tt t & ~ & \color{red}\tt h \\
+			0 & ~ & 1 & ~ & 2 & ~ & 3 & ~ & 4 & ~ & 5 & ~ & 6 & ~ & 7 & ~ & 8 \\
+		\end{tabular}
+		
+		\pause
+		
+		\begin{itemize}
+			\item \lstinline|start| and \lstinline|end| are optional:
+			\begin{columns}[c]
+				\column{.45\textwidth}
+				\begin{lstlisting}
+				>>> "Satyarth"[:3]
+				"Sat"
+				\end{lstlisting}
+				\column{.45\textwidth}
+				\begin{lstlisting}
+				>>> "Satyarth"[3:]
+				"yarth"
+				\end{lstlisting}
+			\end{columns}
+			\note<3>{This is another reason why the end is not included: if it was, ``y" would have appeared in both slices.}
+		\end{itemize}
+		
 		% x:y, optional (off by one), step
 		% why is the end not included? give a good reason
 		% - ensures len of result == y-x
