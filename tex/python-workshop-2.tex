@@ -46,6 +46,32 @@
 	\end{frame}
 	
 	\begin{frame}[fragile]
+		\frametitle{Values and Variables}
+		Remember:
+		\begin{itemize}
+			\item Values are pieces of data stored in computer memory.
+			\item Variables are labels put onto values.
+		\end{itemize}
+		
+		\pause
+		
+		\begin{lstlisting}
+		>>> x = [7, 8]
+		>>> y = x
+		>>> y.append(11)
+		>>> x
+		$\pause$[7, 8, 11]
+		\end{lstlisting}
+		
+		Result:
+		\begin{itemize}
+			\item Assignment does not create a new value.
+			\item More than one variable can label the same value.
+			% use the words aliasing, reference?
+		\end{itemize}
+	\end{frame}
+	
+	\begin{frame}[fragile]
 		\frametitle{Slicing}
 
 		\begin{itemize}
@@ -156,32 +182,6 @@
 		Adding or changing items:
 		\begin{lstlisting}[xleftmargin=\dimexpr-\leftmargini]
 		>>> ages.update({"Charlie": 1})\end{lstlisting}
-	\end{frame}
-	
-	\begin{frame}[fragile]
-		\frametitle{Values and Variables}
-		Remember:
-		\begin{itemize}
-			\item Values are pieces of data stored in computer memory.
-			\item Variables are labels put onto values.
-		\end{itemize}
-		
-		\pause
-		
-		\begin{lstlisting}
-		>>> x = [7, 8]
-		>>> y = x
-		>>> y.append(11)
-		>>> x
-		$\pause$[7, 8, 11]
-		\end{lstlisting}
-		
-		Result:
-		\begin{itemize}
-			\item Assignment does not create a new value.
-			\item More than one variable can label the same value.
-			% use the words aliasing, reference?
-		\end{itemize}
 	\end{frame}
 	
 	\begin{frame}[fragile]
