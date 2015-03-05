@@ -168,10 +168,6 @@
 		>>> x
 		7
 		\end{lstlisting}
-		
-		%\begin{itemize} \item Assignment does not create a new value: \end{itemize}%
-		% save for later? allows delaying explaining list += list
-		
 	\end{frame}
 	
 	\begin{frame}[fragile]
@@ -278,20 +274,6 @@
 		\end{lstlisting}
 	\end{frame}
 	
-	\begin{frame}[fragile]
-		\frametitle{The print function}
-		\begin{lstlisting}
-		print(value)
-		\end{lstlisting}
-		\begin{itemize}
-			\item \lstinline|print| writes things onto the screen.
-			\pause
-			\item \lstinline|print| can print all kinds of values.
-			\pause
-			\item A useful function to see ``what's going on'' in your program.
-		\end{itemize}
-	\end{frame}
-	
 	\section{Files - Control flow}
 	
 	\begin{frame}[fragile]
@@ -305,6 +287,20 @@
 			\pause
 			\item Open a command prompt at the folder where you saved the script and type in the name of your script (\lstinline|my_python_script.py|).
 			\item The computer should respond: \texttt{Hello!}
+		\end{itemize}
+	\end{frame}
+	
+	\begin{frame}[fragile]
+		\frametitle{The print function}
+		\begin{lstlisting}
+		print(value)
+		\end{lstlisting}
+		\begin{itemize}
+			\item \lstinline|print| writes things onto the screen.
+			\pause
+			\item \lstinline|print| can print all kinds of values.
+			\pause
+			\item A useful function to see ``what's going on'' in your program.
 		\end{itemize}
 	\end{frame}
 	
@@ -326,7 +322,12 @@
 	\begin{frame}[fragile]
 		\frametitle{`for' loops}
 		
-		Run a block of code for every element in a list. Indentation specifies the block.
+		\begin{itemize}
+			\item Run a block of code for every element in a list.
+			\item Indentation specifies the block.
+			\item `\lstinline|for|' and `\lstinline|in|' are keywords.
+			\note<1->{Keywords are ones that have a special meaning. You cannot use them as variable names. List comprehensions must use `\lstinline|for|' and `\lstinline|in|'}
+		\end{itemize}
 		
 		\begin{columns}[c]
 			\column{.75\textwidth}
@@ -335,14 +336,14 @@
 			>>> total = 0
 			>>> for num in numbers:
 			...     total = total + num
-			$\note<1>{The line `for num in numbers' followed by the colon opens up a new block of code, which has to be indented. Everything in the block gets executed for each num in numbers. To indent, use four spaces! You can put multiple lines in a block, and they must each be indented.}
+			$\note<1>{Take every element of \lstinline|numbers| in turn and call it \lstinline|num|.}
+			\note<1>{The line `for num in numbers' followed by the colon opens up a new block of code, which has to be indented. Everything in the block gets executed for each num in numbers. To indent, use four spaces! You can put multiple lines in a block, and they must each be indented.}
 			\pause$
 			>>> print(total)
 			108
 			\end{lstlisting}
 			
 			\column{.2\textwidth}
-			\pause
 			\begin{tabular}{l | r}
 				\lstinline|num| & \lstinline|total| \\
 				\, & 0 \\ \pause
@@ -354,10 +355,6 @@
 				42 & 108 \\
 			\end{tabular}
 		\end{columns}
-		
-		% step by step on the side of the running total
-		
-		% whitespace...
 	\end{frame}
 	
 	\begin{frame}[fragile]
@@ -389,8 +386,6 @@
 		
 		\begin{itemize}
 			\item Creates a new list out of another by using each element to create a corresponding new value.
-			\item `\lstinline|for|' and `\lstinline|in|' are keywords.
-			\note<3->{Keywords are ones that have a special meaning. You cannot use them as variable names. List comprehensions must use `\lstinline|for|' and `\lstinline|in|'}
 			\item This is called a \colorbox{jargonbg}{list comprehension}.
 		\end{itemize}
 	\end{frame}
