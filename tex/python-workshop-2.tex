@@ -300,6 +300,40 @@
 	\end{frame}
 	
 	\begin{frame}[fragile]
+		\frametitle{Iterables}
+		
+		\begin{itemize}
+			\item Not everything we iterate over with \lstinline|for| is a list.
+			
+			\pause
+			
+			\item \lstinline|enumerate| does not actually give you a list!
+			\begin{lstlisting}[xleftmargin=\dimexpr-\leftmargini, basicstyle=\scriptsize\tt]
+			>>> enumerate(["Alice", "Bob", "Charlie"])
+			<enumerate object at $\text{\tt\color{num} 0x005FA2B0}$>$\pause$
+			>>> for item in enumerate(["Alice", "Bob", "Charlie"]):
+			...     print(item)
+			(0, 'Alice')
+			(1, 'Bob')
+			(2, 'Charlie')
+			\end{lstlisting}
+			
+			\pause
+			
+			\item These are special objects which act like lists, called \colorbox{jargonbg}{iterables}.
+			
+			\item Can be converted to lists with \lstinline|list|:
+			\begin{lstlisting}[xleftmargin=\dimexpr-\leftmargini]
+			>>> range(10)
+			range(0, 10)
+			>>> list(range(10))
+			[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+			\end{lstlisting}
+			
+		\end{itemize}
+	\end{frame}
+	
+	\begin{frame}[fragile]
 		\frametitle{while}
 		\begin{itemize}
 			\item Sometimes you want your loop to run while some condition is met, as opposed to a set number of times (\lstinline|for| loops).
