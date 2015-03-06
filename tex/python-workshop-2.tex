@@ -14,47 +14,71 @@
 	\begin{frame}[fragile]
 		\frametitle{}
 		
+		\begin{columns}[t]
+			\column{.45\textwidth}
+			\begin{itemize}
+				\item Last session we had this code:
+				\begin{lstlisting}[xleftmargin=\dimexpr-\leftmargini, basicstyle=\scriptsize\tt]
+				def find(list, value):
+				    for item in list:
+				        if item == value:
+				            return True
+				
+				    return False
+				\end{lstlisting}
+				
+				\item We wanted to change it to return the index where the element was found.
+			\end{itemize}
+			
+			\pause
+				
+			\column{.45\textwidth}
+			\begin{itemize}
+				\item You may have come up with something like this:
+				\begin{lstlisting}[xleftmargin=\dimexpr-\leftmargini, basicstyle=\scriptsize\tt]
+				def find(list, value):
+				    index = 0
+				    
+				    for item in list:
+				        if item == value:
+				            return index
+				            
+				        index += 1
+				
+				    return False
+				\end{lstlisting}
+			\end{itemize}
+		\end{columns}
+	\end{frame}
+	
+	\begin{frame}[fragile]
+		\frametitle{Enumerate}
+		
 		\begin{itemize}
-			\item Last session we had this code:
+			\item \lstinline|enumerate($\colorbox{lightspacebg}{list}$)|
+			
+			\item Pairs each element with its index:
+			\begin{lstlisting}[xleftmargin=\dimexpr-\leftmargini]
+			>>> enumerate(["Alice", "Bob", "Charlie"])
+			[(0, 'Alice'),
+			 (1, 'Bob'),
+			 (2, 'Charlie')]
+			\end{lstlisting}
+			
+			\item We can use it to iterate over the list: 
 			\begin{lstlisting}[xleftmargin=\dimexpr-\leftmargini]
 			def find(list, value):
-			    for item in list:
-			        if item == value:
-			            return True
-			
-			    return False
-			\end{lstlisting}
-			
-			\item We wanted to change it to return the index where the element was found. You may have come up with something like this:
-			\begin{lstlisting}[xleftmargin=\dimexpr-\leftmargini]
-			    index = 0
-			    
-			    for item in list:
+			    for index, item in enumerate(list):
 			        if item == value:
 			            return index
-			            
-			        index += 1
 			
 			    return False
 			\end{lstlisting}
+			
+			\item Each loop iteration receives a pair, \lstinline|(index, item)|, not just one element.
 		\end{itemize}
 		
-		\begin{lstlisting}
-		>> enumerate(["Alice", "Bob", "Charlie"])
-		(0, 'Alice')
-		(1, 'Bob')
-		(2, 'Charlie')
-		\end{lstlisting}
-		
-		\begin{lstlisting}
-		    for index, item in enumerate(list):
-		        if item == value:
-		            return index
-		            
-		    return False
-		\end{lstlisting}
-		
-		% unpacking (assignment, for)
+		% todo: tuples, unpacking, assignment
 	\end{frame}
 	
 	\begin{frame}[fragile]

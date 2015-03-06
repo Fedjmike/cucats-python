@@ -127,9 +127,14 @@
 	
 	\subsubsection*{Common functions and methods}
 	
-	\colorbox{codebg}{\lstinline|range($\colorbox{lightspacebg}{end}$)|} \\
-	\colorbox{codebg}{\lstinline|range($\colorbox{lightspacebg}{start}$,\ $\colorbox{lightspacebg}{end}$)|} \\
-	\colorbox{codebg}{\lstinline|range($\colorbox{lightspacebg}{start}$,\ $\colorbox{lightspacebg}{end}$,\ $\colorbox{lightspacebg}{step}$)|} \\
+	\lstinline|range($\colorbox{lightspacebg}{end}$)| \\
+	\lstinline|range($\colorbox{lightspacebg}{start}$, $\colorbox{lightspacebg}{end}$)| \\
+	\lstinline|range($\colorbox{lightspacebg}{start}$, $\colorbox{lightspacebg}{end}$, $\colorbox{lightspacebg}{step}$)| \\
+	
+	\lstinline|enumerate($\colorbox{lightspacebg}{list}$)| \\
+	%\lstinline|enumerate($\colorbox{lightspacebg}{list}$, $\colorbox{lightspacebg}{start}$)| \\
+	% save space, not show this, they can just add to the index (or look it up)
+	\lstinline|zip($\colorbox{lightspacebg}{list}$, $\colorbox{lightspacebg}{otherlist}$)| \\
 	
 	list.\lstinline|append($\colorbox{lightspacebg}{item}$)| \\
 	list.\lstinline|reverse()| \\
@@ -146,9 +151,6 @@
 	
 	\subsubsection*{Dictionaries}
 	
-	An example:
-	\begin{lstlisting}
-ages = {"Alice": 42, "Bob": 40}\end{lstlisting}
 	Indexing:
 	\begin{lstlisting}
 >>> ages["Bob"]
