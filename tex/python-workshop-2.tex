@@ -12,38 +12,6 @@
 	\end{frame}
 	
 	\begin{frame}[fragile]
-		\frametitle{Logical operators}
-		\begin{itemize}
-			\item Act on booleans
-			\item Allow you to chain together expressions
-			\pause
-			\item \lstinline|and|: returns \lstinline|True| if both of the operands are \lstinline|True|, otherwise returns \lstinline|False|.
-			\item \lstinline|or|: returns \lstinline|True| if at least one of the operands is \lstinline|True|, otherwise returns \lstinline|False|.
-			\item \lstinline|not|: returns the complement of the operand.
-		\end{itemize}
-	\end{frame}
-
-	\begin{frame}[fragile]
-		\frametitle{Try it out!}
-
-		Print a number if it is divisible by two or three:
-
-		\begin{lstlisting}
-		for num in range(10):
-		    if num % 2 == 0 or num % 3 == 0:
-		        print(num)
-		\end{lstlisting}
-
-		Print a number if it is divisible by three but not five:
-
-		\begin{lstlisting}
-		for num in range(20):
-		    if num % 3 == 0 and not num % 5 == 0:
-		        print(num)
-		\end{lstlisting}
-	\end{frame}
-	
-	\begin{frame}[fragile]
 		\frametitle{Values and Variables}
 		Remember:
 		\begin{itemize}
@@ -331,6 +299,38 @@
 			\end{lstlisting}
 			
 		\end{itemize}
+	\end{frame}
+	
+	\begin{frame}[fragile]
+		\frametitle{Logical operators}
+		\begin{itemize}
+			\item They operate on booleans.
+			\item Allow you to combine expressions together.
+			\pause
+			\item \lstinline|and|: returns \lstinline|True| if both of the operands are \lstinline|True|, otherwise returns \lstinline|False|.
+			\item \lstinline|or|: returns \lstinline|True| if at least one of the operands is \lstinline|True|, otherwise returns \lstinline|False|.
+			\item \lstinline|not|: returns the complement of the operand.
+		\end{itemize}
+	\end{frame}
+	
+	\begin{frame}[fragile]
+		\frametitle{Try it out!}
+		
+		Print a number if it is divisible by two or five:
+		
+		\begin{lstlisting}
+		for num in range(10):
+		    if num % 2 == 0 or num % 5 == 0:
+		        print(num)
+		\end{lstlisting}
+		
+		Print a number if it isn't divisible by two or three:
+		
+		\begin{lstlisting}
+		for num in range(20):
+		    if not (num % 2 == 0 and num % 3 == 0):
+		        print(num)
+		\end{lstlisting}
 	\end{frame}
 	
 	\begin{frame}[fragile]
