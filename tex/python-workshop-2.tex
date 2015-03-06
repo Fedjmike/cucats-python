@@ -298,7 +298,11 @@
 	\end{frame}
 	
 	\begin{frame}[fragile]
-		\frametitle{break and continue}
+		\frametitle{break}
+	\end{frame}
+	
+	\begin{frame}[fragile]
+		\frametitle{continue}
 		\begin{lstlisting}
 		story = """
 		        John brought 3 apples and Jenny brought
@@ -307,15 +311,12 @@
 		        """
 
 		number_of_fruits = 0
+		
 		for word in story.split():
 		    try:
 		        number_of_fruits += int(word)
 		    except ValueError:
 		        continue
-		
-		    if number_of_fruits > 1000000:
-		        print("Too many fruits! Party over.")
-		        break
 		
 		    print(number_of_fruits, "lovely fruits!")
 		\end{lstlisting}
@@ -324,5 +325,10 @@
 	\begin{frame}[fragile]
 		\frametitle{Files}
 		% use with, damn nice syntax
+		
+		\begin{lstlisting}
+		with open("input.txt") as file:
+		    print(file.read())
+		\end{lstlisting}
 	\end{frame}
 \end{document}
