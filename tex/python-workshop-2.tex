@@ -3,90 +3,14 @@
 
 \include{base}
 
+\usepackage{colortbl}
+
 \title{CUCaTS Python Workshop - Session 2}
 \date{Lent 2015}
 
 \begin{document}
 	\begin{frame}[fragile]
 		\maketitle
-	\end{frame}
-	
-	\begin{frame}[fragile]
-		\frametitle{}
-		
-		\begin{itemize}
-			\item Last session we had this code:
-			\begin{lstlisting}[xleftmargin=\dimexpr-\leftmargini]
-			def find(list, value):
-			    for item in list:
-			        if item == value:
-			            return True
-			
-			    return False
-			\end{lstlisting}
-			
-			\item We wanted to change it to return the index where the element was found. You may have come up with something like this:
-			\begin{lstlisting}[xleftmargin=\dimexpr-\leftmargini]
-			    index = 0
-			    
-			    for item in list:
-			        if item == value:
-			            return index
-			            
-			        index += 1
-			
-			    return False
-			\end{lstlisting}
-		\end{itemize}
-		
-		\begin{lstlisting}
-		>> enumerate(["Alice", "Bob", "Charlie"])
-		(0, 'Alice')
-		(1, 'Bob')
-		(2, 'Charlie')
-		\end{lstlisting}
-		
-		\begin{lstlisting}
-		    for index, item in enumerate(list):
-		        if item == value:
-		            return index
-		            
-		    return False
-		\end{lstlisting}
-		
-		% unpacking (assignment, for)
-	\end{frame}
-	
-	\begin{frame}[fragile]
-		\frametitle{Logical operators}
-		\begin{itemize}
-			\item Act on booleans
-			\item Allow you to chain together expressions
-			\pause
-			\item \lstinline|and|: returns \lstinline|True| if both of the operands are \lstinline|True|, otherwise returns \lstinline|False|.
-			\item \lstinline|or|: returns \lstinline|True| if at least one of the operands is \lstinline|True|, otherwise returns \lstinline|False|.
-			\item \lstinline|not|: returns the complement of the operand.
-		\end{itemize}
-	\end{frame}
-
-	\begin{frame}[fragile]
-		\frametitle{Try it out!}
-
-		Print a number if it is divisible by two or three:
-
-		\begin{lstlisting}
-		for num in range(10):
-		    if num % 2 == 0 or num % 3 == 0:
-		        print(num)
-		\end{lstlisting}
-
-		Print a number if it is divisible by three but not five:
-
-		\begin{lstlisting}
-		for num in range(20):
-		    if num % 3 == 0 and not num % 5 == 0:
-		        print(num)
-		\end{lstlisting}
 	\end{frame}
 	
 	\begin{frame}[fragile]
@@ -132,7 +56,7 @@
 			
 			\item View the indices as between the elements:
 		\end{itemize}
-		\begin{tabular}{llllllllllllllllll}
+		\begin{tabular}{>{\columncolor[gray]{0.8}}l>{\columncolor[gray]{0.8}}l>{\columncolor[gray]{0.8}}l>{\columncolor[gray]{0.8}}l>{\columncolor[gray]{0.8}}l>{\columncolor[gray]{0.8}}l>{\columncolor[gray]{0.8}}llllllllllll}
 			~ & \color{red}\tt S & ~ & \color{red}\tt a & ~ & \color{red}\tt t & ~ & \color{red}\tt y & ~ & \color{red}\tt a & ~ & \color{red}\tt r & ~ & \color{red}\tt t & ~ & \color{red}\tt h \\
 			0 & ~ & 1 & ~ & 2 & ~ & 3 & ~ & 4 & ~ & 5 & ~ & 6 & ~ & 7 & ~ & 8 \\
 		\end{tabular}
@@ -155,7 +79,7 @@
 				"yarth"
 				\end{lstlisting}
 			\end{columns}
-			\note<3>{This is another reason why the end is not included: if it was, ``y" would have appeared in both slices.}
+			\note<1>{This is another reason why the end is not included: if it was, ``y" would have appeared in both slices.}
 			
 			\pause
 			
@@ -194,12 +118,7 @@
 	\end{frame}
 	
 	\begin{frame}[fragile]
-		\frametitle{List comprehensions}
-		% if predicate, filtering
-	\end{frame}
-	
-	\begin{frame}[fragile]
-		\frametitle{Dictionaries}
+		\frametitle{Dictionary}
 		
 		\begin{itemize}
 			\item Dictionaries allow us to have a bunch of \evenbox{jargonbg}{values} associated with certain \evenbox{jargonbg}{keys}.
@@ -218,10 +137,52 @@
 			% strings, floats, integers, tuples (mention?)
 			% keys and values do not have to be of one type
 			
-			\item Adding (or updating) key-value pairs:
+		\end{itemize}
+	\end{frame}
+	
+	\begin{frame}[fragile]
+		\frametitle{Dictionary operations}
+		
+		\begin{itemize}
+			\item Our example:
 			\begin{lstlisting}[xleftmargin=\dimexpr-\leftmargini]
-			ages["Charlie"] = 1
+			ages = {"Alice": 42, "Bob": 40}
 			\end{lstlisting}
+			\item Add/update. We shall add Charlie's age and update Bob's age.
+			\begin{lstlisting}[xleftmargin=\dimexpr-\leftmargini]
+			>>> ages["Charlie"] = 10
+			>>> ages["Bob"] = 41
+			>>> ages
+			{"Alice": 42, "Bob": 41, "Charlie": 10}
+			\end{lstlisting}
+			
+			\item Deleting entries
+			\begin{lstlisting}[xleftmargin=\dimexpr-\leftmargini]
+			>>> del ages["Bob"]
+			>>> ages
+			{"Alice": 42, "Charlie": 10}
+			\end{lstlisting}
+			
+		\end{itemize}
+	\end{frame}
+	
+		
+	\begin{frame}[fragile]
+		\frametitle{Dictionary methods and summary}
+		Methods
+		\begin{itemize}
+			\item Getting a list of values: \lstinline|list(ages.values())|
+			\item Getting a list of keys: \lstinline|list(ages.keys())|
+			\item Checking if a key exists: \lstinline|ages.has_key("Alice")|
+			\item Creating a new copy: \lstinline|record = ages.copy()|
+			\item We can also update or get values with \lstinline|dict.get()| and \lstinline|dict.update()|
+		\end{itemize}
+		Summary
+		\begin{itemize}
+			\item Create a dictionary: \lstinline|x = {}|
+			\item Add/update: \lstinline|x[y] = z|, or \lstinline|x.update({y:z})|
+			\item Retrieve: \lstinline|x[y]| or \lstinline|x.get(y)|
+			\item Delete: \lstinline|del x[y]| or \lstinline|x.pop(y)|
 		\end{itemize}
 	\end{frame}
 	
@@ -277,7 +238,208 @@
 	
 	\begin{frame}[fragile]
 		\frametitle{}
-		% duck typing
+		
+		\begin{columns}[t]
+			\column{.45\textwidth}
+			\begin{itemize}
+				\item Last session we had this code:
+				\begin{lstlisting}[xleftmargin=\dimexpr-\leftmargini, basicstyle=\scriptsize\tt]
+				def find(list, value):
+				    for item in list:
+				        if item == value:
+				            return True
+				
+				    return False
+				\end{lstlisting}
+				
+				\item We wanted to change it to return the index where the element was found.
+			\end{itemize}
+			
+			\pause
+			
+			\column{.45\textwidth}
+			\begin{itemize}
+				\item You may have come up with something like this:
+				\begin{lstlisting}[xleftmargin=\dimexpr-\leftmargini, basicstyle=\scriptsize\tt]
+				def find(list, value):
+				    index = 0
+				
+				    for item in list:
+				        if item == value:
+				            return index
+				
+				        index += 1
+				
+				    return False
+				\end{lstlisting}
+			\end{itemize}
+		\end{columns}
+	\end{frame}
+	
+	\begin{frame}[fragile]
+		\frametitle{Enumerate}
+		
+		\begin{itemize}
+			\item \lstinline|enumerate($\colorbox{lightspacebg}{list}$)|
+			
+			\item Pairs each element with its index:
+			\begin{lstlisting}[xleftmargin=\dimexpr-\leftmargini]
+			>>> enumerate(["Alice", "Bob", "Charlie"])      $\color{blue}*$
+			[(0, 'Alice'),
+			 (1, 'Bob'),
+			 (2, 'Charlie')]
+			\end{lstlisting}
+			
+			\item We can use it to iterate over the list: 
+			\begin{lstlisting}[xleftmargin=\dimexpr-\leftmargini]
+			def find(list, value):
+			    for index, item in enumerate(list):
+			        if item == value:
+			            return index
+			
+			    return False
+			\end{lstlisting}
+			
+			\item Each loop iteration receives a pair, \lstinline|(index, item)|, not just one element.
+		\end{itemize}
+		
+		% todo: tuples, unpacking, assignment
+	\end{frame}
+	
+	\begin{frame}[fragile]
+		\frametitle{Iterables}
+		
+		\begin{itemize}
+			\item Not everything we iterate over with \lstinline|for| is a list.
+			
+			\pause
+			
+			\item \lstinline|enumerate| does not actually give you a list!
+			\begin{lstlisting}[xleftmargin=\dimexpr-\leftmargini, basicstyle=\scriptsize\tt]
+			>>> enumerate(["Alice", "Bob", "Charlie"])
+			<enumerate object at $\text{\tt\color{num} 0x005FA2B0}$>$\pause$
+			>>> for item in enumerate(["Alice", "Bob", "Charlie"]):
+			...     print(item)
+			(0, 'Alice')
+			(1, 'Bob')
+			(2, 'Charlie')
+			\end{lstlisting}
+			
+			\pause
+			
+			\item These are special objects which act like lists, called \colorbox{jargonbg}{iterables}.
+			
+			\item Can be converted to lists with \lstinline|list|:
+			\begin{lstlisting}[xleftmargin=\dimexpr-\leftmargini]
+			>>> range(10)
+			range(0, 10)
+			>>> list(range(10))
+			[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+			\end{lstlisting}
+			
+		\end{itemize}
+	\end{frame}
+	
+	\begin{frame}[fragile]
+		\frametitle{Converting values}
+		\begin{itemize}
+			\item We have seen before that if we tried to add a string to an integer, we get a \lstinline|TypeError|
+			\begin{lstlisting}[xleftmargin=\dimexpr-\leftmargini, basicstyle=\scriptsize\tt]
+			>>> x = 5
+			>>> y = " elephants"
+			>>> x + y
+			TypeError: unsupported operand type(s)
+			for +: 'int' and 'str'
+			\end{lstlisting}
+			\pause
+			\item Similar to converting an iterable using \lstinline|list|, we can use \lstinline|str|~to convert a value (such as an int or a float) to a string.
+			\begin{lstlisting}[xleftmargin=\dimexpr-\leftmargini, basicstyle=\scriptsize\tt]
+			>>> str(x)
+			'5'
+			>>> str(x) + y
+			'5 elephants'
+			\end{lstlisting}
+			
+			\item: Tip: you can always check the type of a value with \lstinline|type|:
+			\begin{lstlisting}[xleftmargin=\dimexpr-\leftmargini, basicstyle=\scriptsize\tt]
+			>>> type(x)
+			<class 'int'>
+			>>> type(str(x))
+			<class 'str'>
+			\end{lstlisting}
+		
+		\end{itemize}
+	\end{frame}
+	
+	\begin{frame}[fragile]
+		\frametitle{Logical operators}
+		\begin{itemize}
+			\item They operate on booleans.
+			\item Allow you to combine expressions together.
+			\pause
+			\item \lstinline|and|: returns \lstinline|True| if both of the operands are \lstinline|True|, otherwise returns \lstinline|False|.
+			\item \lstinline|or|: returns \lstinline|True| if at least one of the operands is \lstinline|True|, otherwise returns \lstinline|False|.
+			\item \lstinline|not|: returns the complement of the operand.
+		\end{itemize}
+	\end{frame}
+	
+	\begin{frame}[fragile]
+		\frametitle{Try it out!}
+		
+		Print a number if it is divisible by two or five:
+		
+		\begin{lstlisting}
+		for num in range(10):
+		    if num % 2 == 0 or num % 5 == 0:
+		        print(num)
+		\end{lstlisting}
+		
+		Print a number if it isn't divisible by two or three:
+		
+		\begin{lstlisting}
+		for num in range(20):
+		    if not (num % 2 == 0 and num % 3 == 0):
+		        print(num)
+		\end{lstlisting}
+	\end{frame}
+
+	\begin{frame}[fragile]
+		\frametitle{List comprehensions}
+		
+		\begin{itemize}
+			\item What if we had wanted to do something further with the multiples?
+			\begin{lstlisting}[xleftmargin=\dimexpr-\leftmargini, basicstyle=\scriptsize\tt]
+			>>> multiples = [num for num in range(20) if num % 3 == 0]
+			>>> multiples
+			[0, 3, 6, 9, 12, 15, 18]
+			>>> sum(multiples)
+			63
+			\end{lstlisting}
+
+			\item Filters through \lstinline|range| with a condition, including only certain elements.
+		\end{itemize}
+		
+		% if predicate, filtering
+	\end{frame}
+	
+	\begin{frame}[fragile]
+		\frametitle{Input}
+		\begin{itemize}
+			\item Capture user input during the program.
+			\item \lstinline|input| is a function that takes a prompt as an argument and reads the input, and returning the input as a \textbf{string}.
+			\pause
+			\item Example:
+			\begin{lstlisting}[xleftmargin=\dimexpr-\leftmargini, basicstyle=\scriptsize\tt]
+			# \n just means make a new line
+			>>> x = input("Please enter your name\n")
+			Please enter your name
+			John Smith
+			>>> print(x)
+			John Smith
+			\end{lstlisting}
+			\pause
+			\item Note: If you are asking for a number, remember to cast it to an integer
+		\end{itemize}
 	\end{frame}
 	
 	\begin{frame}[fragile]
@@ -287,8 +449,7 @@
 			\item Enter the \lstinline|while| loop.
 			\pause
 			\item Example:
-			% Why isn't this listing more left-aligned?
-			\begin{lstlisting}[basicstyle=\scriptsize\tt]
+			\begin{lstlisting}[xleftmargin=\dimexpr-\leftmargini, basicstyle=\scriptsize\tt]
 			num = 0
 			while not num > 0:
 			    num = int(input("Enter a positive number: "))
@@ -298,7 +459,31 @@
 	\end{frame}
 	
 	\begin{frame}[fragile]
-		\frametitle{break and continue}
+		\frametitle{break}
+		\begin{itemize}
+			\item What happens if we want to break out of our loop early?
+			\item Example:
+			The following code only exits if user enters 'q'
+			\begin{lstlisting}[xleftmargin=\dimexpr-\leftmargini, basicstyle=\scriptsize\tt]
+# This is the start of our while block
+while True:
+    user_input = input("Enter q to exit\n")
+        if (user_input == 'q'):
+            # Break out of the current loop
+            break
+        else:
+            print("Try again")
+# End of our while block
+print("You've escaped my infinite loop.")
+			\end{lstlisting}
+			\pause
+			\item Note that break only exits from the innermost block.
+
+		\end{itemize}
+	\end{frame}
+	
+	\begin{frame}[fragile]
+		\frametitle{continue}
 		\begin{lstlisting}
 		story = """
 		        John brought 3 apples and Jenny brought
@@ -307,15 +492,12 @@
 		        """
 
 		number_of_fruits = 0
+		
 		for word in story.split():
 		    try:
 		        number_of_fruits += int(word)
 		    except ValueError:
 		        continue
-		
-		    if number_of_fruits > 1000000:
-		        print("Too many fruits! Party over.")
-		        break
 		
 		    print(number_of_fruits, "lovely fruits!")
 		\end{lstlisting}
@@ -323,7 +505,47 @@
 	
 	\begin{frame}[fragile]
 		\frametitle{Files}
-		% use with, damn nice syntax
+		
+		\begin{itemize}
+			\item Opening and reading the whole file:
+			\begin{lstlisting}[xleftmargin=\dimexpr-\leftmargini]
+			with open("input.txt") as file:
+			    print(file.read())
+			\end{lstlisting}
+			
+			\pause
+			
+			\item Line by line:
+			\begin{lstlisting}[xleftmargin=\dimexpr-\leftmargini]
+			with open("input.txt") as file:
+			    for line in file:
+			        print(line)
+			\end{lstlisting}
+			
+			\pause
+			
+			\item Writing:
+			\begin{lstlisting}[xleftmargin=\dimexpr-\leftmargini]
+			with open("input.txt", "w") as file:
+			    file.write(str(somelist))
+			\end{lstlisting}
+			
+			\pause
+			
+			\item \lstinline|with| automatically closes the file at the end of the block. Manually closing instead:
+			
+			\begin{lstlisting}[xleftmargin=\dimexpr-\leftmargini]
+			file = open("input.txt"):
+			$[...]$
+			file.close()
+			\end{lstlisting}
+		\end{itemize}
+	\end{frame}
+	
+	\begin{frame}[fragile]
+		\frametitle{Exercises!}
+		
+		Your bible: \lstinline|https://docs.python.org/3/|
 	\end{frame}
 	
 	\begin{frame}[fragile]
