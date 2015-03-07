@@ -1,9 +1,9 @@
 ## Session 2 materials
 
 ### Resources
-* [Slides]()
-* [Cheatsheet]()
-* [Installing pip](../preparation.md#installing-the-package-installer-optional)
+* [Slides](../../../raw/master/pdf/python-workshop-2.pdf)
+* [Cheatsheet](../../../raw/master/pdf/python-cheatsheet-2.pdf)
+* [Installing pip](preparation.md#installing-the-package-installer-optional)
 
 ### Challenges
 * [Image processing](../src/image-processing/invert.py)
