@@ -1,6 +1,6 @@
 # Pathfinding with dictionaries!
 
-In this exercise, you'll write a program that can find a path between two cities using dictionaries. Grab the source file [here](cities.py/#L1).
+In this exercise, you'll write a program that can find a path between two cities using dictionaries. We've written a file that defines the relations between some American cities- grab it[here](cities.py/#L1).
 
 In `cities.py` we've initialized a dictionary called `edges`. The keys of this dictionary are the names of cities, while the values are lists of cities that that city is connected to. For example,
 
@@ -52,4 +52,21 @@ We're also going to break our problem down by making our function 'recursive'. T
 Seattle -> Minneapolis -> Denver -> Las Vegas
 ```
 
-this can be expressed as the path from Seattle to Denver followed by the path from Denver to Las Vegas.
+this can be expressed as the path from Seattle to Denver followed by the path from Denver to Las Vegas:
+
+```
+Seattle -> Minneapolis
+Minneapolis -> Denver -> Las Vegas
+```
+
+So, you need to write a function that:
+
+* is a function of a `city_from` and a `city_to`.
+* loops through the cities connected to `city_from`.
+* returns `True` if it has reached the destination (i.e. if `city_to == destination`).
+* calls itself with the current city we're looking at as `city_from`.
+* keeps track of the cities you've already visited.
+* breaks out of the loop (and then continues) if you've already visited `city_from`.
+* returns `false` if we've looked at that city before.
+
+It's harder than it sounds to get all of these right!
