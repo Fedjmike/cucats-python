@@ -325,4 +325,45 @@
 		\frametitle{Files}
 		% use with, damn nice syntax
 	\end{frame}
+	
+	\begin{frame}[fragile]
+		\frametitle{Importing modules}
+		We can use other people's code.
+		\begin{lstlisting}
+		>>> import datetime
+		>>> print(datetime.date.today())
+		\end{lstlisting}
+		\pause
+		or\dots
+		\begin{lstlisting}
+		>>> from datetime import date
+		>>> print(date.today())
+		\end{lstlisting}
+	\end{frame}
+
+	\begin{frame}[fragile]
+		\frametitle{Installing packages}
+		Let's try installing \colorbox{codebg}{\lstinline|pygeocoder|}.\\
+		\vspace{10pt}
+		We'll use \colorbox{codebg}{\lstinline|pip|}, Python's package manager.\\
+		\vspace{10pt}
+		\begin{itemize}
+			\item Windows: \colorbox{codebg}{\lstinline|python -3 -m pip install pygeocoder|}
+			\item Mac/Linux: \colorbox{codebg}{\lstinline|sudo pip3 install pygeocoder|}
+		\end{itemize}
+	\end{frame}
+
+	\begin{frame}[fragile]
+		\frametitle{Challenges}
+		\vfill
+		\centerline{\LARGE cucats.org/r/session2}
+		\vfill
+		Available challenges:
+		\begin{itemize}
+			\item Image processing
+			\item Making change
+			\item Quickest route finding
+			\item Continue exercises from last session
+		\end{itemize}
+	\end{frame}
 \end{document}
