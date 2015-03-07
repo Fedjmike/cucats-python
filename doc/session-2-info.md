@@ -3,10 +3,10 @@
 ### Resources
 * [Slides](../../../raw/master/pdf/python-workshop-2.pdf)
 * [Cheatsheet](../../../raw/master/pdf/python-cheatsheet-2.pdf)
-* [Installing pip](preparation.md#installing-the-package-installer-optional)
+* [Installing `pip`](preparation.md#installing-the-package-installer-optional)
 
 ### Challenges
-* [Image processing](../src/image-processing/invert.py)
+* [Image Processing](../src/image-processing/invert.py)
 
 #### From last time:
 * [Simple Exercises](http://www.ling.gu.se/~lager/python_exercises.html)
