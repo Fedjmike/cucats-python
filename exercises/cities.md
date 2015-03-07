@@ -1,6 +1,6 @@
 # Pathfinding with dictionaries!
 
-In this exercise, you'll write a program that can find a path between two cities using dictionaries. Grab the source file [here](cities.py/#L1).
+In this exercise, you'll write a program that can find a path between two cities using dictionaries. We've written a file that defines the relations between some American cities- grab it[here](cities.py/#L1).
 
 In `cities.py` we've initialized a dictionary called `edges`. The keys of this dictionary are the names of cities, while the values are lists of cities that that city is connected to. For example,
 
