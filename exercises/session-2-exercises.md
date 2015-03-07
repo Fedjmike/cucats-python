@@ -1,3 +1,9 @@
+# Exercises
+
+Note: You might find it easier to type code in your editor. If you've written your functions in a file and want to use the interpreter to test it. You can launch the python interpreter from your terminal and type `from <filename> import *` This will run the code you've written in `<filename>.py` assuming the file is in the current directory when you launched it.
+
+For example, if you've written code in `my_solution.py`. Launching python in the same directory as that file and then typing `from my_solution import *` will run all the code in `my_solution.py` as if you've typed them directly into the interpreter.
+
 ## Ex 2.1 Aliasing (Values and variables)
 Write a function `add_one` that takes a list and adds the value `1` at the end.
 
