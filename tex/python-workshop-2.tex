@@ -362,6 +362,25 @@
 	\end{frame}
 
 	\begin{frame}[fragile]
+		\frametitle{List comprehensions}
+		
+		\begin{itemize}
+			\item What if we had wanted to do something further with the multiples?
+			\begin{lstlisting}[xleftmargin=\dimexpr-\leftmargini, basicstyle=\scriptsize\tt]
+			>>> multiples = [num for num in range(20) if num % 3 == 0]
+			>>> multiples
+			[0, 3, 6, 9, 12, 15, 18]
+			>>> sum(multiples)
+			63
+			\end{lstlisting}
+
+			\item Filters through \lstinline|range| with a condition, including only certain elements.
+		\end{itemize}
+		
+		% if predicate, filtering
+	\end{frame}
+	
+	\begin{frame}[fragile]
 		\frametitle{Input}
 		\begin{itemize}
 			\item Capture user input during the program.
