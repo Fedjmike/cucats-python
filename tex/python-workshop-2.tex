@@ -398,7 +398,7 @@
 			\pause
 			\item Note: If you are asking for a number, remember to cast it to an integer
 		\end{itemize}
-	\end{frame}	
+	\end{frame}
 	
 	\begin{frame}[fragile]
 		\frametitle{while}
@@ -463,11 +463,42 @@ print("You've escaped my infinite loop.")
 	
 	\begin{frame}[fragile]
 		\frametitle{Files}
-		% use with, damn nice syntax
 		
-		\begin{lstlisting}
-		with open("input.txt") as file:
-		    print(file.read())
-		\end{lstlisting}
+		\begin{itemize}
+			\item Opening and reading the whole file:
+			\begin{lstlisting}[xleftmargin=\dimexpr-\leftmargini]
+			with open("input.txt") as file:
+			    print(file.read())
+			\end{lstlisting}
+			
+			\pause
+			
+			\item Line by line:
+			\begin{lstlisting}[xleftmargin=\dimexpr-\leftmargini]
+			with open("input.txt") as file:
+			    for line in file:
+			        print(line)
+			\end{lstlisting}
+			
+			\pause
+			
+			\item Writing:
+			\begin{lstlisting}[xleftmargin=\dimexpr-\leftmargini]
+			with open("input.txt", "w") as file:
+			    file.write(str(somelist))
+			\end{lstlisting}
+			
+			\pause
+			
+			\item \lstinline|with| automatically closes the file at the end of the block. Manually closing instead:
+			
+			\begin{lstlisting}[xleftmargin=\dimexpr-\leftmargini]
+			file = open("input.txt"):
+			$[...]$
+			file.close()
+			\end{lstlisting}
+		\end{itemize}
+		
+		
 	\end{frame}
 \end{document}
