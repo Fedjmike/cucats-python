@@ -153,10 +153,28 @@
 	dict.\lstinline|keys()| \\
 	dict.\lstinline|update($\colorbox{lightspacebg}{otherdict}$)| \\
 	
-	\subsubsection*{Dictionaries}
+	\subsubsection*{Files}
 	
-	Indexing:
+	Opening and reading the whole file:
 	\begin{lstlisting}
->>> ages["Bob"]
-40\end{lstlisting}
+with open("input.txt") as file:
+   print(file.read())\end{lstlisting}
+   
+   Line by line:
+   \begin{lstlisting}
+with open("input.txt") as file:
+   for line in file:
+       print(line)\end{lstlisting}
+       
+   Writing:
+   \begin{lstlisting}
+with open("input.txt", "w") as file:
+   file.write(str(somelist))\end{lstlisting}
+        
+   \lstinline|with| automatically closes the file at the end of the block. Manually closing instead:
+   
+   \begin{lstlisting}
+file = open("input.txt"):
+$[...]$
+file.close()\end{lstlisting}
 \end{document}
