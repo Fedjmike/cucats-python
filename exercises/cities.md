@@ -1,6 +1,6 @@
 # Pathfinding with dictionaries!
 
-In this exercise, you'll write a program that can find a path between two cities using dictionaries. Grab the source file [here](cities.py/#readme).
+In this exercise, you'll write a program that can find a path between two cities using dictionaries. Grab the source file [here](cities.py/#L1).
 
 ## Starting out
 
