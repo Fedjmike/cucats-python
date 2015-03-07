@@ -18,7 +18,7 @@ The following are examples of palindrome:
 * A nut for a jar of tuna.
 * Do geese see God?
 
-For the purpose of this exercise, we can assume there are no spaces in the input, and we care about cases.
+For the purpose of this exercise, we can assume there are no whitespaces in the input, and we care about character cases.
 
 ```py
 >>> is_palindrome(12321)
@@ -31,7 +31,7 @@ True
 False
 ```
 
-If you're keen, modify is_palindrome such that it takes as in put a phrase with spaces and is case insensitive.
+If you're keen, modify is_palindrome such that it takes as input a phrase with spaces and is case insensitive.
 
 Hint: `s.replace(a,b)` returns a copy of the string with all occurrences of a in s replaced by b. `s.lower()` returns a copy of the string with all the cased characters converted to lowercase.
 
