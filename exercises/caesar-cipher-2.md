@@ -1,12 +1,12 @@
 # Break a Caesar cipher - Part 2!
 
-In our last exercise we learned how to write a function do shift a character by a certain offset. In this exercise, we will finish up our work and implement a full Caesar cipher, using list comprehensions and file handling!
+In our last exercise we learned how to write a function do shift a character by a certain offset. In this exercise, we will finish up our work and implement a full Caesar cipher, using list comprehensions and ranges.
 
 This exercise will involve more coding on your own, but once you're done you should be able to appreciate the concepts that you've managed to learn (and make use of)!
 
 ## Step 1: Writing a function to shift a whole string
 
-We have a function that we can use to shift a single character -- how can we extend that to a whole string? Remember, strings are just lists of characters! So, in order to extend our function to entire strings, all we need to do is construct a new list, where each element (i.e., character) from our initial string is shifted using our function. This is what we could use a list comprehension for! If our string is `my_string`, then a good way to iterate over all characters in it would be to do `for char in my_string`, for example. Use what we've shown you to construct a new list where each character should be replaced by having run the `shift` function on it.
+We have a function that we can use to shift a single character - how can we extend that to a whole string? Remember, strings are just lists of characters! So, in order to extend our function to entire strings, all we need to do is construct a new list, where each element (i.e., character) from our initial string is shifted using our function. This is what we could use a list comprehension for! If our string is `my_string`, then a good way to iterate over all characters in it would be to do `for char in my_string`, for example. Use what we've shown you to construct a new list where each character should be replaced by having run the `shift` function on it.
 
 Check if your function works by deciphering the following sentence by shifting it 13 places:
 
@@ -20,7 +20,7 @@ where `new_string` is the list of characters you got after having used the list 
 
 ## Step 2: Fixing our function
 
-You might have noticed I ommitted the spaces in the previous example. This is actually because our function stops working if we use it! Go ahead an try it out on a sentence with spaces, and see what error you get. This happens because in our code we essentially have two branches to execute -- one if the letter is upper case and the other if it is lower case.
+You might have noticed I ommitted the spaces in the previous example. This is actually because our function stops working if we use it! Go ahead an try it out on a sentence with spaces, and see what error you get. This happens because in our code we essentially have two branches to execute - one if the letter is upper case and the other if it is lower case.
 
 What about a space, or any other special character for that matter? Are they upper or lower? The answer is that they're neither! We should always account for such inputs, so we need to make a minor modification to our `shift` function. Here it is from last time:
 
@@ -70,6 +70,21 @@ We get the numbers we want! You should now modify your loop to run the list comp
 `Oz'y kgyokx zu gyq luxmobktkyy zngt oz oy zu mkz vkxsoyyout.`
 
 
-## Step 4: Completed function
+## Step 4: Completed function!
 
-Congratulations, you're now finished with your function to perform shifts on idividual characters! This involved understanding `if`-conditions at a deeper level and using methods such as `isupper()` and `islower()` - you can now appreciate what you've done. In future sessions we'll work on extending this function to work on full sentences, so that we can decipher them with ease! Till next time!
+Now that you have working code, you might want to polish it up a bit, document parts that you feel are important for your understanding, and so on. Your final task is to wrap up all of your code as a function, which when given a string should be able to output all the different possible deciphered pieces of text so you can read them all and pick out the most correct one! It should look like this:
+
+  ```python
+  def decipher(encrypted_text):
+      # Here's your main for loop that should
+      # iterate over all required integer values
+
+      #    Use the list comprehension method to
+      #    return a list of shifted characters
+
+      #    Join this list to convert it to a
+      #    string
+
+      #    Print out your string!
+  ```
+Use this to try encrypting and decrypting all you want!
