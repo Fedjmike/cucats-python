@@ -7,6 +7,7 @@
 
 ### Challenges
 * [Image Processing](../src/image-processing/invert.py)
+* [Some misc exercises based on the slides](../exercises/session-2-exercises.md)
 
 #### From last time:
 * [Simple Exercises](http://www.ling.gu.se/~lager/python_exercises.html)
