@@ -30,7 +30,7 @@ In this program, we'll try to search for the destination 'depth first'. This mea
 
 For example, 
 
-``
+```
 # Start off at Seattle
 Seattle -> Minneapolis
 Seattle -> Minneapolis -> Seattle # Have been here before, continue searching among the cities Minneapolis is connected to
@@ -42,3 +42,14 @@ Seattle -> Minneapolis -> Denver -> Las Vegas -> San Fransisco -> Seattle # Been
 Seattle -> Minneapolis -> Denver -> Las Vegas -> San Fransisco -> Las Vegas
 Seattle -> Minneapolis -> Denver -> Las Vegas -> San Fransisco -> Los Angeles
 Seattle -> Minneapolis -> Denver -> Las Vegas -> San Fransisco -> Los Angeles -> San Fransisco # And so on...
+```
+
+and you'd continue till you find Miami.
+
+We're also going to break our problem down by making our function 'recursive'. This means our function will call itself. For example, if the path between Seattle and Las Vegas is:
+
+```
+Seattle -> Minneapolis -> Denver -> Las Vegas
+```
+
+this can be expressed as the path from Seattle to Denver followed by the path from Denver to Las Vegas.
