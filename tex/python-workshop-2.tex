@@ -331,6 +331,72 @@
 	\end{frame}
 	
 	\begin{frame}[fragile]
+		\frametitle{Types and casting}
+		\begin{itemize}
+			\item We have seen before that if we tried to add a string to an integer, we get a \lstinline|TypeError|
+			\begin{lstlisting}[basicstyle=\scriptsize\tt]
+			>>> x = 5
+			>>> y = " elephants"
+			>>> x + y
+			TypeError: unsupported operand type(s)
+			for +: 'int' and 'str'
+			\end{lstlisting}
+			\pause
+			\item The problem is there is no type information about x or y.
+			\item We can check the type of any variable using \lstinline|type(_)|.
+			\pause
+			\begin{lstlisting}[basicstyle=\scriptsize\tt]
+			>>> type(x)
+			<class 'int'> 
+			>>> type(y)
+			<class 'str'>
+			\end{lstlisting}
+			
+		\end{itemize}
+	\end{frame}		
+	
+	\begin{frame}[fragile]
+		\frametitle{Types and casting 2}
+		\begin{itemize}
+			\item We can cast a variable to other types.
+			\item i.e. change the type of a variable to another type.
+			\item To cast it to string, we use \lstinline|str(_)|.
+			\item similarly for integers (\lstinline|str(_)|), lists (\lstinline|list(_)|), float(\lstinline|float(_)|)
+			\pause
+			\begin{lstlisting}[basicstyle=\scriptsize\tt]
+			>>> type(x)
+			<class 'int'> 			
+			>>> z = str(x)
+			>>> type(z)
+			<class 'str'> 
+			>>> x + y
+			"5 elephants"
+			\end{lstlisting}
+		\end{itemize}
+	\end{frame}		
+	
+	\begin{frame}[fragile]
+		\frametitle{Input}
+		\begin{itemize}
+			\item Capture user input during the program.
+			\item \lstinline|input| is a function that takes a prompt as an argument and reads the input, and returning the input as a \textbf{string}.
+			\pause
+			\item Example:
+			% Why isn't this listing more left-aligned?
+			\begin{lstlisting}[basicstyle=\scriptsize\tt]
+			# \n just means make a new line
+			>>> x = input("Please enter your name\n")
+			Please enter your name
+			John Smith
+			>>> print(x)
+			John Smith
+			\end{lstlisting}
+			\pause
+			\item Note: If you are asking for a number, remember to cast it to an integer
+		\end{itemize}
+	\end{frame}	
+	
+	\begin{frame}[fragile]
 		\frametitle{while}
 		\begin{itemize}
 			\item Sometimes you want your loop to run while some condition is met, as opposed to a set number of times (\lstinline|for| loops).
@@ -349,6 +415,26 @@
 	
 	\begin{frame}[fragile]
 		\frametitle{break}
+		\begin{itemize}
+			\item What happens if we want to break out of our loop early?
+			\item Example:
+			The following code only exits if user enters 'q'
+			\begin{lstlisting}[basicstyle=\scriptsize\tt]
+# This is the start of our while block
+while True:
+	user_input = input("Enter q to exit\n")
+    if (user_input == 'q'):
+        # Break out of our current block
+        break
+    else:
+        print("Try again")
+# End of our while block
+print("You've escaped my infinite loop.")
+			\end{lstlisting}
+			\pause
+			\item Note that break only exits from the innermost block.
+
+		\end{itemize}
 	\end{frame}
 	
 	\begin{frame}[fragile]
