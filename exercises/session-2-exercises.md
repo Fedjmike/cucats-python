@@ -1,6 +1,4 @@
-# 
-
-## Ex 2.1 Values and variables
+## Ex 2.1 Aliasing (Values and variables)
 Write a function `add_one` that takes a list and adds the value `1` at the end.
 
 ```py
@@ -10,7 +8,7 @@ Write a function `add_one` that takes a list and adds the value `1` at the end.
 ['a',1]
 ```
 
-## Ex 2.2 Slicing
+## Ex 2.2 Palindrome testing (Slicing)
 A very useful idiom for reversing a string `s` is to do `s[::-1]`. Write a function `is_palindrome` that checks if a given string or number is a palindrome. 
 
 A palindrome is a phrase or number that reads the same forward and backwards.
@@ -38,7 +36,7 @@ If you're keen, modify is_palindrome such that it takes as in put a phrase with 
 Hint: `s.replace(a,b)` returns a copy of the string with all occurrences of a in s replaced by b. `s.lower()` returns a copy of the string with all the cased characters converted to lowercase.
 
 
-## Ex 2.3 Slicing
+## Ex 2.3 Odd position phrases (Slicing)
 
 Write a function `odd_words` that takes a phrase and returns a new phrase with only the odd words
 
@@ -49,7 +47,7 @@ Tom has apples.
 
 Hint: You can use `s.split()` to get a list of words in s separated by whitespace and `" ".join(myList)` to join words in a list by adding a whitespace between elements of the list.
 
-## Ex 2.4 Dictionaries
+## Ex 2.4 Simple score board (Dictionary)
 In this exercise, we're going to try and create a scoreboard for players. The key is going to be their name, while the value is their score.
 Create an empty dictionary and write functions that does the following:
 
