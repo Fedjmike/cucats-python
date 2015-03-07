@@ -235,47 +235,49 @@
 		$\triangleright$ Less error prone
 		$\triangleright$ Keeps error handling separate
 	\end{frame}
-	
-	\begin{frame}[fragile]
-		\frametitle{}
-		
-		\begin{columns}[t]
-			\column{.45\textwidth}
-			\begin{itemize}
-				\item Last session we had this code:
-				\begin{lstlisting}[xleftmargin=\dimexpr-\leftmargini, basicstyle=\scriptsize\tt]
-				def find(list, value):
-				    for item in list:
-				        if item == value:
-				            return True
-				
-				    return False
-				\end{lstlisting}
-				
-				\item We wanted to change it to return the index where the element was found.
-			\end{itemize}
-			
-			\pause
-			
-			\column{.45\textwidth}
-			\begin{itemize}
-				\item You may have come up with something like this:
-				\begin{lstlisting}[xleftmargin=\dimexpr-\leftmargini, basicstyle=\scriptsize\tt]
-				def find(list, value):
-				    index = 0
-				
-				    for item in list:
-				        if item == value:
-				            return index
-				
-				        index += 1
-				
-				    return False
-				\end{lstlisting}
-			\end{itemize}
-		\end{columns}
-	\end{frame}
-	
+
+%	Daniel: I don't see what's the point of adding this slide. So I'm commenting it out.
+%	\begin{frame}[fragile]
+%		\frametitle{}
+%		
+%		\begin{columns}[t]
+%			\column{.45\textwidth}
+%			\begin{itemize}
+%				\item Last session we had this code:
+%				\begin{lstlisting}[xleftmargin=\dimexpr-\leftmargini, basicstyle=\scriptsize\tt]
+%				def find(list, value):
+%				    for item in list:
+%				        if item == value:
+%				            return True
+%				
+%				    return False
+%				\end{lstlisting}
+%				
+%				\item We wanted to change it to return the index where the element was found.
+%			\end{itemize}
+%			
+%			\pause
+%			
+%			\column{.45\textwidth}
+%			\begin{itemize}
+%				\item You may have come up with something like this:
+%				\begin{lstlisting}[xleftmargin=\dimexpr-\leftmargini, basicstyle=\scriptsize\tt]
+%				def find(list, value):
+%				    index = 0
+%				
+%				    for item in list:
+%				        if item == value:
+%				            return index
+%				
+%				        index += 1
+%				
+%				    return False
+%				\end{lstlisting}
+%			\end{itemize}
+%		\end{columns}
+%	\end{frame}
+%	
+
 	\begin{frame}[fragile]
 		\frametitle{Enumerate}
 		
@@ -443,7 +445,7 @@
 	\end{frame}
 	
 	\begin{frame}[fragile]
-		\frametitle{while}
+		\frametitle{While}
 		\begin{itemize}
 			\item Sometimes you want your loop to run while some condition is met, as opposed to a set number of times (\lstinline|for| loops).
 			\item Enter the \lstinline|while| loop.
@@ -459,7 +461,7 @@
 	\end{frame}
 	
 	\begin{frame}[fragile]
-		\frametitle{break}
+		\frametitle{Breaking out of a loop}
 		\begin{itemize}
 			\item What happens if we want to break out of our loop early?
 			\item Example:
@@ -483,24 +485,32 @@ print("You've escaped my infinite loop.")
 	\end{frame}
 	
 	\begin{frame}[fragile]
-		\frametitle{continue}
-		\begin{lstlisting}
-		story = """
-		        John brought 3 apples and Jenny brought
-		        26 pears. Meanwhile, Bastian brought 22
-		        guavas!
-		        """
-
-		number_of_fruits = 0
-		
-		for word in story.split():
-		    try:
-		        number_of_fruits += int(word)
-		    except ValueError:
-		        continue
-		
-		    print(number_of_fruits, "lovely fruits!")
-		\end{lstlisting}
+		\frametitle{More keywords: continue, pass}
+		\begin{itemize}
+			\item \lstinline|pass| is just a piece of code to say do nothing.
+			\item When we only have a \lstinline|if| block, 
+			\begin{lstlisting}[xleftmargin=\dimexpr-\leftmargini]
+if (cond):
+    print(x)
+			\end{lstlisting}
+			\item it is equivalent to the following
+			
+			\begin{lstlisting}[xleftmargin=\dimexpr-\leftmargini]
+if (cond):
+    print(x)
+else:
+    pass
+			\end{lstlisting}
+			\pause
+			\item \lstinline|continue| is a way of going to the next iteration of the loop
+			\begin{lstlisting}[xleftmargin=\dimexpr-\leftmargini]
+for num in range(10):
+    if (num == 5):
+        continue
+    print(num)
+			\end{lstlisting}
+    		\item This prints all number except 5. If we had used \lstinline|pass| instead, then we would have printed 5 as well. Can you see why?
+		\end{itemize}
 	\end{frame}
 	
 	\begin{frame}[fragile]
@@ -566,8 +576,7 @@ print("You've escaped my infinite loop.")
 		From the command line (not the interpreter):
 		\begin{itemize}
 			\item Windows: \colorbox{codebg}{\lstinline|py -3 -m pip install pygeocoder|}
-			\item Mac: \colorbox{codebg}{\lstinline|sudo pip3 install pygeocoder|}
-			\item Linux: \colorbox{codebg}{\lstinline|sudo pip3 install pygeocoder|}
+			\item Mac/Linux: \colorbox{codebg}{\lstinline|pip3 install pygeocoder|} (add sudo in front if there are errors)
 		\end{itemize}
 	\end{frame}
 
@@ -578,10 +587,10 @@ print("You've escaped my infinite loop.")
 		\vfill
 		Available challenges:
 		\begin{itemize}
-			\item Image processing
-			\item Making change
-			\item Quickest route finding
-			\item Continue exercises from last session
+			\item Image Processing
+			\item Caesar Cipher - Continued!
+			\item Quickest Route Finding
+			\item or continue exercises from last session
 		\end{itemize}
 		\vspace{10pt}
 		Your bible: \lstinline|docs.python.org/3/|\\
