@@ -7,6 +7,7 @@
 
 ### Challenges
 * [Image Processing](../src/image-processing/invert.py)
+* [Caesar Cipher - Continued!](../exercises/caesar-cipher-2.md#readme)
 * [Some misc exercises based on the slides](../exercises/session-2-exercises.md)
 
 #### From last time:

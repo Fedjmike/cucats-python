@@ -171,18 +171,18 @@
 		\frametitle{Dictionary methods and summary}
 		Methods
 		\begin{itemize}
-			\item Getting a list of values: \lstinline|list(ages.values())|
-			\item Getting a list of keys: \lstinline|list(ages.keys())|
-			\item Checking if a key exists: \lstinline|ages.has_key("Alice")|
-			\item Creating a new copy: \lstinline|record = ages.copy()|
-			\item We can also update or get values with \lstinline|dict.get()| and \lstinline|dict.update()|
+			\item Getting a list of values: \colorbox{codebg}{\lstinline|list(ages.values())|}
+			\item Getting a list of keys: \colorbox{codebg}{\lstinline|list(ages.keys())|}
+			\item Checking if a key exists: \colorbox{codebg}{\lstinline|ages.has_key("Alice")|}
+			\item Creating a new copy: \colorbox{codebg}{\lstinline|record = ages.copy()|}
+			\item We can also update or get values with \colorbox{codebg}{\lstinline|dict.get()| and \lstinline|dict.update()|}
 		\end{itemize}
 		Summary
 		\begin{itemize}
-			\item Create a dictionary: \lstinline|x = {}|
-			\item Add/update: \lstinline|x[y] = z|, or \lstinline|x.update({y:z})|
-			\item Retrieve: \lstinline|x[y]| or \lstinline|x.get(y)|
-			\item Delete: \lstinline|del x[y]| or \lstinline|x.pop(y)|
+			\item Create a dictionary: \colorbox{codebg}{\lstinline|x = \{\}|}
+			\item Add/update: \colorbox{codebg}{\lstinline|x[y] = z|}, or \colorbox{codebg}{\lstinline|x.update(\{y\:z\})|}
+			\item Retrieve: \colorbox{codebg}{\lstinline|x[y]|} or \colorbox{codebg}{\lstinline|x.get(y)|}
+			\item Delete: \colorbox{codebg}{\lstinline|del x[y]|} or \colorbox{codebg}{\lstinline|x.pop(y)|}
 		\end{itemize}
 	\end{frame}
 	
@@ -545,7 +545,7 @@ for num in range(10):
 			\item \lstinline|with| automatically closes the file at the end of the block. Manually closing instead:
 			
 			\begin{lstlisting}[xleftmargin=\dimexpr-\leftmargini]
-			file = open("input.txt"):
+			file = open("input.txt")
 			$[...]$
 			file.close()
 			\end{lstlisting}
@@ -573,6 +573,7 @@ for num in range(10):
 		\vspace{10pt}
 		We'll use \colorbox{codebg}{\lstinline|pip|}, Python's package manager.\\
 		\vspace{10pt}
+		From the command line (not the interpreter):
 		\begin{itemize}
 			\item Windows: \colorbox{codebg}{\lstinline|py -3 -m pip install pygeocoder|}
 			\item Mac/Linux: \colorbox{codebg}{\lstinline|pip3 install pygeocoder|} (add sudo in front if there are errors)
@@ -586,10 +587,10 @@ for num in range(10):
 		\vfill
 		Available challenges:
 		\begin{itemize}
-			\item Image processing
-			\item Making change
-			\item Quickest route finding
-			\item Continue exercises from last session
+			\item Image Processing
+			\item Caesar Cipher - Continued!
+			\item Quickest Route Finding
+			\item or continue exercises from last session
 		\end{itemize}
 		\vspace{10pt}
 		Your bible: \lstinline|docs.python.org/3/|\\
