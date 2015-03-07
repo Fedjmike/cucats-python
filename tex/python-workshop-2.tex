@@ -237,47 +237,46 @@
 		$\triangleright$ Keeps error handling separate
 	\end{frame}
 
-%	Daniel: I don't see what's the point of adding this slide. So I'm commenting it out.
-%	\begin{frame}[fragile]
-%		\frametitle{}
-%		
-%		\begin{columns}[t]
-%			\column{.45\textwidth}
-%			\begin{itemize}
-%				\item Last session we had this code:
-%				\begin{lstlisting}[xleftmargin=\dimexpr-\leftmargini, basicstyle=\scriptsize\tt]
-%				def find(list, value):
-%				    for item in list:
-%				        if item == value:
-%				            return True
-%				
-%				    return False
-%				\end{lstlisting}
-%				
-%				\item We wanted to change it to return the index where the element was found.
-%			\end{itemize}
-%			
-%			\pause
-%			
-%			\column{.45\textwidth}
-%			\begin{itemize}
-%				\item You may have come up with something like this:
-%				\begin{lstlisting}[xleftmargin=\dimexpr-\leftmargini, basicstyle=\scriptsize\tt]
-%				def find(list, value):
-%				    index = 0
-%				
-%				    for item in list:
-%				        if item == value:
-%				            return index
-%				
-%				        index += 1
-%				
-%				    return False
-%				\end{lstlisting}
-%			\end{itemize}
-%		\end{columns}
-%	\end{frame}
-%	
+	\begin{frame}[fragile]
+		\frametitle{}
+		
+		\begin{columns}[t]
+			\column{.45\textwidth}
+			\begin{itemize}
+				\item Last session we had this code:
+				\begin{lstlisting}[xleftmargin=\dimexpr-\leftmargini, basicstyle=\scriptsize\tt]
+				def find(list, value):
+				    for item in list:
+				        if item == value:
+				            return True
+				
+				    return False
+				\end{lstlisting}
+				
+				\item We wanted to change it to return the index where the element was found.
+			\end{itemize}
+			
+			\pause
+			
+			\column{.45\textwidth}
+			\begin{itemize}
+				\item You may have come up with something like this:
+				\begin{lstlisting}[xleftmargin=\dimexpr-\leftmargini, basicstyle=\scriptsize\tt]
+				def find(list, value):
+				    index = 0
+				
+				    for item in list:
+				        if item == value:
+				            return index
+				
+				        index += 1
+				
+				    return False
+				\end{lstlisting}
+			\end{itemize}
+		\end{columns}
+	\end{frame}
+	
 
 	\begin{frame}[fragile]
 		\frametitle{Enumerate}
