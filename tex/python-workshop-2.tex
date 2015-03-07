@@ -398,12 +398,12 @@
 			\begin{lstlisting}[xleftmargin=\dimexpr-\leftmargini, basicstyle=\scriptsize\tt]
 # This is the start of our while block
 while True:
-	user_input = input("Enter q to exit\n")
-    if (user_input == 'q'):
-        # Break out of our current block
-        break
-    else:
-        print("Try again")
+    user_input = input("Enter q to exit\n")
+        if (user_input == 'q'):
+            # Break out of the current loop
+            break
+        else:
+            print("Try again")
 # End of our while block
 print("You've escaped my infinite loop.")
 			\end{lstlisting}
