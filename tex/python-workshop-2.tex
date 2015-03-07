@@ -485,32 +485,24 @@ print("You've escaped my infinite loop.")
 	\end{frame}
 	
 	\begin{frame}[fragile]
-		\frametitle{More keywords: continue, pass}
-		\begin{itemize}
-			\item \lstinline|pass| is just a piece of code to say do nothing.
-			\item When we only have a \lstinline|if| block, 
-			\begin{lstlisting}[xleftmargin=\dimexpr-\leftmargini]
-if (cond):
-    print(x)
-			\end{lstlisting}
-			\item it is equivalent to the following
-			
-			\begin{lstlisting}[xleftmargin=\dimexpr-\leftmargini]
-if (cond):
-    print(x)
-else:
-    pass
-			\end{lstlisting}
-			\pause
-			\item \lstinline|continue| is a way of going to the next iteration of the loop
-			\begin{lstlisting}[xleftmargin=\dimexpr-\leftmargini]
-for num in range(10):
-    if (num == 5):
-        continue
-    print(num)
-			\end{lstlisting}
-    		\item This prints all number except 5. If we had used \lstinline|pass| instead, then we would have printed 5 as well. Can you see why?
-		\end{itemize}
+		\frametitle{Continue}
+		\begin{lstlisting}
+		story = """
+		        John brought 3 apples and Jenny brought
+		        26 pears. Meanwhile, Bastian brought 22
+		        guavas!
+		        """
+
+		number_of_fruits = 0
+		
+		for word in story.split():
+		    try:
+		        number_of_fruits += int(word)
+		    except ValueError:
+		        continue
+		
+		    print(number_of_fruits, "lovely fruits!")
+		\end{lstlisting}
 	\end{frame}
 	
 	\begin{frame}[fragile]
