@@ -1,8 +1,23 @@
+
+
 # Exercises
 
 Note: You might find it easier to type code in your editor. If you've written your functions in a file and want to use the interpreter to test it. You can launch the python interpreter from your terminal and type `from <filename> import *` This will run the code you've written in `<filename>.py` assuming the file is in the current directory when you launched it.
 
 For example, if you've written code in `my_solution.py`. Launching python in the same directory as that file and then typing `from my_solution import *` will run all the code in `my_solution.py` as if you've typed them directly into the interpreter.
+
+<!-- MarkdownTOC  autolink=true depth=6 bracket=round  -->
+
+- [Ex 2.1 Aliasing (Values and variables)](#ex-21-aliasing-values-and-variables)
+- [Ex 2.2 Palindrome testing (Slicing)](#ex-22-palindrome-testing-slicing)
+- [Ex 2.3 Odd position phrases (Slicing)](#ex-23-odd-position-phrases-slicing)
+- [Ex 2.4 Simple score board (Dictionary)](#ex-24-simple-score-board-dictionary)
+- [Ex 2.5 Number guessing game (input, while)](#ex-25-number-guessing-game-input-while)
+    - [Extension](#extension)
+- [Ex 2.6 Number of words in Pride and Prejudice (file)](#ex-26-number-of-words-in-pride-and-prejudice-file)
+
+<!-- /MarkdownTOC -->
+
 
 ## Ex 2.1 Aliasing (Values and variables)
 Write a function `add_one` that takes a list and adds the value `1` at the end.
