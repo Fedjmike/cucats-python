@@ -16,7 +16,7 @@ import math
 # before you can run this code. PIL for Python 3 comes in a package called
 # Pillow. From the command line, try:
 # (Windows:)    python -3 -m pip install Pillow
-# (Mac/Linux:)  python3 install Pillow
+# (Mac/Linux:)  pip3 install Pillow
 # Once PIL is installed, you should try running this script (the one you're
 # reading) to check everything's working.
 from PIL import Image
