@@ -6,9 +6,10 @@
 * [Installing `pip`](preparation.md#installing-the-package-installer-optional)
 
 ### Challenges
-* [Image Processing](../exercises/image-processing.py#L1)
+* [Some misc exercises based on the slides](../exercises/session-2-exercises.md)
 * [Caesar Cipher - Continued!](../exercises/caesar-cipher-2.md#readme)
-* [Some misc exercises based on the slides](../exercises/session-2-exercises.md#readme)
+* [Image Processing](../exercises/image-processing.py#L1)
+* [Pathfinding between two cities](../exercises/cities.md#readme)
 
 #### From last time:
 * [Simple Exercises](http://www.ling.gu.se/~lager/python_exercises.html)
