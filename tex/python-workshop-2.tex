@@ -118,7 +118,7 @@
 	\end{frame}
 	
 	\begin{frame}[fragile]
-		\frametitle{Dictionaries}
+		\frametitle{Dictionary}
 		
 		\begin{itemize}
 			\item Dictionaries allow us to have a bunch of \evenbox{jargonbg}{values} associated with certain \evenbox{jargonbg}{keys}.
@@ -137,10 +137,52 @@
 			% strings, floats, integers, tuples (mention?)
 			% keys and values do not have to be of one type
 			
-			\item Adding (or updating) key-value pairs:
+		\end{itemize}
+	\end{frame}
+	
+	\begin{frame}[fragile]
+		\frametitle{Dictionary operations}
+		
+		\begin{itemize}
+			\item Our example:
 			\begin{lstlisting}[xleftmargin=\dimexpr-\leftmargini]
-			ages["Charlie"] = 1
+			ages = {"Alice": 42, "Bob": 40}
 			\end{lstlisting}
+			\item Add/update. We shall add Charlie's age and update Bob's age.
+			\begin{lstlisting}[xleftmargin=\dimexpr-\leftmargini]
+			>>> ages["Charlie"] = 10
+			>>> ages["Bob"] = 41
+			>>> ages
+			{"Alice": 42, "Bob": 41, "Charlie": 10}
+			\end{lstlisting}
+			
+			\item Deleting entries
+			\begin{lstlisting}[xleftmargin=\dimexpr-\leftmargini]
+			>>> del ages["Bob"]
+			>>> ages
+			{"Alice": 42, "Charlie": 10}
+			\end{lstlisting}
+			
+		\end{itemize}
+	\end{frame}
+	
+		
+	\begin{frame}[fragile]
+		\frametitle{Dictionary methods and summary}
+		Methods
+		\begin{itemize}
+			\item Getting a list of values: \colorbox{codebg}{\lstinline|list(ages.values())|}
+			\item Getting a list of keys: \colorbox{codebg}{\lstinline|list(ages.keys())|}
+			\item Checking if a key exists: \colorbox{codebg}{\lstinline|ages.has_key("Alice")|}
+			\item Creating a new copy: \colorbox{codebg}{\lstinline|record = ages.copy()|}
+			\item We can also update or get values with \colorbox{codebg}{\lstinline|dict.get()| and \lstinline|dict.update()|}
+		\end{itemize}
+		Summary
+		\begin{itemize}
+			\item Create a dictionary: \colorbox{codebg}{\lstinline|x = \{\}|}
+			\item Add/update: \colorbox{codebg}{\lstinline|x[y] = z|}, or \colorbox{codebg}{\lstinline|x.update(\{y\:z\})|}
+			\item Retrieve: \colorbox{codebg}{\lstinline|x[y]|} or \colorbox{codebg}{\lstinline|x.get(y)|}
+			\item Delete: \colorbox{codebg}{\lstinline|del x[y]|} or \colorbox{codebg}{\lstinline|x.pop(y)|}
 		\end{itemize}
 	\end{frame}
 	
@@ -396,7 +438,7 @@
 			John Smith
 			\end{lstlisting}
 			\pause
-			\item Note: If you are asking for a number, remember to cast it to an integer
+			\item Note: If you are asking for a number, remember to convert it to an integer
 		\end{itemize}
 	\end{frame}
 	
@@ -493,7 +535,7 @@ print("You've escaped my infinite loop.")
 			\item \lstinline|with| automatically closes the file at the end of the block. Manually closing instead:
 			
 			\begin{lstlisting}[xleftmargin=\dimexpr-\leftmargini]
-			file = open("input.txt"):
+			file = open("input.txt")
 			$[...]$
 			file.close()
 			\end{lstlisting}
@@ -501,8 +543,48 @@ print("You've escaped my infinite loop.")
 	\end{frame}
 	
 	\begin{frame}[fragile]
+		\frametitle{Importing modules}
+		We can use other people's code.
+		\begin{lstlisting}
+		>>> import datetime
+		>>> print(datetime.date.today())
+		\end{lstlisting}
+		\pause
+		or\dots
+		\begin{lstlisting}
+		>>> from datetime import date
+		>>> print(date.today())
+		\end{lstlisting}
+	\end{frame}
+
+	\begin{frame}[fragile]
+		\frametitle{Installing packages}
+		Let's try installing \colorbox{codebg}{\lstinline|pygeocoder|}.\\
+		\vspace{10pt}
+		We'll use \colorbox{codebg}{\lstinline|pip|}, Python's package manager.\\
+		\vspace{10pt}
+		From the command line (not the interpreter):
+		\begin{itemize}
+			\item Windows: \colorbox{codebg}{\lstinline|py -3 -m pip install pygeocoder|}
+			\item Mac: \colorbox{codebg}{\lstinline|sudo pip3 install pygeocoder|}
+			\item Linux: \colorbox{codebg}{\lstinline|sudo pip3 install pygeocoder|}
+		\end{itemize}
+	\end{frame}
+
+	\begin{frame}[fragile]
 		\frametitle{Exercises!}
-		
-		Your bible: \lstinline|https://docs.python.org/3/|
+		\vfill
+		\centerline{\LARGE cucats.org/r/session2}
+		\vfill
+		Available challenges:
+		\begin{itemize}
+			\item Image processing
+			\item Making change
+			\item Quickest route finding
+			\item Continue exercises from last session
+		\end{itemize}
+		\vspace{10pt}
+		Your bible: \lstinline|docs.python.org/3/|\\
+		Or search: \lstinline|devdocs.io/python/|
 	\end{frame}
 \end{document}
