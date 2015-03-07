@@ -1,0 +1,152 @@
+\documentclass[handout]{beamer}
+%\documentclass[handout]{beamer}
+
+\include{base}
+
+\title{CUCaTS Python Workshop}
+\date{Lent 2015}
+
+\begin{document}
+	\begin{frame}[fragile]
+		\frametitle{Making change}
+		\footnotesize
+		Cast your mind back to Friday night. The scene is the ADC bar. It's late, you've had a few.
+		
+		But not enough! So you wander over to the barman and mutter something about a Staropramen. ``2.65 please".
+		
+		You reach for your wallet, but crap! The ADC doesn't take cards!
+		
+		You rustle through your pockets and pull out the contents. No notes, but a whole load of coins. 5ps, 10ps, 20ps. You look at it and think to yourself ``I'm... sure this is enough to make 2.65, but the question is... how?"
+		
+		That is the question we will answer today, and we will answer it with Python!
+	\end{frame}
+
+	\begin{frame}[fragile]
+		\frametitle{Problem data}
+		
+		Going back to the first session: we told you that programming was about processing data. In this problem, what data are we going to be dealing with?
+		
+		\pause
+		
+		Input:
+		\begin{itemize}
+			\item \lstinline|amount| \\
+			      How much we want to make
+			\item \lstinline|coins| \\
+			      The coins that we have to make it
+		\end{itemize}
+		
+		\pause
+		
+		Output:
+		\begin{itemize}
+			\item \lstinline|ways| \\
+			      All the ways of making the amount
+				\begin{lstlisting}
+				[[100, 5, 20, 20, 20, 20, 20, 20, 20, 20],
+				 [200, 50, 10, 5]]
+				\end{lstlisting}
+		\end{itemize}
+	\end{frame}
+		
+	\begin{frame}[fragile]
+		\frametitle{Problem data - Types}
+		
+		Let's be more specific about our data. Input:
+		
+		\begin{itemize}
+			\item The amount will simply be a number, either integer or float. For simplicity, we'll say its the number of pennies, so an integer.
+			\item \lstinline|amount|: integer \\
+			\item The coins we have will then just be a list of integers.
+			\item \lstinline|coins|: list of integer \\
+		\end{itemize}
+		
+		Output:
+		\begin{itemize}
+			\item  If we were working out just a \emph{single} way of making the amount, it would be a list of integers, that is, all the coins needed. But we're working out all the possible ways, so our result will be a list of list of integers: each element of the list will itself be another way of making the amount, a list of integers.
+			\item \lstinline|ways|: list of list of integers \\
+		\end{itemize}
+		
+	\end{frame}
+	
+	
+	\begin{frame}[fragile]
+		\frametitle{}
+		
+		Writing that up as Python:
+		
+		\begin{lstlisting}
+		def makechange(amount, coins):
+		    ways = []
+		
+		    $\textnormal{[\dots work out all the ways\dots]}$
+		
+		    return ways
+		\end{lstlisting}
+		
+		Start by filtering out all the coins that are too large to make the amount from our list of \lstinline|coins|. The (an) answer is on the next slide, but try it yourself before looking!
+	\end{frame}
+	
+	\begin{frame}[fragile]
+		\frametitle{}
+		
+		I've used a list comprehension to reproduce the list of coins, but leaving only ones that can fit in \lstinline|amount|.
+		
+		\begin{lstlisting}[basicstyle=\tt\footnotesize]
+		def makechange(amount, coins):
+		    ways = []
+		
+		    #Get rid of the coins that are too large
+		    coins = [coin for coin in coins if coin <= amount]
+		
+		    $\textnormal{[\dots]}$
+		
+		    return ways
+		\end{lstlisting}
+	\end{frame}
+	
+	\begin{frame}[fragile]
+		\frametitle{}
+		
+		Now we'll go through our list of coins in turn\dots
+		
+		\begin{lstlisting}
+		def makechange(amount, coins):
+		    ways = []
+		
+		    #Get rid of the coins that are too large
+		    coins = [coin for coin in coins if coin <= amount]
+		
+		    for coin in coins:
+		        $\textnormal{[\dots]}$
+		
+		    return ways
+		\end{lstlisting}
+	\end{frame}
+	
+	\begin{frame}[fragile]
+		\frametitle{}
+		
+		\begin{lstlisting}
+		def makechange(amount, coins):
+		    #Deal with the trivial case of making zero
+		    if amount == 0:
+		        return [[]]
+		
+		    else:
+		        ways = []
+		
+		    #Get rid of the coins that are too large
+		    coins = [coin for coin in coins if coin <= amount]
+		
+		    for coin in coins:
+		        ways += also(coin, makechange(amount-coin, coins))
+		
+		        #Exclude this coin from any more solutions
+		        coins = coins[1:]
+		
+		    return ways
+		\end{lstlisting}
+	\end{frame}
+	
+\end{document}
