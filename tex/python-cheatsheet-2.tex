@@ -1,0 +1,180 @@
+\documentclass[12pt,twocolumn]{article}
+
+\usepackage[margin=0.5in]{geometry}
+
+\pagenumbering{gobble}
+
+\setlength{\columnsep}{30pt}
+\setlength{\parindent}{0pt}
+
+\include{base}
+
+\begin{document}
+	\twocolumn[{\LARGE\centering CUCaTS Python Cheatsheet \\[\baselineskip]}]
+	
+	\begin{tabular}{l l}
+		\textbf{Datatype} & \textbf{Example} \\
+
+		Integers &
+		\colorbox{codebg}{\lstinline|5|} \\
+		
+		Floats &
+		\colorbox{codebg}{\lstinline|9.6|} \\
+		
+		Booleans &
+		\colorbox{codebg}{\lstinline|True|} and \colorbox{codebg}{\lstinline|False|} \\
+		
+		Strings &
+		\colorbox{codebg}{\lstinline|"Hello world!"|} \\
+		
+		Lists &
+		\colorbox{codebg}{\lstinline|[4, 8, 15, 16, 23, 42]|} \vspace{0.5mm} \\
+		~ &
+		\colorbox{codebg}{\lstinline|["first", "second"]|} \vspace{0.5mm} \\
+		~ &
+		\colorbox{codebg}{\lstinline|[[], "some text", 99]|} \vspace{0.5mm} \\
+		
+		Dictionaries &
+		\colorbox{codebg}{\lstinline|\{"Alice": 42, "Bob": 40\}|}
+	\end{tabular}
+	
+	\subsubsection*{Operations}
+	
+	\begin{tabular}{r l}
+		\lstinline|+|, \lstinline|-|, \lstinline|*|, \lstinline|/|, \lstinline|%| &
+		(on integers or floats) \\
+	
+		\lstinline|+| & (to join strings or lists) \\
+	
+		\lstinline|==|, \lstinline|!=| & (comparing any values) \\
+	
+		\lstinline|>|, \lstinline|>=|, \lstinline|<|, \lstinline|<=| &
+		(comparing integers or floats) \\
+		
+		\lstinline|and|, \lstinline|or|, \lstinline|not| & (on booleans)
+	\end{tabular}
+	
+	\subsubsection*{Lists and Strings}
+	
+	\begin{tabular}{l l}
+		Element access &
+		\colorbox{codebg}{\lstinline|$\colorbox{lightspacebg}{list}$[$\colorbox{lightspacebg}{index}$]|} \vspace{1mm} \\
+		
+		Slicing &
+		\colorbox{codebg}{\lstinline|$\colorbox{lightspacebg}{list}$[$\colorbox{lightspacebg}{start}$:$\colorbox{lightspacebg}{end}$]|} \vspace{1mm} \\
+		
+		Length &
+		\colorbox{codebg}{\lstinline|len($\colorbox{spacebg}{\quad}$)|} \vspace{1mm} \\
+		
+		Comprehensions &
+		\colorbox{codebg}{\lstinline|[$\colorbox{spacebg}{\quad}$ for\ $\colorbox{spacebg}{\quad}$ in\ $\colorbox{spacebg}{\quad}$]|} \\
+		
+		~ &
+		\colorbox{codebg}{\lstinline|[$\colorbox{spacebg}{\quad}$ for\ $\colorbox{spacebg}{\quad}$ in\ $\colorbox{spacebg}{\quad}$ if\ $\colorbox{spacebg}{\quad}$]|} \vspace{1mm} \\
+	\end{tabular}
+	
+	\subsubsection*{Variables}
+	
+	Labels onto values. Names must consist only of letters, digits and underscores. Cannot start with a digit or have spaces. They are case sensitive.
+	
+	\vspace{\baselineskip}
+	
+	\begin{minipage}[t]{0.23\textwidth}
+		\subsubsection*{Loops}
+		
+		\colorbox{codebg}{\lstinline|for\ $\colorbox{spacebg}{\quad}$ in $\ \colorbox{spacebg}{\quad}$:|} \\
+		
+		\colorbox{codebg}{\lstinline|while\ $\colorbox{spacebg}{\quad}$:|} \\
+		
+		\colorbox{codebg}{\lstinline|\ \ \ \ break|}
+		\vspace{1mm}
+		
+		\colorbox{codebg}{\lstinline|\ \ \ \ continue|} \\
+		
+		\subsubsection*{Branches}
+		
+		\colorbox{codebg}{\lstinline|if\ $ \colorbox{spacebg}{\quad}$:|}
+		\vspace{1mm}
+		
+		\colorbox{codebg}{\lstinline|elif\ $ \colorbox{spacebg}{\quad}$:|}
+		\vspace{1mm}
+		
+		\colorbox{codebg}{\lstinline|else:|}
+	\end{minipage}
+	\hfill
+	\begin{minipage}[t]{0.2\textwidth}
+		\subsubsection*{Functions}
+		
+		\colorbox{codebg}{\lstinline|def\ $\colorbox{spacebg}{\quad}$($\colorbox{spacebg}{\quad}$):|} \\
+		
+		\colorbox{codebg}{\lstinline|\ \ \ \ return\ $\colorbox{spacebg}{\quad}$|} \\
+		
+		\subsubsection*{Exceptions}
+		
+		\colorbox{codebg}{\lstinline|try:|}
+		\vspace{1mm}
+		
+		\colorbox{codebg}{\lstinline|except\ $\colorbox{spacebg}{\quad}$:|}
+		\vspace{1mm}
+		
+		%\colorbox{codebg}{\lstinline|except\ $\colorbox{spacebg}{\quad}$ as $\ \colorbox{spacebg}{\quad}$:|}
+		%\vspace{1mm}
+		
+		\colorbox{codebg}{\lstinline|finally:|} \\
+		
+		\colorbox{codebg}{\lstinline|raise\ $\colorbox{spacebg}{\quad}$|}
+	\end{minipage}
+	
+	\subsubsection*{Common functions and methods}
+	
+	\lstinline|range($\colorbox{lightspacebg}{end}$)| \\
+	\lstinline|range($\colorbox{lightspacebg}{start}$, $\colorbox{lightspacebg}{end}$)| \\
+	\lstinline|range($\colorbox{lightspacebg}{start}$, $\colorbox{lightspacebg}{end}$, $\colorbox{lightspacebg}{step}$)| \\
+	
+	\lstinline|enumerate($\colorbox{lightspacebg}{list}$)| \\
+	%\lstinline|enumerate($\colorbox{lightspacebg}{list}$, $\colorbox{lightspacebg}{start}$)| \\
+	% save space, not show this, they can just add to the index (or look it up)
+	\lstinline|zip($\colorbox{lightspacebg}{list}$, $\colorbox{lightspacebg}{otherlist}$)| \\
+	
+	\lstinline|list($\colorbox{lightspacebg}{iterable}$)| \\
+	\lstinline|str($\colorbox{lightspacebg}{value}$)| \\
+	\lstinline|int($\colorbox{lightspacebg}{value}$)| \\
+	
+	list.\lstinline|append($\colorbox{lightspacebg}{item}$)| \\
+	list.\lstinline|reverse()| \\
+	list.\lstinline|remove($\colorbox{lightspacebg}{item}$)| \\
+	
+	string.\lstinline|split($\colorbox{lightspacebg}{separator}$)| \\
+	string.\lstinline|capitalize()| \\
+	string.\lstinline|upper()| \\
+	string.\lstinline|lower()| \\
+	string.\lstinline|find($\colorbox{lightspacebg}{substring}$)| \\
+	
+	dict.\lstinline|keys()| \\
+	dict.\lstinline|update($\colorbox{lightspacebg}{otherdict}$)| \\
+	
+	\subsubsection*{Files}
+	
+	Opening and reading the whole file:
+	\begin{lstlisting}
+with open("input.txt") as file:
+   print(file.read())\end{lstlisting}
+   
+   Line by line:
+   \begin{lstlisting}
+with open("input.txt") as file:
+   for line in file:
+       print(line)\end{lstlisting}
+       
+   Writing:
+   \begin{lstlisting}
+with open("input.txt", "w") as file:
+   file.write(str(somelist))\end{lstlisting}
+        
+   \lstinline|with| automatically closes the file at the end of the block. Manually closing instead:
+   
+   \begin{lstlisting}
+file = open("input.txt"):
+$[...]$
+file.close()\end{lstlisting}
+\end{document}
