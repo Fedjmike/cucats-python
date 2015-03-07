@@ -102,3 +102,13 @@ Correct!
 
 * Output the number of tries before getting the answer as well.
 
+## Number of words in Pride and Prejudice (file)
+
+* Download the book [here](http://www.gutenberg.org/cache/epub/1342/pg1342.txt) and save it to the same directory as your working folder.
+* Open the file and count the number of words. [You should get 124588]
+
+Extension: 
+
+* Count the number of occurrences of "Bennet". You should get 333 if you include occurrences like "Bennet's", "Bennets", "BENNET" etc.
+
+Hint: Use `s.startswith(x)` to check if a string s starts with x
