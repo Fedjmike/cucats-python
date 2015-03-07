@@ -26,7 +26,7 @@ from PIL import Image
 # The following function takes a PIL Image object, and inverts its left half.
 # Note that the function doesn't "return" anything. It doesn't need to, because
 # it modifies the image in-place. (That is, it doesn't make a copy.)
-# *Exercise*: explain how the function works.
+# *Exercise*: Explain how the function works.
 def invert_left_half(image):
     pixel_rgba_values = image.load()
     width, height = image.size
