@@ -1,6 +1,6 @@
 # Break a Caesar cipher - Part 2!
 
-In our last exercise we learned how to write a function do shift a character by a certain offset. In this exercise, we will finish up our work and implement a full Caesar cipher, using list comprehensions and file handling!
+In our last exercise we learned how to write a function do shift a character by a certain offset. In this exercise, we will finish up our work and implement a full Caesar cipher, using list comprehensions and ranges.
 
 This exercise will involve more coding on your own, but once you're done you should be able to appreciate the concepts that you've managed to learn (and make use of)!
 
@@ -70,6 +70,21 @@ We get the numbers we want! You should now modify your loop to run the list comp
 `Oz'y kgyokx zu gyq luxmobktkyy zngt oz oy zu mkz vkxsoyyout.`
 
 
-## Step 4: Completed function
+## Step 4: Completed function!
 
-Congratulations, you're now finished with your function to perform shifts on idividual characters! This involved understanding `if`-conditions at a deeper level and using methods such as `isupper()` and `islower()` - you can now appreciate what you've done. In future sessions we'll work on extending this function to work on full sentences, so that we can decipher them with ease! Till next time!
+Now that you have working code, you might want to polish it up a bit, document parts that you feel are important for your understanding, and so on. Your final task is to wrap up all of your code as a function, which when given a string should be able to output all the different possible deciphered pieces of text so you can read them all and pick out the most correct one! It should look like this:
+
+  ```python
+  def decipher(encrypted_text):
+      # Here's your main for loop that should
+      # iterate over all required integer values
+
+      #    Use the list comprehension method to
+      #    return a list of shifted characters
+
+      #    Join this list to convert it to a
+      #    string
+
+      #    Print out your string!
+  ```
+
