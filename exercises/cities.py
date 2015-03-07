@@ -16,32 +16,6 @@ edges["Boston"] = ["Chicago", "Washington DC", "New York"]
 origin = "Seattle"
 destination = "Miami"
 
-def distances_dictionary(city_from, cities):
-	distances = {}
-	for city_to in cities:
-		distances[city_to] = geomaths.distance(coordinates(city_from), coordinates(city_to))
-	return distances
-
 visited = [origin]
 
-def naive_pathfinding(city_from, city_to):
-	for city in edges[city_from]:
-		print(visited, city)
-		if city == city_to:
-			print("dank")
-			return True
-		elif city in visited:
-			continue
-		else:
-			visited.append(city)
-			if naive_pathfinding(city, city_to):
-				return True
-			else:
-				continue
-	print("not dank", visited)
-	return False
-
-print(naive_pathfinding(origin, destination))
-
-# print(distances_dictionary("Seattle", edges["Seattle"]))
-
+# Your function goes here!
