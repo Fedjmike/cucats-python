@@ -302,7 +302,7 @@
 		\frametitle{Converting values}
 		\begin{itemize}
 			\item We have seen before that if we tried to add a string to an integer, we get a \lstinline|TypeError|
-			\begin{lstlisting}[basicstyle=\scriptsize\tt]
+			\begin{lstlisting}[xleftmargin=\dimexpr-\leftmargini, basicstyle=\scriptsize\tt]
 			>>> x = 5
 			>>> y = " elephants"
 			>>> x + y
@@ -311,13 +311,21 @@
 			\end{lstlisting}
 			\pause
 			\item Similar to converting an iterable using \lstinline|list|, we can use \lstinline|str|~to convert a value (such as an int or a float) to a string.
-			\begin{lstlisting}[basicstyle=\scriptsize\tt]
+			\begin{lstlisting}[xleftmargin=\dimexpr-\leftmargini, basicstyle=\scriptsize\tt]
 			>>> str(x)
 			'5'
 			>>> str(x) + y
 			'5 elephants'
 			\end{lstlisting}
 			
+			\item: Tip: you can always check the type of a value with \lstinline|type|:
+			\begin{lstlisting}[xleftmargin=\dimexpr-\leftmargini, basicstyle=\scriptsize\tt]
+			>>> type(x)
+			<class 'int'>
+			>>> type(str(x))
+			<class 'str'>
+			\end{lstlisting}
+		
 		\end{itemize}
 	\end{frame}
 	
