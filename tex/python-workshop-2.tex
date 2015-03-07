@@ -118,7 +118,7 @@
 	\end{frame}
 	
 	\begin{frame}[fragile]
-		\frametitle{Dictionaries}
+		\frametitle{Dictionary}
 		
 		\begin{itemize}
 			\item Dictionaries allow us to have a bunch of \evenbox{jargonbg}{values} associated with certain \evenbox{jargonbg}{keys}.
@@ -137,10 +137,52 @@
 			% strings, floats, integers, tuples (mention?)
 			% keys and values do not have to be of one type
 			
-			\item Adding (or updating) key-value pairs:
+		\end{itemize}
+	\end{frame}
+	
+	\begin{frame}[fragile]
+		\frametitle{Dictionary operations}
+		
+		\begin{itemize}
+			\item Our example:
 			\begin{lstlisting}[xleftmargin=\dimexpr-\leftmargini]
-			ages["Charlie"] = 1
+			ages = {"Alice": 42, "Bob": 40}
 			\end{lstlisting}
+			\item Add/update. We shall add Charlie's age and update Bob's age.
+			\begin{lstlisting}[xleftmargin=\dimexpr-\leftmargini]
+			>>> ages["Charlie"] = 10
+			>>> ages["Bob"] = 41
+			>>> ages
+			{"Alice": 42, "Bob": 41, "Charlie": 10}
+			\end{lstlisting}
+			
+			\item Deleting entries
+			\begin{lstlisting}[xleftmargin=\dimexpr-\leftmargini]
+			>>> del ages["Bob"]
+			>>> ages
+			{"Alice": 42, "Charlie": 10}
+			\end{lstlisting}
+			
+		\end{itemize}
+	\end{frame}
+	
+		
+	\begin{frame}[fragile]
+		\frametitle{Dictionary methods and summary}
+		Methods
+		\begin{itemize}
+			\item Getting a list of values: \lstinline|list(ages.values())|
+			\item Getting a list of keys: \lstinline|list(ages.keys())|
+			\item Checking if a key exists: \lstinline|ages.has_key("Alice")|
+			\item Creating a new copy: \lstinline|record = ages.copy()|
+			\item We can also update or get values with \lstinline|dict.get()| and \lstinline|dict.update()|
+		\end{itemize}
+		Summary
+		\begin{itemize}
+			\item Create a dictionary: \lstinline|x = {}|
+			\item Add/update: \lstinline|x[y] = z|, or \lstinline|x.update({y:z})|
+			\item Retrieve: \lstinline|x[y]| or \lstinline|x.get(y)|
+			\item Delete: \lstinline|del x[y]| or \lstinline|x.pop(y)|
 		\end{itemize}
 	\end{frame}
 	
