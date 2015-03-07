@@ -17,8 +17,9 @@ import math
 # Pillow. From the command line, try:
 # (Windows:)    python -3 -m pip install Pillow
 # (Mac/Linux:)  pip3 install Pillow
-# Once PIL is installed, you should try running this script (the one you're
-# reading) to check everything's working.
+# Once PIL is installed (and you've got the cucats logo image file -- see
+# below), you should try running this script (the one you're reading) to check
+# everything's working.
 from PIL import Image
 # We've imported the Image module from PIL. You can view its documentation at:
 # http://effbot.org/imagingbook/image.htm
