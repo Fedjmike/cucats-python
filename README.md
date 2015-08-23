@@ -1,7 +1,7 @@
-# cucats-python
-## Materials for the CUCaTS Python workshop.
+## Materials for the CUCaTS Python Workshop
 
-See info about upcoming sessions [here](doc/workshop-info.md/#readme).
+CUCaTS is the Cambridge University Computing and Technology Society. In February 2015 we ran some introductory workshops for fellow students. These are the materials we created for those workshops. Feel free to use and modify them as per the following license:
 
-“Literacy is a bridge from misery to hope. It is a tool for daily life in modern society. It is a bulwark against poverty, and a building block of development, an essential complement to investments in roads, dams, clinics and factories. Literacy is a platform for democratization, and a vehicle for the promotion of cultural and national identity. Especially for girls and women, it is an agent of family health and nutrition. For everyone, everywhere, literacy is, along with education in general, a basic human right... Literacy is, finally, the road to human progress and the means through which every man, woman and child can realize his or her full potential.”
-― Kofi Annan
+[![CC-BY-SA](https://i.creativecommons.org/l/by-sa/4.0/88x31.png)](http://creativecommons.org/licenses/by-sa/4.0/)
+
+This work is licensed under a [Creative Commons Attribution-ShareAlike 4.0 International License](http://creativecommons.org/licenses/by-sa/4.0/).
